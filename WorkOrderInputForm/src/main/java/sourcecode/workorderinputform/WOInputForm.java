@@ -29,12 +29,15 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setText("Sample Commit and push");
 
         jLabel1.setText("Sample push to kristian");
+
+        jLabel3.setText("Sample push to main");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,11 +52,17 @@ public class WOInputForm extends javax.swing.JFrame {
                         .addGap(146, 146, 146)
                         .addComponent(jLabel1)))
                 .addContainerGap(123, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(178, 178, 178))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(113, 113, 113)
+                .addGap(46, 46, 46)
+                .addComponent(jLabel3)
+                .addGap(53, 53, 53)
                 .addComponent(jLabel2)
                 .addGap(52, 52, 52)
                 .addComponent(jLabel1)
@@ -101,5 +110,6 @@ public class WOInputForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

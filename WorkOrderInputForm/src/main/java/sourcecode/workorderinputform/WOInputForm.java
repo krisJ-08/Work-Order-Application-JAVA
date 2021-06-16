@@ -145,6 +145,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jPanel48 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
+        jFormattedTextField50 = new javax.swing.JFormattedTextField();
         jPanel45 = new javax.swing.JPanel();
         jFormattedTextField34 = new javax.swing.JFormattedTextField();
         jPanel46 = new javax.swing.JPanel();
@@ -155,6 +156,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jPanel51 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
+        jFormattedTextField49 = new javax.swing.JFormattedTextField();
         jPanel52 = new javax.swing.JPanel();
         jFormattedTextField37 = new javax.swing.JFormattedTextField();
         jPanel53 = new javax.swing.JPanel();
@@ -175,6 +177,38 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jPanel61 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
+        jPanel62 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanel63 = new javax.swing.JPanel();
+        jFormattedTextField43 = new javax.swing.JFormattedTextField();
+        jPanel64 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jPanel65 = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jPanel66 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jFormattedTextField44 = new javax.swing.JFormattedTextField();
+        jPanel67 = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        jPanel68 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jPanel69 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jFormattedTextField45 = new javax.swing.JFormattedTextField();
+        jPanel70 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jFormattedTextField46 = new javax.swing.JFormattedTextField();
+        jPanel71 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jPanel72 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jFormattedTextField52 = new javax.swing.JFormattedTextField();
+        jPanel73 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jFormattedTextField47 = new javax.swing.JFormattedTextField();
+        jPanel74 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jFormattedTextField48 = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Work Order Input Form");
@@ -208,6 +242,12 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel1.setText("Date");
 
         jFormattedTextField1.setText("jFormattedTextField1");
+        jFormattedTextField1.setName("txtfld_dateofcreation"); // NOI18N
+        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -235,15 +275,18 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel6.setPreferredSize(new java.awt.Dimension(222, 65));
 
         jFormattedTextField2.setText("jFormattedTextField1");
+        jFormattedTextField2.setName("txtfld_Time"); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Time");
 
         jCheckBox3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jCheckBox3.setText("PM");
+        jCheckBox3.setName("hckbox_TimeCreationPm"); // NOI18N
 
         jCheckBox4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jCheckBox4.setText("AM");
+        jCheckBox4.setName("chckbox_TimeCreationAm"); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -280,6 +323,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(220, 65));
 
         jFormattedTextField3.setText("jFormattedTextField1");
+        jFormattedTextField3.setName("txtfld_Takenby"); // NOI18N
         jFormattedTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFormattedTextField3ActionPerformed(evt);
@@ -317,6 +361,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel4.setText("Requested By");
 
         jFormattedTextField4.setText("jFormattedTextField1");
+        jFormattedTextField4.setName("txtfld_Requestedby"); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -347,6 +392,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel5.setText("Dept");
 
         jFormattedTextField5.setText("jFormattedTextField1");
+        jFormattedTextField5.setName("txtfld_Dept"); // NOI18N
         jFormattedTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFormattedTextField5ActionPerformed(evt);
@@ -381,6 +427,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel6.setText("BLDG / Floor");
 
         jFormattedTextField6.setText("jFormattedTextField1");
+        jFormattedTextField6.setName("txtfld_bldg/floor1"); // NOI18N
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -411,6 +458,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel7.setText("BLDG / Floor");
 
         jFormattedTextField7.setText("jFormattedTextField1");
+        jFormattedTextField7.setName("txtfld_bldg/floor2"); // NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -441,6 +489,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel8.setText("BLDG / Floor");
 
         jFormattedTextField8.setText("jFormattedTextField1");
+        jFormattedTextField8.setName("txtfld_bldg/floor3"); // NOI18N
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -508,6 +557,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         jFormattedTextField9.setText("jFormattedTextField1");
+        jFormattedTextField9.setName("txtfld_Descrption1"); // NOI18N
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -556,6 +606,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         jFormattedTextField11.setText("jFormattedTextField1");
+        jFormattedTextField11.setName("txtfld_Descrption2"); // NOI18N
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -604,6 +655,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         jFormattedTextField12.setText("jFormattedTextField1");
+        jFormattedTextField12.setName("txtfld_Descrption3"); // NOI18N
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -652,6 +704,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         jFormattedTextField13.setText("jFormattedTextField1");
+        jFormattedTextField13.setName("txtfld_Descrption4"); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -700,6 +753,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         jFormattedTextField14.setText("jFormattedTextField1");
+        jFormattedTextField14.setName("txtfld_Descrption5"); // NOI18N
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -748,6 +802,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         jFormattedTextField15.setText("jFormattedTextField1");
+        jFormattedTextField15.setName("txtfld_Descrption6"); // NOI18N
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -796,6 +851,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         jFormattedTextField16.setText("jFormattedTextField1");
+        jFormattedTextField16.setName("txtfld_Descrption7"); // NOI18N
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -831,6 +887,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel10.setText("Scheduled Date");
 
         jFormattedTextField10.setText("jFormattedTextField1");
+        jFormattedTextField10.setName("txtfld_ScheduledDate"); // NOI18N
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -862,11 +919,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jCheckBox17.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jCheckBox17.setText("AM");
+        jCheckBox17.setName("hckbox_SchedCreationAm"); // NOI18N
 
         jCheckBox18.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jCheckBox18.setText("PM");
+        jCheckBox18.setName("hckbox_SchedCreationPM"); // NOI18N
 
         jFormattedTextField18.setText("jFormattedTextField1");
+        jFormattedTextField18.setName("txtfld_TimeSched"); // NOI18N
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
@@ -1019,6 +1079,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel26.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField17.setText("jFormattedTextField1");
+        jFormattedTextField17.setName("txtfld_qty1"); // NOI18N
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
@@ -1047,6 +1108,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel27.setPreferredSize(new java.awt.Dimension(342, 35));
 
         jFormattedTextField19.setText("jFormattedTextField1");
+        jFormattedTextField19.setName("txtfld_Materials/Parts1"); // NOI18N
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1075,6 +1137,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel28.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField20.setText("jFormattedTextField1");
+        jFormattedTextField20.setName("txtfld_MatPrice1"); // NOI18N
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -1103,6 +1166,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel29.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField21.setText("jFormattedTextField1");
+        jFormattedTextField21.setName("txtfld_Amount1"); // NOI18N
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
@@ -1131,6 +1195,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel30.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField22.setText("jFormattedTextField1");
+        jFormattedTextField22.setName("txtfld_qty2"); // NOI18N
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -1159,6 +1224,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel31.setPreferredSize(new java.awt.Dimension(342, 35));
 
         jFormattedTextField23.setText("jFormattedTextField1");
+        jFormattedTextField23.setName("txtfld_Materials/Parts2"); // NOI18N
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -1187,6 +1253,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel32.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField24.setText("jFormattedTextField1");
+        jFormattedTextField24.setName("txtfld_MatPrice2"); // NOI18N
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
@@ -1215,6 +1282,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel33.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField25.setText("jFormattedTextField1");
+        jFormattedTextField25.setName("txtfld_Amount2"); // NOI18N
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
@@ -1243,6 +1311,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel34.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField26.setText("jFormattedTextField1");
+        jFormattedTextField26.setName("txtfld_qty3"); // NOI18N
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -1271,6 +1340,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel35.setPreferredSize(new java.awt.Dimension(342, 35));
 
         jFormattedTextField27.setText("jFormattedTextField1");
+        jFormattedTextField27.setName("txtfld_Materials/Parts3"); // NOI18N
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
@@ -1299,6 +1369,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel36.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField28.setText("jFormattedTextField1");
+        jFormattedTextField28.setName("txtfld_MatPrice3"); // NOI18N
 
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
@@ -1327,6 +1398,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel37.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField29.setText("jFormattedTextField1");
+        jFormattedTextField29.setName("txtfld_Amount3"); // NOI18N
 
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
@@ -1355,6 +1427,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel38.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField30.setText("jFormattedTextField1");
+        jFormattedTextField30.setName("txtfld_qty4"); // NOI18N
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -1383,6 +1456,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel39.setPreferredSize(new java.awt.Dimension(342, 35));
 
         jFormattedTextField31.setText("jFormattedTextField1");
+        jFormattedTextField31.setName("txtfld_Materials/Parts4"); // NOI18N
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
@@ -1411,6 +1485,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel40.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField32.setText("jFormattedTextField1");
+        jFormattedTextField32.setName("txtfld_MatPrice4"); // NOI18N
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -1439,6 +1514,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel41.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jFormattedTextField33.setText("jFormattedTextField1");
+        jFormattedTextField33.setName("txtfld_Amount4"); // NOI18N
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
@@ -1587,6 +1663,9 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        jFormattedTextField50.setText("jFormattedTextField1");
+        jFormattedTextField50.setName("txtfld_TotalMat"); // NOI18N
+
         javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
@@ -1596,14 +1675,24 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addGroup(jPanel48Layout.createSequentialGroup()
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 1, Short.MAX_VALUE)))
+            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel48Layout.createSequentialGroup()
+                    .addGap(14, 14, 14)
+                    .addComponent(jFormattedTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addGap(14, 14, 14)))
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 42, Short.MAX_VALUE)
             .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel48Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
                     .addComponent(jLabel22)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel48Layout.createSequentialGroup()
+                    .addGap(1, 1, 1)
+                    .addComponent(jFormattedTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -1613,6 +1702,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel45.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField34.setText("jFormattedTextField1");
+        jFormattedTextField34.setName("txtfld_hrs1"); // NOI18N
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
@@ -1641,6 +1731,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel46.setPreferredSize(new java.awt.Dimension(240, 35));
 
         jFormattedTextField35.setText("jFormattedTextField1");
+        jFormattedTextField35.setName("txtfld_Labor1"); // NOI18N
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
@@ -1669,6 +1760,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel49.setPreferredSize(new java.awt.Dimension(102, 35));
 
         jFormattedTextField36.setText("jFormattedTextField1");
+        jFormattedTextField36.setName("txtfld_LbrPrice1"); // NOI18N
 
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
@@ -1731,6 +1823,9 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        jFormattedTextField49.setText("jFormattedTextField1");
+        jFormattedTextField49.setName("txtfld_TotalLbr"); // NOI18N
+
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
         jPanel51.setLayout(jPanel51Layout);
         jPanel51Layout.setHorizontalGroup(
@@ -1740,14 +1835,24 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addGroup(jPanel51Layout.createSequentialGroup()
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 1, Short.MAX_VALUE)))
+            .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel51Layout.createSequentialGroup()
+                    .addGap(14, 14, 14)
+                    .addComponent(jFormattedTextField49, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addGap(14, 14, 14)))
         );
         jPanel51Layout.setVerticalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 42, Short.MAX_VALUE)
             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel51Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
                     .addComponent(jLabel24)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel51Layout.createSequentialGroup()
+                    .addGap(1, 1, 1)
+                    .addComponent(jFormattedTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -1757,6 +1862,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel52.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField37.setText("jFormattedTextField1");
+        jFormattedTextField37.setName("txtfld_hrs2"); // NOI18N
 
         javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
         jPanel52.setLayout(jPanel52Layout);
@@ -1785,6 +1891,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel53.setPreferredSize(new java.awt.Dimension(240, 35));
 
         jFormattedTextField38.setText("jFormattedTextField1");
+        jFormattedTextField38.setName("txtfld_Labor2"); // NOI18N
 
         javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
         jPanel53.setLayout(jPanel53Layout);
@@ -1813,6 +1920,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel54.setPreferredSize(new java.awt.Dimension(102, 35));
 
         jFormattedTextField39.setText("jFormattedTextField1");
+        jFormattedTextField39.setName("txtfld_LbrPrice2"); // NOI18N
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
         jPanel54.setLayout(jPanel54Layout);
@@ -1899,6 +2007,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel57.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField40.setText("jFormattedTextField1");
+        jFormattedTextField40.setName("txtfld_hrs3"); // NOI18N
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
         jPanel57.setLayout(jPanel57Layout);
@@ -1927,6 +2036,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel58.setPreferredSize(new java.awt.Dimension(240, 35));
 
         jFormattedTextField41.setText("jFormattedTextField1");
+        jFormattedTextField41.setName("txtfld_Labor3"); // NOI18N
 
         javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
         jPanel58.setLayout(jPanel58Layout);
@@ -1955,6 +2065,12 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel59.setPreferredSize(new java.awt.Dimension(102, 35));
 
         jFormattedTextField42.setText("jFormattedTextField1");
+        jFormattedTextField42.setName("txtfld_LbrPrice3"); // NOI18N
+        jFormattedTextField42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField42ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
         jPanel59.setLayout(jPanel59Layout);
@@ -2037,6 +2153,404 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel61);
 
+        jPanel62.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel62.setPreferredSize(new java.awt.Dimension(340, 35));
+
+        jLabel19.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel19.setText("TOTAL LABOR");
+
+        javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
+        jPanel62.setLayout(jPanel62Layout);
+        jPanel62Layout.setHorizontalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 338, Short.MAX_VALUE)
+            .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel62Layout.createSequentialGroup()
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel62Layout.setVerticalGroup(
+            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+            .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel62Layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel19)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanel4.add(jPanel62);
+
+        jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel63.setPreferredSize(new java.awt.Dimension(102, 35));
+
+        jFormattedTextField43.setText("jFormattedTextField1");
+        jFormattedTextField43.setName("txtfld_TotalLbr"); // NOI18N
+
+        javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
+        jPanel63.setLayout(jPanel63Layout);
+        jPanel63Layout.setHorizontalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel63Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jFormattedTextField43, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        jPanel63Layout.setVerticalGroup(
+            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 42, Short.MAX_VALUE)
+            .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel63Layout.createSequentialGroup()
+                    .addGap(1, 1, 1)
+                    .addComponent(jFormattedTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanel4.add(jPanel63);
+
+        jPanel64.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel64.setPreferredSize(new java.awt.Dimension(110, 35));
+
+        jLabel29.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout jPanel64Layout = new javax.swing.GroupLayout(jPanel64);
+        jPanel64.setLayout(jPanel64Layout);
+        jPanel64Layout.setHorizontalGroup(
+            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel64Layout.createSequentialGroup()
+                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 1, Short.MAX_VALUE)))
+        );
+        jPanel64Layout.setVerticalGroup(
+            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 33, Short.MAX_VALUE)
+            .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel64Layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel29)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanel4.add(jPanel64);
+
+        jPanel65.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel65.setPreferredSize(new java.awt.Dimension(110, 35));
+
+        jLabel30.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
+        jPanel65.setLayout(jPanel65Layout);
+        jPanel65Layout.setHorizontalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel65Layout.createSequentialGroup()
+                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 1, Short.MAX_VALUE)))
+        );
+        jPanel65Layout.setVerticalGroup(
+            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 33, Short.MAX_VALUE)
+            .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel65Layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel30)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanel4.add(jPanel65);
+
+        jPanel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel66.setPreferredSize(new java.awt.Dimension(442, 65));
+
+        jLabel20.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel20.setText("Charge to");
+
+        jFormattedTextField44.setText("jFormattedTextField1");
+        jFormattedTextField44.setName("txtfld_ChargeTo"); // NOI18N
+
+        javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
+        jPanel66.setLayout(jPanel66Layout);
+        jPanel66Layout.setHorizontalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel66Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel20)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jFormattedTextField44, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
+        );
+        jPanel66Layout.setVerticalGroup(
+            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel66Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(jPanel66);
+
+        jPanel67.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel67.setPreferredSize(new java.awt.Dimension(110, 65));
+
+        jLabel31.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout jPanel67Layout = new javax.swing.GroupLayout(jPanel67);
+        jPanel67.setLayout(jPanel67Layout);
+        jPanel67Layout.setHorizontalGroup(
+            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel67Layout.createSequentialGroup()
+                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 1, Short.MAX_VALUE)))
+        );
+        jPanel67Layout.setVerticalGroup(
+            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+            .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel67Layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel31)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanel4.add(jPanel67);
+
+        jPanel68.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel68.setPreferredSize(new java.awt.Dimension(110, 65));
+
+        jLabel32.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout jPanel68Layout = new javax.swing.GroupLayout(jPanel68);
+        jPanel68.setLayout(jPanel68Layout);
+        jPanel68Layout.setHorizontalGroup(
+            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel68Layout.createSequentialGroup()
+                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 1, Short.MAX_VALUE)))
+        );
+        jPanel68Layout.setVerticalGroup(
+            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+            .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel68Layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel32)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanel4.add(jPanel68);
+
+        jPanel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel69.setPreferredSize(new java.awt.Dimension(340, 65));
+
+        jLabel34.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel34.setText("Work completed by");
+
+        jFormattedTextField45.setText("jFormattedTextField1");
+        jFormattedTextField45.setName("txtfld_WrkCompBy"); // NOI18N
+
+        javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
+        jPanel69.setLayout(jPanel69Layout);
+        jPanel69Layout.setHorizontalGroup(
+            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel69Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel34)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jFormattedTextField45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+        );
+        jPanel69Layout.setVerticalGroup(
+            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel69Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(jPanel69);
+
+        jPanel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel70.setPreferredSize(new java.awt.Dimension(102, 65));
+
+        jLabel35.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel35.setText("Date");
+
+        jFormattedTextField46.setText("jFormattedTextField1");
+        jFormattedTextField46.setName("txtfld_DateComp"); // NOI18N
+
+        javax.swing.GroupLayout jPanel70Layout = new javax.swing.GroupLayout(jPanel70);
+        jPanel70.setLayout(jPanel70Layout);
+        jPanel70Layout.setHorizontalGroup(
+            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel70Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel35)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jFormattedTextField46, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        jPanel70Layout.setVerticalGroup(
+            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel70Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(jPanel70);
+
+        jPanel71.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel71.setPreferredSize(new java.awt.Dimension(110, 65));
+
+        jLabel36.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("TOTAL");
+
+        javax.swing.GroupLayout jPanel71Layout = new javax.swing.GroupLayout(jPanel71);
+        jPanel71.setLayout(jPanel71Layout);
+        jPanel71Layout.setHorizontalGroup(
+            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel71Layout.createSequentialGroup()
+                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
+        );
+        jPanel71Layout.setVerticalGroup(
+            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel71Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel36)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(jPanel71);
+
+        jPanel72.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel72.setPreferredSize(new java.awt.Dimension(110, 65));
+
+        jLabel37.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jFormattedTextField52.setText("jFormattedTextField1");
+        jFormattedTextField52.setName("txtfld_TOTAL"); // NOI18N
+
+        javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
+        jPanel72.setLayout(jPanel72Layout);
+        jPanel72Layout.setHorizontalGroup(
+            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel72Layout.createSequentialGroup()
+                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 1, Short.MAX_VALUE)))
+            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel72Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jFormattedTextField52, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                    .addGap(14, 14, 14)))
+        );
+        jPanel72Layout.setVerticalGroup(
+            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 63, Short.MAX_VALUE)
+            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel72Layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addComponent(jLabel37)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel72Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jFormattedTextField52, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+
+        jPanel4.add(jPanel72);
+
+        jPanel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel73.setPreferredSize(new java.awt.Dimension(442, 65));
+
+        jLabel38.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel38.setText("Inspected / Approved by");
+
+        jFormattedTextField47.setText("jFormattedTextField1");
+        jFormattedTextField47.setName("txtfld_Insp/AppBy"); // NOI18N
+
+        javax.swing.GroupLayout jPanel73Layout = new javax.swing.GroupLayout(jPanel73);
+        jPanel73.setLayout(jPanel73Layout);
+        jPanel73Layout.setHorizontalGroup(
+            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel73Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel38)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jFormattedTextField47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
+        );
+        jPanel73Layout.setVerticalGroup(
+            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel73Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(jPanel73);
+
+        jPanel74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel74.setPreferredSize(new java.awt.Dimension(220, 65));
+
+        jLabel39.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel39.setText("Date");
+
+        jFormattedTextField48.setText("jFormattedTextField1");
+        jFormattedTextField48.setName("txtfld_DateInsp"); // NOI18N
+
+        javax.swing.GroupLayout jPanel74Layout = new javax.swing.GroupLayout(jPanel74);
+        jPanel74.setLayout(jPanel74Layout);
+        jPanel74Layout.setHorizontalGroup(
+            jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel74Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel39)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jFormattedTextField48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+        );
+        jPanel74Layout.setVerticalGroup(
+            jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel74Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jFormattedTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(jPanel74);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -2065,7 +2579,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1372, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1483, Short.MAX_VALUE)
         );
 
         pack();
@@ -2134,6 +2648,14 @@ public class WOInputForm extends javax.swing.JFrame {
     private void jCheckBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox16ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox16ActionPerformed
+
+    private void jFormattedTextField42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField42ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField42ActionPerformed
+
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2226,7 +2748,16 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField jFormattedTextField40;
     private javax.swing.JFormattedTextField jFormattedTextField41;
     private javax.swing.JFormattedTextField jFormattedTextField42;
+    private javax.swing.JFormattedTextField jFormattedTextField43;
+    private javax.swing.JFormattedTextField jFormattedTextField44;
+    private javax.swing.JFormattedTextField jFormattedTextField45;
+    private javax.swing.JFormattedTextField jFormattedTextField46;
+    private javax.swing.JFormattedTextField jFormattedTextField47;
+    private javax.swing.JFormattedTextField jFormattedTextField48;
+    private javax.swing.JFormattedTextField jFormattedTextField49;
     private javax.swing.JFormattedTextField jFormattedTextField5;
+    private javax.swing.JFormattedTextField jFormattedTextField50;
+    private javax.swing.JFormattedTextField jFormattedTextField52;
     private javax.swing.JFormattedTextField jFormattedTextField6;
     private javax.swing.JFormattedTextField jFormattedTextField7;
     private javax.swing.JFormattedTextField jFormattedTextField8;
@@ -2241,7 +2772,9 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -2250,7 +2783,17 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -2315,7 +2858,20 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel60;
     private javax.swing.JPanel jPanel61;
+    private javax.swing.JPanel jPanel62;
+    private javax.swing.JPanel jPanel63;
+    private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
+    private javax.swing.JPanel jPanel67;
+    private javax.swing.JPanel jPanel68;
+    private javax.swing.JPanel jPanel69;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel70;
+    private javax.swing.JPanel jPanel71;
+    private javax.swing.JPanel jPanel72;
+    private javax.swing.JPanel jPanel73;
+    private javax.swing.JPanel jPanel74;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;

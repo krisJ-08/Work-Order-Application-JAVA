@@ -211,16 +211,18 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel74 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jFormattedTextField48 = new javax.swing.JFormattedTextField();
-        jButton1 = new javax.swing.JButton();
+        bttnSave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Work Order Input Form");
         setAlwaysOnTop(true);
+        setMinimumSize(new java.awt.Dimension(700, 700));
         setName("woinputFrame"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(700, 600));
+        setPreferredSize(new java.awt.Dimension(715, 600));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBar(null);
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(700, 700));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(700, 1570));
 
         jPanel2.setBackground(new java.awt.Color(243, 243, 243));
@@ -245,7 +247,7 @@ public class WOInputForm extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,6 +260,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
 
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel4.setPreferredSize(new java.awt.Dimension(700, 72));
         jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 0, 0));
 
         jPanel5.setBackground(new java.awt.Color(246, 246, 246));
@@ -283,7 +286,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(txtfld_dateofcreation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+            .addComponent(txtfld_dateofcreation, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,7 +304,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(246, 246, 246));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel6.setPreferredSize(new java.awt.Dimension(222, 65));
+        jPanel6.setPreferredSize(new java.awt.Dimension(220, 65));
 
         jFormattedTextField2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField2.setName("txtfld_Time"); // NOI18N
@@ -331,7 +334,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jCheckBox3)
                 .addContainerGap())
-            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -372,7 +375,7 @@ public class WOInputForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jFormattedTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel1Layout.setVerticalGroup(
@@ -388,7 +391,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(246, 246, 246));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel7.setPreferredSize(new java.awt.Dimension(442, 65));
+        jPanel7.setPreferredSize(new java.awt.Dimension(440, 65));
 
         jLabel4.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel4.setText("Requested By");
@@ -400,7 +403,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jFormattedTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField4)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -440,8 +443,8 @@ public class WOInputForm extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(171, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jFormattedTextField5)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,7 +475,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField6, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -488,7 +491,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel10.setBackground(new java.awt.Color(246, 246, 246));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel10.setPreferredSize(new java.awt.Dimension(222, 65));
+        jPanel10.setPreferredSize(new java.awt.Dimension(220, 65));
 
         jLabel7.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel7.setText("Machine No.");
@@ -504,7 +507,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField7, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -536,7 +539,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField8, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -552,7 +555,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel12.setBackground(new java.awt.Color(234, 234, 234));
         jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel12.setPreferredSize(new java.awt.Dimension(662, 35));
+        jPanel12.setPreferredSize(new java.awt.Dimension(660, 35));
 
         jLabel9.setBackground(new java.awt.Color(234, 234, 234));
         jLabel9.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
@@ -565,19 +568,19 @@ public class WOInputForm extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel4.add(jPanel12);
 
         jPanel13.setBackground(new java.awt.Color(246, 246, 246));
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel13.setPreferredSize(new java.awt.Dimension(662, 70));
+        jPanel13.setPreferredSize(new java.awt.Dimension(660, 70));
 
         jCheckBox1.setBackground(new java.awt.Color(246, 246, 246));
         jCheckBox1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
@@ -610,7 +613,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox2)
                     .addComponent(jCheckBox1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField9)
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
@@ -630,7 +633,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel14.setBackground(new java.awt.Color(246, 246, 246));
         jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel14.setPreferredSize(new java.awt.Dimension(662, 70));
+        jPanel14.setPreferredSize(new java.awt.Dimension(660, 70));
 
         jCheckBox5.setBackground(new java.awt.Color(246, 246, 246));
         jCheckBox5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
@@ -663,7 +666,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox6)
                     .addComponent(jCheckBox5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField11)
                 .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
@@ -683,7 +686,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel15.setBackground(new java.awt.Color(246, 246, 246));
         jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel15.setPreferredSize(new java.awt.Dimension(662, 70));
+        jPanel15.setPreferredSize(new java.awt.Dimension(660, 70));
 
         jCheckBox7.setBackground(new java.awt.Color(246, 246, 246));
         jCheckBox7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
@@ -716,7 +719,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox8)
                     .addComponent(jCheckBox7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField12)
                 .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
@@ -736,7 +739,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel16.setBackground(new java.awt.Color(246, 246, 246));
         jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel16.setPreferredSize(new java.awt.Dimension(662, 70));
+        jPanel16.setPreferredSize(new java.awt.Dimension(660, 70));
 
         jCheckBox9.setBackground(new java.awt.Color(246, 246, 246));
         jCheckBox9.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
@@ -769,7 +772,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox10)
                     .addComponent(jCheckBox9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField13)
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
@@ -789,7 +792,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel17.setBackground(new java.awt.Color(246, 246, 246));
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel17.setPreferredSize(new java.awt.Dimension(662, 70));
+        jPanel17.setPreferredSize(new java.awt.Dimension(660, 70));
 
         jCheckBox11.setBackground(new java.awt.Color(246, 246, 246));
         jCheckBox11.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
@@ -822,7 +825,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox12)
                     .addComponent(jCheckBox11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField14)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
@@ -842,7 +845,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel18.setBackground(new java.awt.Color(246, 246, 246));
         jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel18.setPreferredSize(new java.awt.Dimension(662, 70));
+        jPanel18.setPreferredSize(new java.awt.Dimension(660, 70));
 
         jCheckBox13.setBackground(new java.awt.Color(246, 246, 246));
         jCheckBox13.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
@@ -875,7 +878,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox14)
                     .addComponent(jCheckBox13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField15)
                 .addContainerGap())
         );
         jPanel18Layout.setVerticalGroup(
@@ -895,7 +898,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel19.setBackground(new java.awt.Color(246, 246, 246));
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel19.setPreferredSize(new java.awt.Dimension(662, 70));
+        jPanel19.setPreferredSize(new java.awt.Dimension(660, 70));
 
         jCheckBox15.setBackground(new java.awt.Color(246, 246, 246));
         jCheckBox15.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
@@ -928,7 +931,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox16)
                     .addComponent(jCheckBox15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField16)
                 .addContainerGap())
         );
         jPanel19Layout.setVerticalGroup(
@@ -948,7 +951,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel20.setBackground(new java.awt.Color(246, 246, 246));
         jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel20.setPreferredSize(new java.awt.Dimension(442, 65));
+        jPanel20.setPreferredSize(new java.awt.Dimension(440, 65));
 
         jLabel10.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel10.setText("Scheduled Date");
@@ -960,7 +963,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jFormattedTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField10)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1010,7 +1013,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jCheckBox18)
                 .addContainerGap())
-            .addComponent(jFormattedTextField18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField18, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1041,13 +1044,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 37, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel22Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1059,7 +1062,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel23.setBackground(new java.awt.Color(234, 234, 234));
         jPanel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel23.setPreferredSize(new java.awt.Dimension(342, 35));
+        jPanel23.setPreferredSize(new java.awt.Dimension(340, 35));
 
         jLabel13.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1069,13 +1072,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE))
+                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 37, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel23Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1097,15 +1100,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel24Layout.createSequentialGroup()
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 37, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel24Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1127,15 +1130,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel25Layout.createSequentialGroup()
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 37, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel25Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1156,16 +1159,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel26.setLayout(jPanel26Layout);
         jPanel26Layout.setHorizontalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel26Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField17, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField17)
                     .addContainerGap()))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel26Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1177,7 +1180,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel27.setBackground(new java.awt.Color(246, 246, 246));
         jPanel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel27.setPreferredSize(new java.awt.Dimension(342, 35));
+        jPanel27.setPreferredSize(new java.awt.Dimension(340, 35));
 
         jFormattedTextField19.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField19.setName("txtfld_Materials/Parts1"); // NOI18N
@@ -1186,16 +1189,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel27.setLayout(jPanel27Layout);
         jPanel27Layout.setHorizontalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel27Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField19, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField19)
                     .addContainerGap()))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel27Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1216,16 +1219,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel28.setLayout(jPanel28Layout);
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel28Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField20, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField20)
                     .addContainerGap()))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel28Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1246,16 +1249,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel29Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField21, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField21)
                     .addContainerGap()))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel29Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1276,16 +1279,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel30.setLayout(jPanel30Layout);
         jPanel30Layout.setHorizontalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel30Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField22, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField22)
                     .addContainerGap()))
         );
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel30Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1297,7 +1300,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel31.setBackground(new java.awt.Color(246, 246, 246));
         jPanel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel31.setPreferredSize(new java.awt.Dimension(342, 35));
+        jPanel31.setPreferredSize(new java.awt.Dimension(340, 35));
 
         jFormattedTextField23.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField23.setName("txtfld_Materials/Parts2"); // NOI18N
@@ -1306,16 +1309,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel31Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField23, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField23)
                     .addContainerGap()))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel31Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1336,16 +1339,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel32.setLayout(jPanel32Layout);
         jPanel32Layout.setHorizontalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel32Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField24, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField24)
                     .addContainerGap()))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel32Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1366,16 +1369,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel33Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField25, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField25)
                     .addContainerGap()))
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel33Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1396,16 +1399,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel34.setLayout(jPanel34Layout);
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel34Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField26, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField26)
                     .addContainerGap()))
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel34Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1417,7 +1420,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel35.setBackground(new java.awt.Color(246, 246, 246));
         jPanel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel35.setPreferredSize(new java.awt.Dimension(342, 35));
+        jPanel35.setPreferredSize(new java.awt.Dimension(340, 35));
 
         jFormattedTextField27.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField27.setName("txtfld_Materials/Parts3"); // NOI18N
@@ -1426,16 +1429,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel35.setLayout(jPanel35Layout);
         jPanel35Layout.setHorizontalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel35Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField27, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField27)
                     .addContainerGap()))
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel35Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1458,16 +1461,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel36.setLayout(jPanel36Layout);
         jPanel36Layout.setHorizontalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel36Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField28, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField28)
                     .addContainerGap()))
         );
         jPanel36Layout.setVerticalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel36Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1488,16 +1491,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel37Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField29, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField29)
                     .addContainerGap()))
         );
         jPanel37Layout.setVerticalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel37Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1518,16 +1521,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel38.setLayout(jPanel38Layout);
         jPanel38Layout.setHorizontalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel38Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField30, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField30)
                     .addContainerGap()))
         );
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel38Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1539,7 +1542,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel39.setBackground(new java.awt.Color(246, 246, 246));
         jPanel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel39.setPreferredSize(new java.awt.Dimension(342, 35));
+        jPanel39.setPreferredSize(new java.awt.Dimension(340, 35));
 
         jFormattedTextField31.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField31.setName("txtfld_Materials/Parts4"); // NOI18N
@@ -1553,16 +1556,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel39Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField31)
                     .addContainerGap()))
         );
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel39Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1583,16 +1586,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel40Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField32)
                     .addContainerGap()))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel40Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1613,16 +1616,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel41.setLayout(jPanel41Layout);
         jPanel41Layout.setHorizontalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel41Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField33, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField33)
                     .addContainerGap()))
         );
         jPanel41Layout.setVerticalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel41Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1645,15 +1648,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel42.setLayout(jPanel42Layout);
         jPanel42Layout.setHorizontalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
+                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel42Layout.setVerticalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 43, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel42);
@@ -1671,46 +1674,47 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel43.setLayout(jPanel43Layout);
         jPanel43Layout.setHorizontalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 238, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
+                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 43, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel43);
 
         jPanel44.setBackground(new java.awt.Color(234, 234, 234));
         jPanel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel44.setPreferredSize(new java.awt.Dimension(102, 45));
+        jPanel44.setPreferredSize(new java.awt.Dimension(100, 45));
 
         jLabel18.setBackground(new java.awt.Color(234, 234, 234));
         jLabel18.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Price");
+        jLabel18.setPreferredSize(new java.awt.Dimension(35, 18));
 
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
         jPanel44Layout.setHorizontalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 98, Short.MAX_VALUE)
             .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 43, Short.MAX_VALUE)
             .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel44);
 
-        jPanel47.setBackground(new java.awt.Color(246, 246, 246));
+        jPanel47.setBackground(new java.awt.Color(234, 234, 234));
         jPanel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel47.setPreferredSize(new java.awt.Dimension(110, 45));
 
@@ -1725,12 +1729,12 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel47Layout.setHorizontalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                .addGap(0, 1, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel47Layout.setVerticalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+            .addComponent(jLabel41)
         );
 
         jPanel4.add(jPanel47);
@@ -1751,16 +1755,16 @@ public class WOInputForm extends javax.swing.JFrame {
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel48Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jFormattedTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addComponent(jFormattedTextField50)
                 .addContainerGap())
             .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel48Layout.createSequentialGroup()
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jFormattedTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField50)
             .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel48Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1781,16 +1785,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel45.setLayout(jPanel45Layout);
         jPanel45Layout.setHorizontalGroup(
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel45Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField34, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField34)
                     .addContainerGap()))
         );
         jPanel45Layout.setVerticalGroup(
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel45Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1811,16 +1815,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel46.setLayout(jPanel46Layout);
         jPanel46Layout.setHorizontalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 238, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel46Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField35, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField35)
                     .addContainerGap()))
         );
         jPanel46Layout.setVerticalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel46Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1832,7 +1836,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel49.setBackground(new java.awt.Color(246, 246, 246));
         jPanel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel49.setPreferredSize(new java.awt.Dimension(102, 35));
+        jPanel49.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField36.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField36.setName("txtfld_LbrPrice1"); // NOI18N
@@ -1841,16 +1845,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel49.setLayout(jPanel49Layout);
         jPanel49Layout.setHorizontalGroup(
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel49Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField36, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField36)
                     .addContainerGap()))
         );
         jPanel49Layout.setVerticalGroup(
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel49Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1860,7 +1864,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel49);
 
-        jPanel50.setBackground(new java.awt.Color(246, 246, 246));
+        jPanel50.setBackground(new java.awt.Color(234, 234, 234));
         jPanel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel50.setPreferredSize(new java.awt.Dimension(110, 35));
 
@@ -1873,15 +1877,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel50.setLayout(jPanel50Layout);
         jPanel50Layout.setHorizontalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel50Layout.createSequentialGroup()
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel50Layout.setVerticalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 37, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel50Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1905,20 +1909,20 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel51.setLayout(jPanel51Layout);
         jPanel51Layout.setHorizontalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel51Layout.createSequentialGroup()
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel51Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField49, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField49)
                     .addContainerGap()))
         );
         jPanel51Layout.setVerticalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel51Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1944,16 +1948,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel52.setLayout(jPanel52Layout);
         jPanel52Layout.setHorizontalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel52Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField37, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField37)
                     .addContainerGap()))
         );
         jPanel52Layout.setVerticalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel52Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1974,16 +1978,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel53.setLayout(jPanel53Layout);
         jPanel53Layout.setHorizontalGroup(
             jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 238, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel53Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField38, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField38)
                     .addContainerGap()))
         );
         jPanel53Layout.setVerticalGroup(
             jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel53Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -1995,7 +1999,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel54.setBackground(new java.awt.Color(246, 246, 246));
         jPanel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel54.setPreferredSize(new java.awt.Dimension(102, 35));
+        jPanel54.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField39.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField39.setName("txtfld_LbrPrice2"); // NOI18N
@@ -2004,16 +2008,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel54.setLayout(jPanel54Layout);
         jPanel54Layout.setHorizontalGroup(
             jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel54Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField39, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField39)
                     .addContainerGap()))
         );
         jPanel54Layout.setVerticalGroup(
             jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel54Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -2034,15 +2038,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel55.setLayout(jPanel55Layout);
         jPanel55Layout.setHorizontalGroup(
             jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel55Layout.createSequentialGroup()
                     .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel55Layout.setVerticalGroup(
             jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel55Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2063,15 +2067,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel56.setLayout(jPanel56Layout);
         jPanel56Layout.setHorizontalGroup(
             jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel56Layout.createSequentialGroup()
                     .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel56Layout.setVerticalGroup(
             jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel56Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2092,16 +2096,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel57.setLayout(jPanel57Layout);
         jPanel57Layout.setHorizontalGroup(
             jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 98, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel57Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField40, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField40)
                     .addContainerGap()))
         );
         jPanel57Layout.setVerticalGroup(
             jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel57Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -2122,16 +2126,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel58.setLayout(jPanel58Layout);
         jPanel58Layout.setHorizontalGroup(
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 238, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel58Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField41, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField41)
                     .addContainerGap()))
         );
         jPanel58Layout.setVerticalGroup(
             jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel58Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -2143,7 +2147,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel59.setBackground(new java.awt.Color(246, 246, 246));
         jPanel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel59.setPreferredSize(new java.awt.Dimension(102, 35));
+        jPanel59.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField42.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField42.setName("txtfld_LbrPrice3"); // NOI18N
@@ -2157,16 +2161,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel59.setLayout(jPanel59Layout);
         jPanel59Layout.setHorizontalGroup(
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel59Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField42, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField42)
                     .addContainerGap()))
         );
         jPanel59Layout.setVerticalGroup(
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel59Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -2187,15 +2191,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel60.setLayout(jPanel60Layout);
         jPanel60Layout.setHorizontalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel60Layout.createSequentialGroup()
                     .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel60Layout.setVerticalGroup(
             jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel60Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2216,15 +2220,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel61.setLayout(jPanel61Layout);
         jPanel61Layout.setHorizontalGroup(
             jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel61Layout.createSequentialGroup()
                     .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel61Layout.setVerticalGroup(
             jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel61Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2234,7 +2238,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel61);
 
-        jPanel62.setBackground(new java.awt.Color(246, 246, 246));
+        jPanel62.setBackground(new java.awt.Color(234, 234, 234));
         jPanel62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel62.setPreferredSize(new java.awt.Dimension(340, 35));
 
@@ -2246,15 +2250,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel62.setLayout(jPanel62Layout);
         jPanel62Layout.setHorizontalGroup(
             jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 338, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel62Layout.createSequentialGroup()
-                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanel62Layout.setVerticalGroup(
             jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 37, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel62Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2266,7 +2270,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel63.setBackground(new java.awt.Color(246, 246, 246));
         jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel63.setPreferredSize(new java.awt.Dimension(102, 35));
+        jPanel63.setPreferredSize(new java.awt.Dimension(100, 35));
 
         jFormattedTextField43.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField43.setName("txtfld_TotalLbr"); // NOI18N
@@ -2275,16 +2279,16 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel63.setLayout(jPanel63Layout);
         jPanel63Layout.setHorizontalGroup(
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel63Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField43, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField43)
                     .addContainerGap()))
         );
         jPanel63Layout.setVerticalGroup(
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel63Layout.createSequentialGroup()
                     .addGap(1, 1, 1)
@@ -2305,15 +2309,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel64.setLayout(jPanel64Layout);
         jPanel64Layout.setHorizontalGroup(
             jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel64Layout.createSequentialGroup()
                     .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel64Layout.setVerticalGroup(
             jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel64Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2334,15 +2338,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel65.setLayout(jPanel65Layout);
         jPanel65Layout.setHorizontalGroup(
             jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel65Layout.createSequentialGroup()
                     .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel65Layout.setVerticalGroup(
             jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel65Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2354,7 +2358,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel66.setBackground(new java.awt.Color(246, 246, 246));
         jPanel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel66.setPreferredSize(new java.awt.Dimension(442, 65));
+        jPanel66.setPreferredSize(new java.awt.Dimension(440, 65));
 
         jLabel20.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel20.setText("Charge to");
@@ -2370,7 +2374,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel20)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField44, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField44, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel66Layout.setVerticalGroup(
             jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2395,15 +2399,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel67.setLayout(jPanel67Layout);
         jPanel67Layout.setHorizontalGroup(
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel67Layout.createSequentialGroup()
                     .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel67Layout.setVerticalGroup(
             jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 63, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel67Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2424,15 +2428,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel68.setLayout(jPanel68Layout);
         jPanel68Layout.setHorizontalGroup(
             jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel68Layout.createSequentialGroup()
                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel68Layout.setVerticalGroup(
             jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 63, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel68Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2460,7 +2464,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel34)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField45, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel69Layout.setVerticalGroup(
             jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2476,7 +2480,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel70.setBackground(new java.awt.Color(246, 246, 246));
         jPanel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel70.setPreferredSize(new java.awt.Dimension(102, 65));
+        jPanel70.setPreferredSize(new java.awt.Dimension(100, 65));
 
         jLabel35.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel35.setText("Date");
@@ -2492,7 +2496,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel35)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField46, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField46, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel70Layout.setVerticalGroup(
             jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2506,7 +2510,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel70);
 
-        jPanel71.setBackground(new java.awt.Color(246, 246, 246));
+        jPanel71.setBackground(new java.awt.Color(234, 234, 234));
         jPanel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel71.setPreferredSize(new java.awt.Dimension(110, 65));
 
@@ -2520,14 +2524,14 @@ public class WOInputForm extends javax.swing.JFrame {
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel71Layout.createSequentialGroup()
                 .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel71Layout.setVerticalGroup(
             jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel71Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel36)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel71);
@@ -2546,29 +2550,29 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel72.setLayout(jPanel72Layout);
         jPanel72Layout.setHorizontalGroup(
             jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel72Layout.createSequentialGroup()
                     .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel72Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField52, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
-                    .addGap(14, 14, 14)))
+                    .addComponent(jFormattedTextField52)
+                    .addContainerGap()))
         );
         jPanel72Layout.setVerticalGroup(
             jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 63, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel72Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
                     .addComponent(jLabel37)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel72Layout.createSequentialGroup()
+                .addGroup(jPanel72Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jFormattedTextField52, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField52)
                     .addContainerGap()))
         );
 
@@ -2576,7 +2580,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel73.setBackground(new java.awt.Color(246, 246, 246));
         jPanel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel73.setPreferredSize(new java.awt.Dimension(442, 65));
+        jPanel73.setPreferredSize(new java.awt.Dimension(440, 65));
 
         jLabel38.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel38.setText("Inspected / Approved by");
@@ -2592,7 +2596,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel38)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField47, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel73Layout.setVerticalGroup(
             jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2624,7 +2628,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel39)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField48, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel74Layout.setVerticalGroup(
             jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2638,24 +2642,31 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel74);
 
-        jButton1.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 18)); // NOI18N
-        jButton1.setText("SAVE");
-        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
+        bttnSave.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 18)); // NOI18N
+        bttnSave.setText("SAVE");
+        bttnSave.setBorder(new javax.swing.border.MatteBorder(null));
+        bttnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(301, 301, 301)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2663,8 +2674,8 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bttnSave)
                 .addGap(41, 41, 41))
         );
 
@@ -2678,10 +2689,11 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1568, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1550, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField3ActionPerformed
@@ -2760,6 +2772,60 @@ public class WOInputForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField31ActionPerformed
 
+    private void bttnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                         
+//        try {
+//
+//            Class.forName(strDriver);
+//            objConn = DriverManager.getConnection(strConn, strUser, strPass);
+//
+//            String SQLWorkOrder = "INSERT INTO WORK_ORDER" +
+//                    "(DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy,"
+//                    + "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total) VALUES " +
+//                    "('" + txtCFBDATE + "', '" + txtCFBNAME + "', '" + strCFBPosition + "', '" + txtCFB1Address + "', '" + txtCFB2Date + "', '" + txtCFB3Cough + "', "
+//                    + boolCFB1 + ", " + boolCFB2 + ", " + boolCFB3 + ", " + boolCFB4 + ");";
+//
+//           String SQLService = "INSERT INTO SERVICE" +
+//                    "(ServiceID, NatureofService, Description) VALUES " +
+//
+//
+//           String SQLMaterial = "INSERT INTO MATERIAL" +
+//                    "(MatID, QTY, MatName, MatPrice, MatAmount) VALUES " +
+//
+//
+//           String SQLLabor = "INSERT INTO LABOR" +
+//                    "(Hours, Labor, LaborAmount) VALUES " +
+//
+//            Statement objSQLQuery = objConn.createStatement();
+//
+//            System.out.println("Database setup complete.");
+//            objSQLQuery.executeUpdate(strSQLCFBInsertCFB);
+//            System.out.println("Database insert complete.");
+//
+//
+//        } catch (Exception objEx) {
+//
+//            System.out.println("Database setup failed!");
+//            System.out.println(objEx.toString());
+//
+//        } finally {
+//
+//            if (objConn != null) {
+//
+//                try {
+//                    objConn.close();
+//                } catch (Exception objEx) {
+//                    System.out.println("Problem closing the database!");
+//                    System.out.println(objEx);
+//                }
+//
+//            }
+//
+//            System.out.println("The finally block will always execute..");
+//
+//      }
+    }
+
+
     /**
      * @param args the command line arguments
      */
@@ -2796,7 +2862,7 @@ public class WOInputForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton bttnSave;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;

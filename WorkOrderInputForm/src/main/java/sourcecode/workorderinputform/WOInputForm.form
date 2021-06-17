@@ -6,6 +6,9 @@
     <Property name="title" type="java.lang.String" value="Work Order Input Form"/>
     <Property name="alwaysOnTop" type="boolean" value="true"/>
     <Property name="name" type="java.lang.String" value="woinputFrame" noResource="true"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[700, 600]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -31,7 +34,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="0" pref="1483" max="32767" attributes="0"/>
+          <Component id="jScrollPane1" alignment="0" pref="1568" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -45,7 +48,7 @@
           <ComponentRef name="null"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[700, 700]"/>
+          <Dimension value="[700, 1570]"/>
         </Property>
       </Properties>
 
@@ -53,8 +56,11 @@
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="f3" green="f3" red="f3" type="rgb"/>
+            </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[700, 700]"/>
+              <Dimension value="[700, 1570]"/>
             </Property>
           </Properties>
 
@@ -62,9 +68,17 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel4" min="-2" pref="664" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jPanel4" min="-2" pref="664" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="301" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -73,8 +87,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel4" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanel4" min="-2" pref="1342" max="-2" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -85,21 +102,57 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="700" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Component id="jLabel40" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel33" min="-2" pref="664" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="121" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel33">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Montserrat SemiBold" size="36" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="MAINTENANCE WORK ORDER"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel40">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Century Gothic" size="18" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="INFORMATION TECHNOLOGY DEPARTMENT"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel4">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder/>
+                    <LineBorder roundedCorners="true"/>
                   </Border>
                 </Property>
               </Properties>
@@ -112,6 +165,9 @@
               <SubComponents>
                 <Container class="javax.swing.JPanel" name="jPanel5">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -130,7 +186,7 @@
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jFormattedTextField1" alignment="1" pref="218" max="32767" attributes="0"/>
+                          <Component id="txtfld_dateofcreation" alignment="1" pref="218" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
@@ -139,7 +195,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField1" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="txtfld_dateofcreation" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -149,24 +205,32 @@
                     <Component class="javax.swing.JLabel" name="jLabel1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Date"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField1">
+                    <Component class="javax.swing.JFormattedTextField" name="txtfld_dateofcreation">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_dateofcreation" noResource="true"/>
                       </Properties>
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtfld_dateofcreation"/>
+                      </AccessibilityProperties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFormattedTextField1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfld_dateofcreationActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel6">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -215,22 +279,27 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField2">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Time" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel2">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Time"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox3">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
+                          <Font name="Montserrat Light" size="10" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="PM"/>
                         <Property name="name" type="java.lang.String" value="hckbox_TimeCreationPm" noResource="true"/>
@@ -238,8 +307,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox4">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
+                          <Font name="Montserrat Light" size="10" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="AM"/>
                         <Property name="name" type="java.lang.String" value="chckbox_TimeCreationAm" noResource="true"/>
@@ -249,6 +321,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel1">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -265,7 +340,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="148" max="32767" attributes="0"/>
+                              <EmptySpace pref="139" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jFormattedTextField3" alignment="1" max="32767" attributes="0"/>
                       </Group>
@@ -284,7 +359,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField3">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Takenby" noResource="true"/>
                       </Properties>
                       <Events>
@@ -294,7 +371,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel3">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Taken By"/>
                       </Properties>
@@ -303,6 +380,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel7">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -340,14 +420,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel4">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Requested By"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField4">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Requestedby" noResource="true"/>
                       </Properties>
                     </Component>
@@ -355,6 +437,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel8">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -371,7 +456,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="178" max="32767" attributes="0"/>
+                              <EmptySpace pref="171" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jFormattedTextField5" alignment="0" pref="218" max="32767" attributes="0"/>
                       </Group>
@@ -391,14 +476,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel5">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Dept"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField5">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Dept" noResource="true"/>
                       </Properties>
                       <Events>
@@ -409,6 +496,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel9">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -446,14 +536,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel6">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="BLDG / Floor"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField6">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_bldg/floor1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -461,6 +553,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel10">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -498,14 +593,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel7">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="BLDG / Floor"/>
+                        <Property name="text" type="java.lang.String" value="Machine No."/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField7">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_bldg/floor2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -513,6 +610,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel11">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -550,14 +650,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel8">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="BLDG / Floor"/>
+                        <Property name="text" type="java.lang.String" value="Date Wanted"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField8">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_bldg/floor3" noResource="true"/>
                       </Properties>
                     </Component>
@@ -566,7 +668,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel12">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -597,8 +699,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel9">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ea" green="ea" red="ea" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="DESCRIPTION OF WORK REQUIRED"/>
@@ -608,6 +713,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel13">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -628,7 +736,8 @@
                                   <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField9" pref="553" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField9" pref="535" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -652,8 +761,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox1">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
@@ -663,8 +775,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox2">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
@@ -674,7 +789,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField9">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Descrption1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -682,6 +799,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel14">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -702,7 +822,8 @@
                                   <Component id="jCheckBox5" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField11" pref="553" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField11" pref="535" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -726,8 +847,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox5">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
@@ -737,8 +861,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox6">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
@@ -748,7 +875,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField11">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Descrption2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -756,6 +885,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel15">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -776,7 +908,8 @@
                                   <Component id="jCheckBox7" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField12" pref="553" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField12" pref="535" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -800,8 +933,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox7">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
@@ -811,8 +947,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox8">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
@@ -822,7 +961,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField12">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Descrption3" noResource="true"/>
                       </Properties>
                     </Component>
@@ -830,6 +971,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel16">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -850,7 +994,8 @@
                                   <Component id="jCheckBox9" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField13" pref="553" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField13" pref="535" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -874,8 +1019,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox9">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
@@ -885,8 +1033,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox10">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
@@ -896,7 +1047,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField13">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Descrption4" noResource="true"/>
                       </Properties>
                     </Component>
@@ -904,6 +1057,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel17">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -924,7 +1080,8 @@
                                   <Component id="jCheckBox11" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField14" pref="553" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField14" pref="535" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -948,8 +1105,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox11">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
@@ -959,8 +1119,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox12">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
@@ -970,7 +1133,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField14">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Descrption5" noResource="true"/>
                       </Properties>
                     </Component>
@@ -978,6 +1143,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel18">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -998,7 +1166,8 @@
                                   <Component id="jCheckBox13" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField15" pref="553" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField15" pref="535" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1022,8 +1191,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox13">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
@@ -1033,8 +1205,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox14">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
@@ -1044,7 +1219,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField15">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Descrption6" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1052,6 +1229,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel19">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1072,7 +1252,8 @@
                                   <Component id="jCheckBox15" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jFormattedTextField16" pref="553" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField16" pref="535" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1096,8 +1277,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox15">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
@@ -1107,8 +1291,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox16">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
+                          <Font name="Montserrat Light" size="12" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
@@ -1118,7 +1305,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField16">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Descrption7" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1126,6 +1315,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel20">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1142,7 +1334,7 @@
                           <Component id="jFormattedTextField10" alignment="0" pref="440" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel10" min="-2" pref="115" max="-2" attributes="0"/>
+                              <Component id="jLabel10" min="-2" pref="128" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1163,14 +1355,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel10">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Scheduled Date"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField10">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_ScheduledDate" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1178,6 +1372,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel21">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1227,15 +1424,18 @@
                     <Component class="javax.swing.JLabel" name="jLabel12">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Time"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox17">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
+                          <Font name="Montserrat Light" size="10" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="AM"/>
                         <Property name="name" type="java.lang.String" value="hckbox_SchedCreationAm" noResource="true"/>
@@ -1243,8 +1443,11 @@
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="jCheckBox18">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="10" style="0"/>
+                          <Font name="Montserrat Light" size="10" style="0"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="PM"/>
                         <Property name="name" type="java.lang.String" value="hckbox_SchedCreationPM" noResource="true"/>
@@ -1252,7 +1455,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField18">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_TimeSched" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1261,7 +1466,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel22">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1284,7 +1489,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -1299,7 +1504,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel11">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="QTY"/>
@@ -1310,7 +1515,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel23">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1333,7 +1538,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -1348,7 +1553,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel13">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Materials / Parts"/>
@@ -1359,7 +1564,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel24">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1385,7 +1590,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -1400,7 +1605,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel14">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Price"/>
@@ -1411,7 +1616,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel25">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1437,7 +1642,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -1452,7 +1657,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel15">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Amount"/>
@@ -1462,6 +1667,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel26">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1501,7 +1709,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField17">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_qty1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1509,6 +1719,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel27">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1548,7 +1761,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField19">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Materials/Parts1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1556,6 +1771,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel28">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1595,7 +1813,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField20">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_MatPrice1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1603,6 +1823,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel29">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1642,7 +1865,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField21">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Amount1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1650,6 +1875,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel30">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1689,7 +1917,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField22">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_qty2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1697,6 +1927,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel31">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1736,7 +1969,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField23">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Materials/Parts2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1744,6 +1979,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel32">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1783,7 +2021,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField24">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_MatPrice2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1791,6 +2031,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel33">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1830,7 +2073,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField25">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Amount2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1838,6 +2083,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel34">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1877,7 +2125,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField26">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_qty3" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1885,6 +2135,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel35">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1924,14 +2177,22 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField27">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Materials/Parts3" noResource="true"/>
                       </Properties>
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtfld_Materials/Parts3"/>
+                      </AccessibilityProperties>
                     </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel36">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -1971,7 +2232,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField28">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_MatPrice3" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1979,6 +2242,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel37">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2018,7 +2284,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField29">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Amount3" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2026,6 +2294,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel38">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2065,7 +2336,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField30">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_qty4" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2073,6 +2346,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel39">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2112,14 +2388,22 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField31">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Materials/Parts4" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFormattedTextField31ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel40">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2159,7 +2443,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField32">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_MatPrice4" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2167,6 +2453,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel41">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2206,7 +2495,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField33">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Amount4" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2215,7 +2506,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel42">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2223,7 +2514,7 @@
                       </Border>
                     </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[100, 35]"/>
+                      <Dimension value="[100, 45]"/>
                     </Property>
                   </Properties>
 
@@ -2238,13 +2529,9 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="43" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jLabel16" alignment="1" pref="43" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2252,8 +2539,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel16">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ea" green="ea" red="ea" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Hours"/>
@@ -2264,7 +2554,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel43">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2272,7 +2562,7 @@
                       </Border>
                     </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[240, 35]"/>
+                      <Dimension value="[240, 45]"/>
                     </Property>
                   </Properties>
 
@@ -2287,13 +2577,9 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="43" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jLabel17" alignment="1" pref="43" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2301,8 +2587,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel17">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ea" green="ea" red="ea" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Labor"/>
@@ -2313,7 +2602,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel44">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="ea" green="ea" red="ea" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2321,31 +2610,24 @@
                       </Border>
                     </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[102, 35]"/>
+                      <Dimension value="[102, 45]"/>
                     </Property>
                   </Properties>
 
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="107" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel18" min="-2" pref="107" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jLabel18" alignment="0" pref="100" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="43" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jLabel18" alignment="1" pref="43" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2353,8 +2635,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel18">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ea" green="ea" red="ea" type="rgb"/>
+                        </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Price"/>
@@ -2365,7 +2650,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel47">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2373,46 +2658,37 @@
                       </Border>
                     </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[110, 35]"/>
+                      <Dimension value="[110, 45]"/>
                     </Property>
                   </Properties>
 
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="108" max="32767" attributes="0"/>
-                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel21" min="-2" pref="107" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
-                              </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                              <Component id="jLabel41" min="-2" pref="107" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
-                          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jLabel41" alignment="0" pref="43" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel21">
+                    <Component class="javax.swing.JLabel" name="jLabel41">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="Total Materials"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Total&lt;br&gt; Materials&lt;/p&gt;&lt;/html&gt;"/>
+                        <Property name="horizontalTextPosition" type="int" value="0"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -2420,7 +2696,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel48">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2428,43 +2704,33 @@
                       </Border>
                     </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[110, 35]"/>
+                      <Dimension value="[110, 45]"/>
                     </Property>
                   </Properties>
 
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="108" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jFormattedTextField50" pref="88" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel22" min="-2" pref="107" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Component id="jFormattedTextField50" pref="80" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
+                          <Component id="jFormattedTextField50" alignment="0" pref="43" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                                   <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                  <Component id="jFormattedTextField50" min="-2" pref="30" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -2482,7 +2748,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField50">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_TotalMat" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2490,6 +2758,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel45">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2529,7 +2800,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField34">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_hrs1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2537,6 +2810,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel46">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2576,7 +2852,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField35">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Labor1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2584,6 +2862,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel49">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2623,7 +2904,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField36">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_LbrPrice1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2632,7 +2915,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel50">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2658,7 +2941,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -2676,7 +2959,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Total Labor"/>
@@ -2687,7 +2970,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel51">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2710,10 +2993,10 @@
                               </Group>
                           </Group>
                           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                  <Component id="jFormattedTextField49" pref="80" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jFormattedTextField49" pref="88" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -2749,7 +3032,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField49">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_TotalLbr" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2757,6 +3042,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel52">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2796,7 +3084,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField37">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_hrs2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2804,6 +3094,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel53">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2843,7 +3136,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField38">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Labor2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2851,6 +3146,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel54">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -2890,7 +3188,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField39">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_LbrPrice2" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2899,7 +3199,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel55">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2950,7 +3250,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel56">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3000,6 +3300,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel57">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3039,7 +3342,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField40">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_hrs3" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3047,6 +3352,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel58">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3086,7 +3394,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField41">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Labor3" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3094,6 +3404,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel59">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3133,7 +3446,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField42">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_LbrPrice3" noResource="true"/>
                       </Properties>
                       <Events>
@@ -3145,7 +3460,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel60">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3196,7 +3511,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel61">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3247,7 +3562,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel62">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3273,7 +3588,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -3288,7 +3603,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel19">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" value="TOTAL LABOR"/>
@@ -3298,6 +3613,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel63">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3337,7 +3655,9 @@
                   <SubComponents>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField43">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_TotalLbr" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3346,7 +3666,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel64">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3397,7 +3717,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel65">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3447,6 +3767,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel66">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3484,14 +3807,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel20">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Charge to"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField44">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_ChargeTo" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3500,7 +3825,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel67">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3551,7 +3876,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel68">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3601,6 +3926,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel69">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3638,14 +3966,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel34">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Work completed by"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField45">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_WrkCompBy" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3653,6 +3983,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel70">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3690,14 +4023,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel35">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Date"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField46">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_DateComp" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3706,7 +4041,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel71">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3732,7 +4067,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="24" max="32767" attributes="0"/>
+                              <EmptySpace pref="23" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3741,7 +4076,7 @@
                     <Component class="javax.swing.JLabel" name="jLabel36">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="TOTAL"/>
@@ -3752,7 +4087,7 @@
                 <Container class="javax.swing.JPanel" name="jPanel72">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3814,7 +4149,9 @@
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField52">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_TOTAL" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3822,6 +4159,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel73">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3859,14 +4199,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel38">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Inspected / Approved by"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField47">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_Insp/AppBy" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3874,6 +4216,9 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel74">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="f6" green="f6" red="f6" type="rgb"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
@@ -3911,14 +4256,16 @@
                     <Component class="javax.swing.JLabel" name="jLabel39">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="14" style="0"/>
+                          <Font name="Montserrat" size="14" style="1"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Date"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField48">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Montserrat" size="12" style="0"/>
+                        </Property>
                         <Property name="name" type="java.lang.String" value="txtfld_DateInsp" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3926,6 +4273,19 @@
                 </Container>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Montserrat ExtraBold" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="SAVE"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                    <MatteColorBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>

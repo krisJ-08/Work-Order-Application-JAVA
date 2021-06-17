@@ -30,10 +30,12 @@ public class WOInputForm extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        txtfld_dateofcreation = new javax.swing.JFormattedTextField();
         jPanel6 = new javax.swing.JPanel();
         jFormattedTextField2 = new javax.swing.JFormattedTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -142,7 +144,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel44 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jPanel47 = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
         jPanel48 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jFormattedTextField50 = new javax.swing.JFormattedTextField();
@@ -209,43 +211,67 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel74 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jFormattedTextField48 = new javax.swing.JFormattedTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Work Order Input Form");
         setAlwaysOnTop(true);
         setName("woinputFrame"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(700, 600));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBar(null);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(700, 700));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(700, 1570));
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(700, 700));
+        jPanel2.setBackground(new java.awt.Color(243, 243, 243));
+        jPanel2.setPreferredSize(new java.awt.Dimension(700, 1570));
+
+        jLabel33.setFont(new java.awt.Font("Montserrat SemiBold", 0, 36)); // NOI18N
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setText("MAINTENANCE WORK ORDER");
+
+        jLabel40.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("INFORMATION TECHNOLOGY DEPARTMENT");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 121, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel40)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 0, 0));
 
+        jPanel5.setBackground(new java.awt.Color(246, 246, 246));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel5.setPreferredSize(new java.awt.Dimension(220, 65));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel1.setText("Date");
 
-        jFormattedTextField1.setText("jFormattedTextField1");
-        jFormattedTextField1.setName("txtfld_dateofcreation"); // NOI18N
-        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtfld_dateofcreation.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        txtfld_dateofcreation.setName("txtfld_dateofcreation"); // NOI18N
+        txtfld_dateofcreation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ActionPerformed(evt);
+                txtfld_dateofcreationActionPerformed(evt);
             }
         });
 
@@ -257,7 +283,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+            .addComponent(txtfld_dateofcreation, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,26 +291,31 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtfld_dateofcreation, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        txtfld_dateofcreation.getAccessibleContext().setAccessibleName("txtfld_dateofcreation");
+
         jPanel4.add(jPanel5);
 
+        jPanel6.setBackground(new java.awt.Color(246, 246, 246));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel6.setPreferredSize(new java.awt.Dimension(222, 65));
 
-        jFormattedTextField2.setText("jFormattedTextField1");
+        jFormattedTextField2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField2.setName("txtfld_Time"); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel2.setText("Time");
 
-        jCheckBox3.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jCheckBox3.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox3.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         jCheckBox3.setText("PM");
         jCheckBox3.setName("hckbox_TimeCreationPm"); // NOI18N
 
-        jCheckBox4.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jCheckBox4.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox4.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         jCheckBox4.setText("AM");
         jCheckBox4.setName("chckbox_TimeCreationAm"); // NOI18N
 
@@ -319,10 +350,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel6);
 
+        jPanel1.setBackground(new java.awt.Color(246, 246, 246));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setPreferredSize(new java.awt.Dimension(220, 65));
 
-        jFormattedTextField3.setText("jFormattedTextField1");
+        jFormattedTextField3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField3.setName("txtfld_Takenby"); // NOI18N
         jFormattedTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -330,7 +362,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel3.setText("Taken By");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -340,7 +372,7 @@ public class WOInputForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
             .addComponent(jFormattedTextField3, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel1Layout.setVerticalGroup(
@@ -354,13 +386,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel1);
 
+        jPanel7.setBackground(new java.awt.Color(246, 246, 246));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel7.setPreferredSize(new java.awt.Dimension(442, 65));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel4.setText("Requested By");
 
-        jFormattedTextField4.setText("jFormattedTextField1");
+        jFormattedTextField4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField4.setName("txtfld_Requestedby"); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -385,13 +418,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel7);
 
+        jPanel8.setBackground(new java.awt.Color(246, 246, 246));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel8.setPreferredSize(new java.awt.Dimension(220, 65));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel5.setText("Dept");
 
-        jFormattedTextField5.setText("jFormattedTextField1");
+        jFormattedTextField5.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField5.setName("txtfld_Dept"); // NOI18N
         jFormattedTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -406,7 +440,7 @@ public class WOInputForm extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
             .addComponent(jFormattedTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
@@ -420,13 +454,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel8);
 
+        jPanel9.setBackground(new java.awt.Color(246, 246, 246));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel9.setPreferredSize(new java.awt.Dimension(220, 65));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel6.setText("BLDG / Floor");
 
-        jFormattedTextField6.setText("jFormattedTextField1");
+        jFormattedTextField6.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField6.setName("txtfld_bldg/floor1"); // NOI18N
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -451,13 +486,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel9);
 
+        jPanel10.setBackground(new java.awt.Color(246, 246, 246));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel10.setPreferredSize(new java.awt.Dimension(222, 65));
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel7.setText("BLDG / Floor");
+        jLabel7.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        jLabel7.setText("Machine No.");
 
-        jFormattedTextField7.setText("jFormattedTextField1");
+        jFormattedTextField7.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField7.setName("txtfld_bldg/floor2"); // NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -482,13 +518,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel10);
 
+        jPanel11.setBackground(new java.awt.Color(246, 246, 246));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel11.setPreferredSize(new java.awt.Dimension(220, 65));
 
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel8.setText("BLDG / Floor");
+        jLabel8.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        jLabel8.setText("Date Wanted");
 
-        jFormattedTextField8.setText("jFormattedTextField1");
+        jFormattedTextField8.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField8.setName("txtfld_bldg/floor3"); // NOI18N
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
@@ -513,11 +550,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel11);
 
-        jPanel12.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel12.setBackground(new java.awt.Color(234, 234, 234));
         jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel12.setPreferredSize(new java.awt.Dimension(662, 35));
 
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel9.setBackground(new java.awt.Color(234, 234, 234));
+        jLabel9.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("DESCRIPTION OF WORK REQUIRED");
 
@@ -537,10 +575,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel12);
 
+        jPanel13.setBackground(new java.awt.Color(246, 246, 246));
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel13.setPreferredSize(new java.awt.Dimension(662, 70));
 
-        jCheckBox1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox1.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox1.setText("Repair");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -548,7 +588,8 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox2.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox2.setText("Maintenance");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -556,7 +597,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField9.setText("jFormattedTextField1");
+        jFormattedTextField9.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField9.setName("txtfld_Descrption1"); // NOI18N
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -569,7 +610,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox2)
                     .addComponent(jCheckBox1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jFormattedTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -586,10 +628,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel13);
 
+        jPanel14.setBackground(new java.awt.Color(246, 246, 246));
         jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel14.setPreferredSize(new java.awt.Dimension(662, 70));
 
-        jCheckBox5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox5.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox5.setText("Repair");
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -597,7 +641,8 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox6.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox6.setText("Maintenance");
         jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -605,7 +650,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField11.setText("jFormattedTextField1");
+        jFormattedTextField11.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField11.setName("txtfld_Descrption2"); // NOI18N
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -618,7 +663,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox6)
                     .addComponent(jCheckBox5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jFormattedTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -635,10 +681,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel14);
 
+        jPanel15.setBackground(new java.awt.Color(246, 246, 246));
         jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel15.setPreferredSize(new java.awt.Dimension(662, 70));
 
-        jCheckBox7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox7.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox7.setText("Repair");
         jCheckBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -646,7 +694,8 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox8.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox8.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox8.setText("Maintenance");
         jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -654,7 +703,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField12.setText("jFormattedTextField1");
+        jFormattedTextField12.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField12.setName("txtfld_Descrption3"); // NOI18N
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
@@ -667,7 +716,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox8)
                     .addComponent(jCheckBox7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jFormattedTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -684,10 +734,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel15);
 
+        jPanel16.setBackground(new java.awt.Color(246, 246, 246));
         jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel16.setPreferredSize(new java.awt.Dimension(662, 70));
 
-        jCheckBox9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox9.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox9.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox9.setText("Repair");
         jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -695,7 +747,8 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox10.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox10.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox10.setText("Maintenance");
         jCheckBox10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -703,7 +756,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField13.setText("jFormattedTextField1");
+        jFormattedTextField13.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField13.setName("txtfld_Descrption4"); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -716,7 +769,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox10)
                     .addComponent(jCheckBox9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jFormattedTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -733,10 +787,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel16);
 
+        jPanel17.setBackground(new java.awt.Color(246, 246, 246));
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel17.setPreferredSize(new java.awt.Dimension(662, 70));
 
-        jCheckBox11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox11.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox11.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox11.setText("Repair");
         jCheckBox11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -744,7 +800,8 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox12.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox12.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox12.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox12.setText("Maintenance");
         jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -752,7 +809,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField14.setText("jFormattedTextField1");
+        jFormattedTextField14.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField14.setName("txtfld_Descrption5"); // NOI18N
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
@@ -765,7 +822,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox12)
                     .addComponent(jCheckBox11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jFormattedTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -782,10 +840,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel17);
 
+        jPanel18.setBackground(new java.awt.Color(246, 246, 246));
         jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel18.setPreferredSize(new java.awt.Dimension(662, 70));
 
-        jCheckBox13.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox13.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox13.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox13.setText("Repair");
         jCheckBox13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -793,7 +853,8 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox14.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox14.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox14.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox14.setText("Maintenance");
         jCheckBox14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -801,7 +862,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField15.setText("jFormattedTextField1");
+        jFormattedTextField15.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField15.setName("txtfld_Descrption6"); // NOI18N
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
@@ -814,7 +875,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox14)
                     .addComponent(jCheckBox13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jFormattedTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -831,10 +893,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel18);
 
+        jPanel19.setBackground(new java.awt.Color(246, 246, 246));
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel19.setPreferredSize(new java.awt.Dimension(662, 70));
 
-        jCheckBox15.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox15.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox15.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox15.setText("Repair");
         jCheckBox15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -842,7 +906,8 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox16.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jCheckBox16.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox16.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         jCheckBox16.setText("Maintenance");
         jCheckBox16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -850,7 +915,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField16.setText("jFormattedTextField1");
+        jFormattedTextField16.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField16.setName("txtfld_Descrption7"); // NOI18N
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
@@ -863,7 +928,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox16)
                     .addComponent(jCheckBox15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
+                .addComponent(jFormattedTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -880,13 +946,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel19);
 
+        jPanel20.setBackground(new java.awt.Color(246, 246, 246));
         jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel20.setPreferredSize(new java.awt.Dimension(442, 65));
 
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel10.setText("Scheduled Date");
 
-        jFormattedTextField10.setText("jFormattedTextField1");
+        jFormattedTextField10.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField10.setName("txtfld_ScheduledDate"); // NOI18N
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
@@ -896,7 +963,7 @@ public class WOInputForm extends javax.swing.JFrame {
             .addComponent(jFormattedTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
@@ -911,21 +978,24 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel20);
 
+        jPanel21.setBackground(new java.awt.Color(246, 246, 246));
         jPanel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel21.setPreferredSize(new java.awt.Dimension(220, 65));
 
-        jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel12.setText("Time");
 
-        jCheckBox17.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jCheckBox17.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox17.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         jCheckBox17.setText("AM");
         jCheckBox17.setName("hckbox_SchedCreationAm"); // NOI18N
 
-        jCheckBox18.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jCheckBox18.setBackground(new java.awt.Color(246, 246, 246));
+        jCheckBox18.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         jCheckBox18.setText("PM");
         jCheckBox18.setName("hckbox_SchedCreationPM"); // NOI18N
 
-        jFormattedTextField18.setText("jFormattedTextField1");
+        jFormattedTextField18.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField18.setName("txtfld_TimeSched"); // NOI18N
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
@@ -959,11 +1029,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel21);
 
-        jPanel22.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel22.setBackground(new java.awt.Color(234, 234, 234));
         jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel22.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("QTY");
 
@@ -977,7 +1047,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 37, Short.MAX_VALUE)
             .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel22Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -987,11 +1057,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel22);
 
-        jPanel23.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel23.setBackground(new java.awt.Color(234, 234, 234));
         jPanel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel23.setPreferredSize(new java.awt.Dimension(342, 35));
 
-        jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Materials / Parts");
 
@@ -1005,7 +1075,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 37, Short.MAX_VALUE)
             .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel23Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1015,11 +1085,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel23);
 
-        jPanel24.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel24.setBackground(new java.awt.Color(234, 234, 234));
         jPanel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel24.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jLabel14.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("Price");
 
@@ -1035,7 +1105,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 37, Short.MAX_VALUE)
             .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel24Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1045,11 +1115,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel24);
 
-        jPanel25.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel25.setBackground(new java.awt.Color(234, 234, 234));
         jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel25.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Amount");
 
@@ -1065,7 +1135,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 37, Short.MAX_VALUE)
             .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel25Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1075,10 +1145,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel25);
 
+        jPanel26.setBackground(new java.awt.Color(246, 246, 246));
         jPanel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel26.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jFormattedTextField17.setText("jFormattedTextField1");
+        jFormattedTextField17.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField17.setName("txtfld_qty1"); // NOI18N
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
@@ -1104,10 +1175,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel26);
 
+        jPanel27.setBackground(new java.awt.Color(246, 246, 246));
         jPanel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel27.setPreferredSize(new java.awt.Dimension(342, 35));
 
-        jFormattedTextField19.setText("jFormattedTextField1");
+        jFormattedTextField19.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField19.setName("txtfld_Materials/Parts1"); // NOI18N
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
@@ -1133,10 +1205,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel27);
 
+        jPanel28.setBackground(new java.awt.Color(246, 246, 246));
         jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel28.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField20.setText("jFormattedTextField1");
+        jFormattedTextField20.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField20.setName("txtfld_MatPrice1"); // NOI18N
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
@@ -1162,10 +1235,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel28);
 
+        jPanel29.setBackground(new java.awt.Color(246, 246, 246));
         jPanel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel29.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField21.setText("jFormattedTextField1");
+        jFormattedTextField21.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField21.setName("txtfld_Amount1"); // NOI18N
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
@@ -1191,10 +1265,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel29);
 
+        jPanel30.setBackground(new java.awt.Color(246, 246, 246));
         jPanel30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel30.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jFormattedTextField22.setText("jFormattedTextField1");
+        jFormattedTextField22.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField22.setName("txtfld_qty2"); // NOI18N
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
@@ -1220,10 +1295,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel30);
 
+        jPanel31.setBackground(new java.awt.Color(246, 246, 246));
         jPanel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel31.setPreferredSize(new java.awt.Dimension(342, 35));
 
-        jFormattedTextField23.setText("jFormattedTextField1");
+        jFormattedTextField23.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField23.setName("txtfld_Materials/Parts2"); // NOI18N
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
@@ -1249,10 +1325,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel31);
 
+        jPanel32.setBackground(new java.awt.Color(246, 246, 246));
         jPanel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel32.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField24.setText("jFormattedTextField1");
+        jFormattedTextField24.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField24.setName("txtfld_MatPrice2"); // NOI18N
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
@@ -1278,10 +1355,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel32);
 
+        jPanel33.setBackground(new java.awt.Color(246, 246, 246));
         jPanel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel33.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField25.setText("jFormattedTextField1");
+        jFormattedTextField25.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField25.setName("txtfld_Amount2"); // NOI18N
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
@@ -1307,10 +1385,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel33);
 
+        jPanel34.setBackground(new java.awt.Color(246, 246, 246));
         jPanel34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel34.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jFormattedTextField26.setText("jFormattedTextField1");
+        jFormattedTextField26.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField26.setName("txtfld_qty3"); // NOI18N
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
@@ -1336,10 +1415,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel34);
 
+        jPanel35.setBackground(new java.awt.Color(246, 246, 246));
         jPanel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel35.setPreferredSize(new java.awt.Dimension(342, 35));
 
-        jFormattedTextField27.setText("jFormattedTextField1");
+        jFormattedTextField27.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField27.setName("txtfld_Materials/Parts3"); // NOI18N
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
@@ -1363,12 +1443,15 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jFormattedTextField27.getAccessibleContext().setAccessibleName("txtfld_Materials/Parts3");
+
         jPanel4.add(jPanel35);
 
+        jPanel36.setBackground(new java.awt.Color(246, 246, 246));
         jPanel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel36.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField28.setText("jFormattedTextField1");
+        jFormattedTextField28.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField28.setName("txtfld_MatPrice3"); // NOI18N
 
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
@@ -1394,10 +1477,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel36);
 
+        jPanel37.setBackground(new java.awt.Color(246, 246, 246));
         jPanel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel37.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField29.setText("jFormattedTextField1");
+        jFormattedTextField29.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField29.setName("txtfld_Amount3"); // NOI18N
 
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
@@ -1423,10 +1507,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel37);
 
+        jPanel38.setBackground(new java.awt.Color(246, 246, 246));
         jPanel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel38.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jFormattedTextField30.setText("jFormattedTextField1");
+        jFormattedTextField30.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField30.setName("txtfld_qty4"); // NOI18N
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
@@ -1452,11 +1537,17 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel38);
 
+        jPanel39.setBackground(new java.awt.Color(246, 246, 246));
         jPanel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel39.setPreferredSize(new java.awt.Dimension(342, 35));
 
-        jFormattedTextField31.setText("jFormattedTextField1");
+        jFormattedTextField31.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField31.setName("txtfld_Materials/Parts4"); // NOI18N
+        jFormattedTextField31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField31ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
@@ -1481,10 +1572,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel39);
 
+        jPanel40.setBackground(new java.awt.Color(246, 246, 246));
         jPanel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel40.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField32.setText("jFormattedTextField1");
+        jFormattedTextField32.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField32.setName("txtfld_MatPrice4"); // NOI18N
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
@@ -1510,10 +1602,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel40);
 
+        jPanel41.setBackground(new java.awt.Color(246, 246, 246));
         jPanel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel41.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        jFormattedTextField33.setText("jFormattedTextField1");
+        jFormattedTextField33.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField33.setName("txtfld_Amount4"); // NOI18N
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
@@ -1539,11 +1632,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel41);
 
-        jPanel42.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel42.setBackground(new java.awt.Color(234, 234, 234));
         jPanel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel42.setPreferredSize(new java.awt.Dimension(100, 35));
+        jPanel42.setPreferredSize(new java.awt.Dimension(100, 45));
 
-        jLabel16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel16.setBackground(new java.awt.Color(234, 234, 234));
+        jLabel16.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Hours");
 
@@ -1557,21 +1651,19 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel42Layout.setVerticalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 43, Short.MAX_VALUE)
             .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel42Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel16)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel42);
 
-        jPanel43.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel43.setBackground(new java.awt.Color(234, 234, 234));
         jPanel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel43.setPreferredSize(new java.awt.Dimension(240, 35));
+        jPanel43.setPreferredSize(new java.awt.Dimension(240, 45));
 
-        jLabel17.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel17.setBackground(new java.awt.Color(234, 234, 234));
+        jLabel17.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Labor");
 
@@ -1585,21 +1677,19 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 43, Short.MAX_VALUE)
             .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel43Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel17)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel43);
 
-        jPanel44.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel44.setBackground(new java.awt.Color(234, 234, 234));
         jPanel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel44.setPreferredSize(new java.awt.Dimension(102, 35));
+        jPanel44.setPreferredSize(new java.awt.Dimension(102, 45));
 
-        jLabel18.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel18.setBackground(new java.awt.Color(234, 234, 234));
+        jLabel18.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Price");
 
@@ -1607,101 +1697,84 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel44.setLayout(jPanel44Layout);
         jPanel44Layout.setHorizontalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 107, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
             .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel44Layout.createSequentialGroup()
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 43, Short.MAX_VALUE)
             .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel44Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel18)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel44);
 
-        jPanel47.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel47.setBackground(new java.awt.Color(246, 246, 246));
         jPanel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel47.setPreferredSize(new java.awt.Dimension(110, 35));
+        jPanel47.setPreferredSize(new java.awt.Dimension(110, 45));
 
-        jLabel21.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel21.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("Total Materials");
+        jLabel41.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel41.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel41.setText("<html><p style=\"text-align: center;\">Total<br> Materials</p></html>");
+        jLabel41.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
         jPanel47Layout.setHorizontalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
-            .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel47Layout.createSequentialGroup()
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel47Layout.setVerticalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
-            .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel47Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel21)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
         );
 
         jPanel4.add(jPanel47);
 
-        jPanel48.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel48.setBackground(new java.awt.Color(246, 246, 246));
         jPanel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel48.setPreferredSize(new java.awt.Dimension(110, 35));
+        jPanel48.setPreferredSize(new java.awt.Dimension(110, 45));
 
         jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jFormattedTextField50.setText("jFormattedTextField1");
+        jFormattedTextField50.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField50.setName("txtfld_TotalMat"); // NOI18N
 
         javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel48Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jFormattedTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel48Layout.createSequentialGroup()
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 1, Short.MAX_VALUE)))
-            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel48Layout.createSequentialGroup()
-                    .addGap(14, 14, 14)
-                    .addComponent(jFormattedTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                    .addGap(14, 14, 14)))
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addComponent(jFormattedTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
             .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel48Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
                     .addComponent(jLabel22)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel48Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(jFormattedTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel48);
 
+        jPanel45.setBackground(new java.awt.Color(246, 246, 246));
         jPanel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel45.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jFormattedTextField34.setText("jFormattedTextField1");
+        jFormattedTextField34.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField34.setName("txtfld_hrs1"); // NOI18N
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
@@ -1727,10 +1800,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel45);
 
+        jPanel46.setBackground(new java.awt.Color(246, 246, 246));
         jPanel46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel46.setPreferredSize(new java.awt.Dimension(240, 35));
 
-        jFormattedTextField35.setText("jFormattedTextField1");
+        jFormattedTextField35.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField35.setName("txtfld_Labor1"); // NOI18N
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
@@ -1756,10 +1830,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel46);
 
+        jPanel49.setBackground(new java.awt.Color(246, 246, 246));
         jPanel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel49.setPreferredSize(new java.awt.Dimension(102, 35));
 
-        jFormattedTextField36.setText("jFormattedTextField1");
+        jFormattedTextField36.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField36.setName("txtfld_LbrPrice1"); // NOI18N
 
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
@@ -1785,12 +1860,12 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel49);
 
-        jPanel50.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel50.setBackground(new java.awt.Color(246, 246, 246));
         jPanel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel50.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jLabel23.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel23.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("Total Labor");
 
@@ -1806,7 +1881,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel50Layout.setVerticalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 37, Short.MAX_VALUE)
             .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel50Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -1816,14 +1891,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel50);
 
-        jPanel51.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel51.setBackground(new java.awt.Color(246, 246, 246));
         jPanel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel51.setPreferredSize(new java.awt.Dimension(110, 35));
 
         jLabel24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jFormattedTextField49.setText("jFormattedTextField1");
+        jFormattedTextField49.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField49.setName("txtfld_TotalLbr"); // NOI18N
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
@@ -1837,9 +1912,9 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addGap(0, 1, Short.MAX_VALUE)))
             .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel51Layout.createSequentialGroup()
-                    .addGap(14, 14, 14)
-                    .addComponent(jFormattedTextField49, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                    .addGap(14, 14, 14)))
+                    .addContainerGap()
+                    .addComponent(jFormattedTextField49, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         jPanel51Layout.setVerticalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1858,10 +1933,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel51);
 
+        jPanel52.setBackground(new java.awt.Color(246, 246, 246));
         jPanel52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel52.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jFormattedTextField37.setText("jFormattedTextField1");
+        jFormattedTextField37.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField37.setName("txtfld_hrs2"); // NOI18N
 
         javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
@@ -1887,10 +1963,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel52);
 
+        jPanel53.setBackground(new java.awt.Color(246, 246, 246));
         jPanel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel53.setPreferredSize(new java.awt.Dimension(240, 35));
 
-        jFormattedTextField38.setText("jFormattedTextField1");
+        jFormattedTextField38.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField38.setName("txtfld_Labor2"); // NOI18N
 
         javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
@@ -1916,10 +1993,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel53);
 
+        jPanel54.setBackground(new java.awt.Color(246, 246, 246));
         jPanel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel54.setPreferredSize(new java.awt.Dimension(102, 35));
 
-        jFormattedTextField39.setText("jFormattedTextField1");
+        jFormattedTextField39.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField39.setName("txtfld_LbrPrice2"); // NOI18N
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
@@ -1945,7 +2023,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel54);
 
-        jPanel55.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel55.setBackground(new java.awt.Color(246, 246, 246));
         jPanel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel55.setPreferredSize(new java.awt.Dimension(110, 35));
 
@@ -1974,7 +2052,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel55);
 
-        jPanel56.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel56.setBackground(new java.awt.Color(246, 246, 246));
         jPanel56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel56.setPreferredSize(new java.awt.Dimension(110, 35));
 
@@ -2003,10 +2081,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel56);
 
+        jPanel57.setBackground(new java.awt.Color(246, 246, 246));
         jPanel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel57.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jFormattedTextField40.setText("jFormattedTextField1");
+        jFormattedTextField40.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField40.setName("txtfld_hrs3"); // NOI18N
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
@@ -2032,10 +2111,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel57);
 
+        jPanel58.setBackground(new java.awt.Color(246, 246, 246));
         jPanel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel58.setPreferredSize(new java.awt.Dimension(240, 35));
 
-        jFormattedTextField41.setText("jFormattedTextField1");
+        jFormattedTextField41.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField41.setName("txtfld_Labor3"); // NOI18N
 
         javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
@@ -2061,10 +2141,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel58);
 
+        jPanel59.setBackground(new java.awt.Color(246, 246, 246));
         jPanel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel59.setPreferredSize(new java.awt.Dimension(102, 35));
 
-        jFormattedTextField42.setText("jFormattedTextField1");
+        jFormattedTextField42.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField42.setName("txtfld_LbrPrice3"); // NOI18N
         jFormattedTextField42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2095,7 +2176,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel59);
 
-        jPanel60.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel60.setBackground(new java.awt.Color(246, 246, 246));
         jPanel60.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel60.setPreferredSize(new java.awt.Dimension(110, 35));
 
@@ -2124,7 +2205,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel60);
 
-        jPanel61.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel61.setBackground(new java.awt.Color(246, 246, 246));
         jPanel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel61.setPreferredSize(new java.awt.Dimension(110, 35));
 
@@ -2153,11 +2234,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel61);
 
-        jPanel62.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel62.setBackground(new java.awt.Color(246, 246, 246));
         jPanel62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel62.setPreferredSize(new java.awt.Dimension(340, 35));
 
-        jLabel19.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("TOTAL LABOR");
 
@@ -2173,7 +2254,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         jPanel62Layout.setVerticalGroup(
             jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 37, Short.MAX_VALUE)
             .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel62Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
@@ -2183,10 +2264,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel62);
 
+        jPanel63.setBackground(new java.awt.Color(246, 246, 246));
         jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel63.setPreferredSize(new java.awt.Dimension(102, 35));
 
-        jFormattedTextField43.setText("jFormattedTextField1");
+        jFormattedTextField43.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField43.setName("txtfld_TotalLbr"); // NOI18N
 
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
@@ -2212,7 +2294,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel63);
 
-        jPanel64.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel64.setBackground(new java.awt.Color(246, 246, 246));
         jPanel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel64.setPreferredSize(new java.awt.Dimension(110, 35));
 
@@ -2241,7 +2323,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel64);
 
-        jPanel65.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel65.setBackground(new java.awt.Color(246, 246, 246));
         jPanel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel65.setPreferredSize(new java.awt.Dimension(110, 35));
 
@@ -2270,13 +2352,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel65);
 
+        jPanel66.setBackground(new java.awt.Color(246, 246, 246));
         jPanel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel66.setPreferredSize(new java.awt.Dimension(442, 65));
 
-        jLabel20.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel20.setText("Charge to");
 
-        jFormattedTextField44.setText("jFormattedTextField1");
+        jFormattedTextField44.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField44.setName("txtfld_ChargeTo"); // NOI18N
 
         javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
@@ -2301,7 +2384,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel66);
 
-        jPanel67.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel67.setBackground(new java.awt.Color(246, 246, 246));
         jPanel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel67.setPreferredSize(new java.awt.Dimension(110, 65));
 
@@ -2330,7 +2413,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel67);
 
-        jPanel68.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel68.setBackground(new java.awt.Color(246, 246, 246));
         jPanel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel68.setPreferredSize(new java.awt.Dimension(110, 65));
 
@@ -2359,13 +2442,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel68);
 
+        jPanel69.setBackground(new java.awt.Color(246, 246, 246));
         jPanel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel69.setPreferredSize(new java.awt.Dimension(340, 65));
 
-        jLabel34.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel34.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel34.setText("Work completed by");
 
-        jFormattedTextField45.setText("jFormattedTextField1");
+        jFormattedTextField45.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField45.setName("txtfld_WrkCompBy"); // NOI18N
 
         javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
@@ -2390,13 +2474,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel69);
 
+        jPanel70.setBackground(new java.awt.Color(246, 246, 246));
         jPanel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel70.setPreferredSize(new java.awt.Dimension(102, 65));
 
-        jLabel35.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel35.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel35.setText("Date");
 
-        jFormattedTextField46.setText("jFormattedTextField1");
+        jFormattedTextField46.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField46.setName("txtfld_DateComp"); // NOI18N
 
         javax.swing.GroupLayout jPanel70Layout = new javax.swing.GroupLayout(jPanel70);
@@ -2421,11 +2506,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel70);
 
-        jPanel71.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel71.setBackground(new java.awt.Color(246, 246, 246));
         jPanel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel71.setPreferredSize(new java.awt.Dimension(110, 65));
 
-        jLabel36.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel36.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel36.setText("TOTAL");
 
@@ -2442,19 +2527,19 @@ public class WOInputForm extends javax.swing.JFrame {
             .addGroup(jPanel71Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel36)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel71);
 
-        jPanel72.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel72.setBackground(new java.awt.Color(246, 246, 246));
         jPanel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel72.setPreferredSize(new java.awt.Dimension(110, 65));
 
         jLabel37.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jFormattedTextField52.setText("jFormattedTextField1");
+        jFormattedTextField52.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField52.setName("txtfld_TOTAL"); // NOI18N
 
         javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
@@ -2489,13 +2574,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel72);
 
+        jPanel73.setBackground(new java.awt.Color(246, 246, 246));
         jPanel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel73.setPreferredSize(new java.awt.Dimension(442, 65));
 
-        jLabel38.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel38.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel38.setText("Inspected / Approved by");
 
-        jFormattedTextField47.setText("jFormattedTextField1");
+        jFormattedTextField47.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField47.setName("txtfld_Insp/AppBy"); // NOI18N
 
         javax.swing.GroupLayout jPanel73Layout = new javax.swing.GroupLayout(jPanel73);
@@ -2520,13 +2606,14 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel73);
 
+        jPanel74.setBackground(new java.awt.Color(246, 246, 246));
         jPanel74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel74.setPreferredSize(new java.awt.Dimension(220, 65));
 
-        jLabel39.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel39.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel39.setText("Date");
 
-        jFormattedTextField48.setText("jFormattedTextField1");
+        jFormattedTextField48.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         jFormattedTextField48.setName("txtfld_DateInsp"); // NOI18N
 
         javax.swing.GroupLayout jPanel74Layout = new javax.swing.GroupLayout(jPanel74);
@@ -2551,22 +2638,34 @@ public class WOInputForm extends javax.swing.JFrame {
 
         jPanel4.add(jPanel74);
 
+        jButton1.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 18)); // NOI18N
+        jButton1.setText("SAVE");
+        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(301, 301, 301)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(41, 41, 41))
         );
 
         jScrollPane1.setViewportView(jPanel2);
@@ -2579,7 +2678,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1483, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1568, Short.MAX_VALUE)
         );
 
         pack();
@@ -2653,9 +2752,13 @@ public class WOInputForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField42ActionPerformed
 
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+    private void txtfld_dateofcreationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfld_dateofcreationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+    }//GEN-LAST:event_txtfld_dateofcreationActionPerformed
+
+    private void jFormattedTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField31ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2693,6 +2796,7 @@ public class WOInputForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
@@ -2711,7 +2815,6 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFormattedTextField jFormattedTextField10;
     private javax.swing.JFormattedTextField jFormattedTextField11;
     private javax.swing.JFormattedTextField jFormattedTextField12;
@@ -2775,7 +2878,6 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
@@ -2788,6 +2890,7 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -2795,6 +2898,8 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2875,5 +2980,6 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JFormattedTextField txtfld_dateofcreation;
     // End of variables declaration//GEN-END:variables
 }

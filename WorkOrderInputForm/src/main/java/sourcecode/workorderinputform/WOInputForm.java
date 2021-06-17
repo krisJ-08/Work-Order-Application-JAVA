@@ -5,11 +5,16 @@
  */
 package sourcecode.workorderinputform;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Kristian
  */
 public class WOInputForm extends javax.swing.JFrame {
+
+    private String TimeCreation;
+    private String SchedTime;
 
     /**
      * Creates new form WOInputForm
@@ -279,9 +284,9 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel1.setText("Date");
 
+        txtfld_dateofcreation.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_dateofcreation.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_dateofcreation.setName("txtfld_dateofcreation"); // NOI18N
-
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -311,6 +316,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel6.setPreferredSize(new java.awt.Dimension(220, 65));
 
+        txtfld_Time.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("h:mm"))));
         txtfld_Time.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Time.setName("txtfld_Time"); // NOI18N
 
@@ -322,12 +328,22 @@ public class WOInputForm extends javax.swing.JFrame {
         hckbox_TimeCreationPm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         hckbox_TimeCreationPm.setText("PM");
         hckbox_TimeCreationPm.setName("hckbox_TimeCreationPm"); // NOI18N
+        hckbox_TimeCreationPm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hckbox_TimeCreationPmActionPerformed(evt);
+            }
+        });
 
         chckbox_TimeCreationAm.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpTimeCreation.add(chckbox_TimeCreationAm);
         chckbox_TimeCreationAm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_TimeCreationAm.setText("AM");
         chckbox_TimeCreationAm.setName("chckbox_TimeCreationAm"); // NOI18N
+        chckbox_TimeCreationAm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_TimeCreationAmActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -366,7 +382,6 @@ public class WOInputForm extends javax.swing.JFrame {
 
         txtfld_Takenby.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Takenby.setName("txtfld_Takenby"); // NOI18N
-
 
         jLabel3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel3.setText("Taken By");
@@ -433,7 +448,6 @@ public class WOInputForm extends javax.swing.JFrame {
 
         txtfld_Dept.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Dept.setName("txtfld_Dept"); // NOI18N
-
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -527,6 +541,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel8.setText("Date Wanted");
 
+        txtfld_DateWanted.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_DateWanted.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateWanted.setName("txtfld_DateWanted"); // NOI18N
 
@@ -585,13 +600,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc1.add(chckbox_Rep1);
         chckbox_Rep1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep1.setText("Repair");
-
+        chckbox_Rep1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep1ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main1.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc1.add(chckbox_Main1);
         chckbox_Main1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main1.setText("Maintenance");
-
+        chckbox_Main1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main1ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption1.setName("txtfld_Descrption1"); // NOI18N
@@ -632,13 +655,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc2.add(chckbox_Rep2);
         chckbox_Rep2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep2.setText("Repair");
-
+        chckbox_Rep2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep2ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main2.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc2.add(chckbox_Main2);
         chckbox_Main2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main2.setText("Maintenance");
-
+        chckbox_Main2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main2ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption2.setName("txtfld_Descrption2"); // NOI18N
@@ -679,13 +710,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc3.add(chckbox_Rep3);
         chckbox_Rep3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep3.setText("Repair");
-
+        chckbox_Rep3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep3ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main3.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc3.add(chckbox_Main3);
         chckbox_Main3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main3.setText("Maintenance");
-
+        chckbox_Main3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main3ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption3.setName("txtfld_Descrption3"); // NOI18N
@@ -726,13 +765,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc4.add(chckbox_Rep4);
         chckbox_Rep4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep4.setText("Repair");
-
+        chckbox_Rep4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep4ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main4.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc4.add(chckbox_Main4);
         chckbox_Main4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main4.setText("Maintenance");
-
+        chckbox_Main4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main4ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption4.setName("txtfld_Descrption4"); // NOI18N
@@ -773,13 +820,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc5.add(chckbox_Rep5);
         chckbox_Rep5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep5.setText("Repair");
-
+        chckbox_Rep5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep5ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main5.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc5.add(chckbox_Main5);
         chckbox_Main5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main5.setText("Maintenance");
-
+        chckbox_Main5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main5ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption5.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption5.setName("txtfld_Descrption5"); // NOI18N
@@ -820,13 +875,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc6.add(chckbox_Rep6);
         chckbox_Rep6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep6.setText("Repair");
-
+        chckbox_Rep6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep6ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main6.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc6.add(chckbox_Main6);
         chckbox_Main6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main6.setText("Maintenance");
-
+        chckbox_Main6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main6ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption6.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption6.setName("txtfld_Descrption6"); // NOI18N
@@ -867,12 +930,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc7.add(chckbox_Rep7);
         chckbox_Rep7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep7.setText("Repair");
+        chckbox_Rep7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep7ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main7.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc7.add(chckbox_Main7);
         chckbox_Main7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main7.setText("Maintenance");
-
+        chckbox_Main7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main7ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption7.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption7.setName("txtfld_Descrption7"); // NOI18N
@@ -912,6 +984,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel10.setText("Scheduled Date");
 
+        txtfld_ScheduledDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_ScheduledDate.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_ScheduledDate.setName("txtfld_ScheduledDate"); // NOI18N
 
@@ -960,7 +1033,13 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_SchedCreationPM.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_SchedCreationPM.setText("PM");
         chckbox_SchedCreationPM.setName("chckbox_SchedCreationPM"); // NOI18N
+        chckbox_SchedCreationPM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_SchedCreationPMActionPerformed(evt);
+            }
+        });
 
+        txtfld_TimeSched.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("h:mm"))));
         txtfld_TimeSched.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TimeSched.setName("txtfld_TimeSched"); // NOI18N
 
@@ -1175,6 +1254,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel28.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_MatPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_MatPrice1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice1.setName("txtfld_MatPrice1"); // NOI18N
 
@@ -1205,6 +1285,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel29.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_Amount1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_Amount1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount1.setName("txtfld_Amount1"); // NOI18N
 
@@ -1295,6 +1376,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel32.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_MatPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_MatPrice2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice2.setName("txtfld_MatPrice2"); // NOI18N
 
@@ -1325,6 +1407,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel33.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_Amount2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_Amount2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount2.setName("txtfld_Amount2"); // NOI18N
 
@@ -1417,6 +1500,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel36.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_MatPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_MatPrice3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice3.setName("txtfld_MatPrice3"); // NOI18N
 
@@ -1447,6 +1531,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel37.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_Amount3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_Amount3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount3.setName("txtfld_Amount3"); // NOI18N
 
@@ -1538,6 +1623,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel40.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_MatPrice4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_MatPrice4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice4.setName("txtfld_MatPrice4"); // NOI18N
 
@@ -1568,6 +1654,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel41.setPreferredSize(new java.awt.Dimension(110, 35));
 
+        txtfld_Amount4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_Amount4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount4.setName("txtfld_Amount4"); // NOI18N
 
@@ -1705,6 +1792,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        txtfld_TotalMat.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_TotalMat.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TotalMat.setName("txtfld_TotalMat"); // NOI18N
 
@@ -1797,6 +1885,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel49.setPreferredSize(new java.awt.Dimension(100, 35));
 
+        txtfld_LbrPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_LbrPrice1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice1.setName("txtfld_LbrPrice1"); // NOI18N
 
@@ -1861,6 +1950,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        txtfld_TotalLbr.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_TotalLbr.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TotalLbr.setName("txtfld_TotalLbr"); // NOI18N
 
@@ -1960,6 +2050,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel54.setPreferredSize(new java.awt.Dimension(100, 35));
 
+        txtfld_LbrPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_LbrPrice2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice2.setName("txtfld_LbrPrice2"); // NOI18N
 
@@ -2108,9 +2199,9 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel59.setPreferredSize(new java.awt.Dimension(100, 35));
 
+        txtfld_LbrPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_LbrPrice3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice3.setName("txtfld_LbrPrice3"); // NOI18N
-
 
         javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
         jPanel59.setLayout(jPanel59Layout);
@@ -2227,6 +2318,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel63.setPreferredSize(new java.awt.Dimension(100, 35));
 
+        txtfld_TotalLaborInit.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_TotalLaborInit.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TotalLaborInit.setName("txtfld_TotalLbr"); // NOI18N
 
@@ -2440,6 +2532,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel35.setText("Date");
 
+        txtfld_DateComp.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_DateComp.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateComp.setName("txtfld_DateComp"); // NOI18N
 
@@ -2498,6 +2591,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel37.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        txtfld_TOTAL.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         txtfld_TOTAL.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TOTAL.setName("txtfld_TOTAL"); // NOI18N
 
@@ -2572,6 +2666,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel39.setText("Date");
 
+        txtfld_DateInsp.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_DateInsp.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateInsp.setName("txtfld_DateInsp"); // NOI18N
 
@@ -2600,6 +2695,7 @@ public class WOInputForm extends javax.swing.JFrame {
         bttnSave.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 18)); // NOI18N
         bttnSave.setText("SAVE");
         bttnSave.setBorder(new javax.swing.border.MatteBorder(null));
+        bttnSave.setEnabled(false);
         bttnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttnSaveActionPerformed(evt);
@@ -2651,11 +2747,266 @@ public class WOInputForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void chckbox_TimeCreationAmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_TimeCreationAmActionPerformed
+        if(chckbox_TimeCreationAm.isSelected()){
+            TimeCreation = " am";
+        }
+    }//GEN-LAST:event_chckbox_TimeCreationAmActionPerformed
+
+    private void hckbox_TimeCreationPmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hckbox_TimeCreationPmActionPerformed
+        if(hckbox_TimeCreationPm.isSelected()){
+            TimeCreation = " pm";
+        }
+    }//GEN-LAST:event_hckbox_TimeCreationPmActionPerformed
+
+    private void chckbox_SchedCreationPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_SchedCreationPMActionPerformed
+        if(chckbox_SchedCreationPM.isSelected()){
+            SchedTime = " pm";
+        }
+    }//GEN-LAST:event_chckbox_SchedCreationPMActionPerformed
+
     private void chckbox_SchedCreationAmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_SchedCreationAmActionPerformed
-        // TODO add your handling code here:
+        if(chckbox_SchedCreationAm.isSelected()){
+            SchedTime = " am";
+        }
     }//GEN-LAST:event_chckbox_SchedCreationAmActionPerformed
 
-    private void bttnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void chckbox_Main1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Main1ActionPerformed
+    }//GEN-LAST:event_chckbox_Main1ActionPerformed
+
+    private void chckbox_Rep1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Rep1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Rep1ActionPerformed
+
+    private void chckbox_Main2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Main2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Main2ActionPerformed
+
+    private void chckbox_Rep2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Rep2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Rep2ActionPerformed
+
+    private void chckbox_Main3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Main3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Main3ActionPerformed
+
+    private void chckbox_Rep3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Rep3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Rep3ActionPerformed
+
+    private void chckbox_Main4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Main4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Main4ActionPerformed
+
+    private void chckbox_Rep4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Rep4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Rep4ActionPerformed
+
+    private void chckbox_Main5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Main5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Main5ActionPerformed
+
+    private void chckbox_Rep5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Rep5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Rep5ActionPerformed
+
+    private void chckbox_Main6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Main6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Main6ActionPerformed
+
+    private void chckbox_Rep6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Rep6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Rep6ActionPerformed
+
+    private void chckbox_Main7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Main7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Main7ActionPerformed
+
+    private void chckbox_Rep7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_Rep7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chckbox_Rep7ActionPerformed
+
+
+    private void bttnSaveActionPerformed(java.awt.event.ActionEvent evt) {
+        {
+            ArrayList<String> tempServiceID = new ArrayList<String>();
+            ArrayList<String> tempNatureofService = new ArrayList<String>();
+
+            if (chckbox_Main1.isSelected()) {
+                tempServiceID.add("M0001");
+                tempNatureofService.add("Maintenance");
+            }
+            if (chckbox_Rep1.isSelected()) {
+                tempServiceID.add("R0001");
+                tempNatureofService.add("Repair");
+            }
+            if (chckbox_Main2.isSelected()) {
+                tempNatureofService.add("Maintenance");
+                if (tempServiceID.contains("M0001")) {
+                    tempServiceID.add("M0002");
+                } else {
+                    tempServiceID.add("M0001");
+                }
+            }
+            if (chckbox_Rep2.isSelected()) {
+                tempNatureofService.add("Repair");
+                if (tempServiceID.contains("R0001")) {
+                    tempServiceID.add("R0002");
+                } else {
+                    tempServiceID.add("R0001");
+                }
+            }
+            if (chckbox_Main3.isSelected()) {
+                tempNatureofService.add("Maintenance");
+                if (tempServiceID.contains("M0002")) {
+                    tempServiceID.add("M0003");
+                } else if (tempServiceID.contains("M0001")) {
+                    tempServiceID.add("M0002");
+                } else {
+                    tempServiceID.add("M0001");
+                }
+            }
+            if (chckbox_Rep3.isSelected()) {
+                tempNatureofService.add("Repair");
+                if (tempServiceID.contains("R0002")) {
+                    tempServiceID.add("R0003");
+                } else if (tempServiceID.contains("R0001")) {
+                    tempServiceID.add("R0002");
+                } else {
+                    tempServiceID.add("R0001");
+                }
+            }
+            if (chckbox_Main4.isSelected()) {
+                tempNatureofService.add("Maintenance");
+                if (tempServiceID.contains("M0003")) {
+                    tempServiceID.add("M0004");
+                } else if (tempServiceID.contains("M0002")) {
+                    tempServiceID.add("M0003");
+                } else if (tempServiceID.contains("M0001")) {
+                    tempServiceID.add("M0002");
+                } else {
+                    tempServiceID.add("M0001");
+                }
+            }
+            if (chckbox_Rep4.isSelected()) {
+                tempNatureofService.add("Repair");
+                if (tempServiceID.contains("R0003")) {
+                    tempServiceID.add("R0004");
+                } else if (tempServiceID.contains("R0002")) {
+                    tempServiceID.add("R0003");
+                } else if (tempServiceID.contains("R0001")) {
+                    tempServiceID.add("R0002");
+                } else {
+                    tempServiceID.add("R0001");
+                }
+            }
+            if (chckbox_Main5.isSelected()) {
+                tempNatureofService.add("Maintenance");
+                if (tempServiceID.contains("M0004")) {
+                    tempServiceID.add("M0005");
+                } else if (tempServiceID.contains("M0003")) {
+                    tempServiceID.add("M0004");
+                } else if (tempServiceID.contains("M0002")) {
+                    tempServiceID.add("M0003");
+                } else if (tempServiceID.contains("M0001")) {
+                    tempServiceID.add("M0002");
+                } else {
+                    tempServiceID.add("M0001");
+                }
+            }
+            if (chckbox_Rep5.isSelected()) {
+                tempNatureofService.add("Repair");
+                if (tempServiceID.contains("R0004")) {
+                    tempServiceID.add("R0005");
+                } else if (tempServiceID.contains("R0003")) {
+                    tempServiceID.add("R0004");
+                } else if (tempServiceID.contains("R0002")) {
+                    tempServiceID.add("R0003");
+                } else if (tempServiceID.contains("R0001")) {
+                    tempServiceID.add("R0002");
+                } else {
+                    tempServiceID.add("R0001");
+                }
+            }
+            if (chckbox_Main6.isSelected()) {
+                tempNatureofService.add("Maintenance");
+                if (tempServiceID.contains("M0005")) {
+                    tempServiceID.add("M0006");
+                } else if (tempServiceID.contains("M0004")) {
+                    tempServiceID.add("M0005");
+                } else if (tempServiceID.contains("M0003")) {
+                    tempServiceID.add("M0004");
+                } else if (tempServiceID.contains("M0002")) {
+                    tempServiceID.add("M0003");
+                } else if (tempServiceID.contains("M0001")) {
+                    tempServiceID.add("M0002");
+                } else {
+                    tempServiceID.add("M0001");
+                }
+            }
+            if (chckbox_Rep6.isSelected()) {
+                tempNatureofService.add("Repair");
+                if (tempServiceID.contains("R0005")) {
+                    tempServiceID.add("R0006");
+                } else if (tempServiceID.contains("R0004")) {
+                    tempServiceID.add("R0005");
+                } else if (tempServiceID.contains("R0003")) {
+                    tempServiceID.add("R0004");
+                } else if (tempServiceID.contains("R0002")) {
+                    tempServiceID.add("R0003");
+                } else if (tempServiceID.contains("R0001")) {
+                    tempServiceID.add("R0002");
+                } else {
+                    tempServiceID.add("R0001");
+                }
+            }
+            if (chckbox_Main7.isSelected()) {
+                tempNatureofService.add("Maintenance");
+                if (tempServiceID.contains("M0006")) {
+                    tempServiceID.add("M0007");
+                } else if (tempServiceID.contains("M0005")) {
+                    tempServiceID.add("M0006");
+                } else if (tempServiceID.contains("M0004")) {
+                    tempServiceID.add("M0005");
+                } else if (tempServiceID.contains("M0003")) {
+                    tempServiceID.add("M0004");
+                } else if (tempServiceID.contains("M0002")) {
+                    tempServiceID.add("M0003");
+                } else if (tempServiceID.contains("M0001")) {
+                    tempServiceID.add("M0002");
+                } else {
+                    tempServiceID.add("M0001");
+                }
+            }
+            if (chckbox_Rep7.isSelected()) {
+                tempNatureofService.add("Repair");
+                if (tempServiceID.contains("R0006")) {
+                    tempServiceID.add("R0007");
+                } else if (tempServiceID.contains("R0005")) {
+                    tempServiceID.add("R0006");
+                } else if (tempServiceID.contains("R0004")) {
+                    tempServiceID.add("R0005");
+                } else if (tempServiceID.contains("R0003")) {
+                    tempServiceID.add("R0004");
+                } else if (tempServiceID.contains("R0002")) {
+                    tempServiceID.add("R0003");
+                } else if (tempServiceID.contains("R0001")) {
+                    tempServiceID.add("R0002");
+                } else {
+                    tempServiceID.add("R0001");
+                }
+            }
+        } //ServiceID & Nature of Service
+
+        ArrayList<String> tempDescription = new ArrayList<String>();
+        ArrayList<Integer> tempQTY = new ArrayList<Integer>();
+        ArrayList<String> tempMatParts = new ArrayList<String>();
+        ArrayList<Float> tempMatPrice = new ArrayList<Float>();
+        ArrayList<Float> tempMatAmount = new ArrayList<Float>();
+        ArrayList<Integer> tempHours = new ArrayList<Integer>();
+        ArrayList<String> tempLabor = new ArrayList<String>();
+        ArrayList<Float> tempLaborAmount = new ArrayList<Float>();
+
 //        try {
 //
 //            Class.forName(strDriver);

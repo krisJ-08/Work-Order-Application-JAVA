@@ -5,6 +5,8 @@
  */
 package sourcecode.workorderinputform;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 /**
@@ -381,7 +383,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(220, 65));
 
         txtfld_Takenby.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Takenby.setName("txtfld_Takenby"); // NOI18N
+        txtfld_Takenby.setName("txtfld_Takenby");
+        txtfld_Takenby.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Takenby.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         jLabel3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel3.setText("Taken By");
@@ -415,7 +423,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel4.setText("Requested By");
 
         txtfld_Requestedby.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Requestedby.setName("txtfld_Requestedby"); // NOI18N
+        txtfld_Requestedby.setName("txtfld_Requestedby");
+        txtfld_Requestedby.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Requestedby.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -447,7 +461,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel5.setText("Dept");
 
         txtfld_Dept.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Dept.setName("txtfld_Dept"); // NOI18N
+        txtfld_Dept.setName("txtfld_Dept");
+        txtfld_Dept.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Dept.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -478,7 +498,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel6.setText("BLDG / Floor");
 
         txtfld_bldgfloor1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_bldgfloor1.setName("txtfld_bldg/floor1"); // NOI18N
+        txtfld_bldgfloor1.setName("txtfld_bldg/floor1");
+        txtfld_bldgfloor1.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_bldgfloor1.getText().length() >= 3 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -510,7 +536,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel7.setText("Machine No.");
 
         txtfld_MachineNo.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_MachineNo.setName("txtfld_MachineNo"); // NOI18N
+        txtfld_MachineNo.setName("txtfld_MachineNo");
+        txtfld_MachineNo.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_MachineNo.getText().length() >= 3 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -617,7 +649,13 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         txtfld_Descrption1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Descrption1.setName("txtfld_Descrption1"); // NOI18N
+        txtfld_Descrption1.setName("txtfld_Descrption1");
+        txtfld_Descrption1.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Descrption1.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -672,7 +710,13 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         txtfld_Descrption2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Descrption2.setName("txtfld_Descrption2"); // NOI18N
+        txtfld_Descrption2.setName("txtfld_Descrption2");
+        txtfld_Descrption2.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Descrption2.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -727,7 +771,13 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         txtfld_Descrption3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Descrption3.setName("txtfld_Descrption3"); // NOI18N
+        txtfld_Descrption3.setName("txtfld_Descrption3");
+        txtfld_Descrption3.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Descrption3.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -782,7 +832,13 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         txtfld_Descrption4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Descrption4.setName("txtfld_Descrption4"); // NOI18N
+        txtfld_Descrption4.setName("txtfld_Descrption4");
+        txtfld_Descrption4.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Descrption4.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -837,7 +893,13 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         txtfld_Descrption5.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Descrption5.setName("txtfld_Descrption5"); // NOI18N
+        txtfld_Descrption5.setName("txtfld_Descrption5");
+        txtfld_Descrption5.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Descrption5.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -892,7 +954,13 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         txtfld_Descrption6.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Descrption6.setName("txtfld_Descrption6"); // NOI18N
+        txtfld_Descrption6.setName("txtfld_Descrption6");
+        txtfld_Descrption6.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Descrption6.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -947,7 +1015,13 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         txtfld_Descrption7.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Descrption7.setName("txtfld_Descrption7"); // NOI18N
+        txtfld_Descrption7.setName("txtfld_Descrption7");
+        txtfld_Descrption7.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Descrption7.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -1195,7 +1269,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel26.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_qty1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_qty1.setName("txtfld_qty1"); // NOI18N
+        txtfld_qty1.setName("txtfld_qty1");
+        txtfld_qty1.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_qty1.getText().length() >= 2 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
@@ -1225,7 +1305,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel27.setPreferredSize(new java.awt.Dimension(340, 35));
 
         txtfld_MaterialsParts1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_MaterialsParts1.setName("txtfld_Materials/Parts1"); // NOI18N
+        txtfld_MaterialsParts1.setName("txtfld_Materials/Parts1");
+        txtfld_MaterialsParts1.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_MaterialsParts1.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1317,7 +1403,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel30.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_qty2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_qty2.setName("txtfld_qty2"); // NOI18N
+        txtfld_qty2.setName("txtfld_qty2");
+        txtfld_qty2.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_qty2.getText().length() >= 2 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -1347,7 +1439,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel31.setPreferredSize(new java.awt.Dimension(340, 35));
 
         txtfld_MaterialsParts2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_MaterialsParts2.setName("txtfld_Materials/Parts2"); // NOI18N
+        txtfld_MaterialsParts2.setName("txtfld_Materials/Parts2");
+        txtfld_MaterialsParts2.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_MaterialsParts2.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -1439,7 +1537,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel34.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_qty3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_qty3.setName("txtfld_qty3"); // NOI18N
+        txtfld_qty3.setName("txtfld_qty3");
+        txtfld_qty3.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_qty3.getText().length() >= 2 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -1469,7 +1573,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel35.setPreferredSize(new java.awt.Dimension(340, 35));
 
         txtfld_MaterialsParts3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_MaterialsParts3.setName("txtfld_Materials/Parts3"); // NOI18N
+        txtfld_MaterialsParts3.setName("txtfld_Materials/Parts3");
+        txtfld_MaterialsParts3.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_MaterialsParts3.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
@@ -1563,7 +1673,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel38.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_qty4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_qty4.setName("txtfld_qty4"); // NOI18N
+        txtfld_qty4.setName("txtfld_qty4");
+        txtfld_qty4.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_qty4.getText().length() >= 2 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -1593,7 +1709,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel39.setPreferredSize(new java.awt.Dimension(340, 35));
 
         txtfld_MaterialsParts4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_MaterialsParts4.setName("txtfld_Materials/Parts4"); // NOI18N
+        txtfld_MaterialsParts4.setName("txtfld_Materials/Parts4");
+        txtfld_MaterialsParts4.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_MaterialsParts4.getText().length() >= 100 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
@@ -1826,7 +1948,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel45.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_hrs1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_hrs1.setName("txtfld_hrs1"); // NOI18N
+        txtfld_hrs1.setName("txtfld_hrs1");
+        txtfld_hrs1.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_hrs1.getText().length() >= 2 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
@@ -1856,7 +1984,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel46.setPreferredSize(new java.awt.Dimension(240, 35));
 
         txtfld_Labor1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Labor1.setName("txtfld_Labor1"); // NOI18N
+        txtfld_Labor1.setName("txtfld_Labor1");
+        txtfld_Labor1.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Labor1.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
@@ -1991,7 +2125,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel52.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_hrs2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_hrs2.setName("txtfld_hrs2"); // NOI18N
+        txtfld_hrs2.setName("txtfld_hrs2");
+        txtfld_hrs2.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_hrs2.getText().length() >= 2 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
         jPanel52.setLayout(jPanel52Layout);
@@ -2021,7 +2161,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel53.setPreferredSize(new java.awt.Dimension(240, 35));
 
         txtfld_Labor2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Labor2.setName("txtfld_Labor2"); // NOI18N
+        txtfld_Labor2.setName("txtfld_Labor2");
+        txtfld_Labor2.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Labor2.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
         jPanel53.setLayout(jPanel53Layout);
@@ -2140,7 +2286,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel57.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_hrs3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_hrs3.setName("txtfld_hrs3"); // NOI18N
+        txtfld_hrs3.setName("txtfld_hrs3");
+        txtfld_hrs3.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_hrs3.getText().length() >= 2 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
         jPanel57.setLayout(jPanel57Layout);
@@ -2170,7 +2322,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel58.setPreferredSize(new java.awt.Dimension(240, 35));
 
         txtfld_Labor3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_Labor3.setName("txtfld_Labor3"); // NOI18N
+        txtfld_Labor3.setName("txtfld_Labor3");
+        txtfld_Labor3.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_Labor3.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
         jPanel58.setLayout(jPanel58Layout);
@@ -2411,7 +2569,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel20.setText("Charge to");
 
         txtfld_ChargeTo.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_ChargeTo.setName("txtfld_ChargeTo"); // NOI18N
+        txtfld_ChargeTo.setName("txtfld_ChargeTo");
+        txtfld_ChargeTo.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_ChargeTo.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
         jPanel66.setLayout(jPanel66Layout);
@@ -2500,8 +2664,15 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel34.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel34.setText("Work completed by");
 
+
         txtfld_WrkCompBy.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_WrkCompBy.setName("txtfld_WrkCompBy"); // NOI18N
+        txtfld_WrkCompBy.setName("txtfld_WrkCompBy");
+        txtfld_WrkCompBy.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_WrkCompBy.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
         jPanel69.setLayout(jPanel69Layout);
@@ -2635,7 +2806,13 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel38.setText("Inspected / Approved by");
 
         txtfld_InspAppBy.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        txtfld_InspAppBy.setName("txtfld_Insp/AppBy"); // NOI18N
+        txtfld_InspAppBy.setName("txtfld_Insp/AppBy");
+        txtfld_InspAppBy.addKeyListener(new KeyAdapter() {
+            public void keyTyped(KeyEvent e) {
+                if (txtfld_InspAppBy.getText().length() >= 50 ) // limit textfield to 3 characters
+                    e.consume();
+            }
+        });// NOI18N
 
         javax.swing.GroupLayout jPanel73Layout = new javax.swing.GroupLayout(jPanel73);
         jPanel73.setLayout(jPanel73Layout);
@@ -2998,14 +3175,15 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         } //ServiceID & Nature of Service
 
-        ArrayList<String> tempDescription = new ArrayList<String>();
-        ArrayList<Integer> tempQTY = new ArrayList<Integer>();
-        ArrayList<String> tempMatParts = new ArrayList<String>();
-        ArrayList<Float> tempMatPrice = new ArrayList<Float>();
-        ArrayList<Float> tempMatAmount = new ArrayList<Float>();
-        ArrayList<Integer> tempHours = new ArrayList<Integer>();
-        ArrayList<String> tempLabor = new ArrayList<String>();
-        ArrayList<Float> tempLaborAmount = new ArrayList<Float>();
+        ArrayList<String> tempDescription = new ArrayList<>();
+        ArrayList<String> tempMatID = new ArrayList<>();
+        ArrayList<Integer> tempQTY = new ArrayList<>();
+        ArrayList<String> tempMatParts = new ArrayList<>();
+        ArrayList<Float> tempMatPrice = new ArrayList<>();
+        ArrayList<Float> tempMatAmount = new ArrayList<>();
+        ArrayList<Integer> tempHours = new ArrayList<>();
+        ArrayList<String> tempLabor = new ArrayList<>();
+        ArrayList<Float> tempLaborAmount = new ArrayList<>();
 
 //        try {
 //

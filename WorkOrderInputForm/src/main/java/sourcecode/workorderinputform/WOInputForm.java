@@ -7,6 +7,9 @@ package sourcecode.workorderinputform;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
@@ -15,8 +18,19 @@ import java.util.ArrayList;
  */
 public class WOInputForm extends javax.swing.JFrame {
 
+    static Connection objConn;
+
     private String TimeCreation;
     private String SchedTime;
+    private float dblMatPrice1;
+    private float dblMatPrice2;
+    private float dblMatPrice3;
+    private float dblMatPrice4;
+    private float dblAmount1;
+    private float dblAmount2;
+    private float dblAmount3;
+    private float dblAmount4;
+    private float dblTotalLaborInit;
 
     /**
      * Creates new form WOInputForm
@@ -1596,11 +1610,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         txtfld_MaterialsParts4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MaterialsParts4.setName("txtfld_Materials/Parts4"); // NOI18N
-        txtfld_MaterialsParts4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtfld_MaterialsParts4ActionPerformed(evt);
-            }
-        });
+
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
@@ -3048,20 +3058,20 @@ public class WOInputForm extends javax.swing.JFrame {
         dblMatPrice2 = Float.parseFloat(txtfld_MatPrice2.getText());
         dblMatPrice3 = Float.parseFloat(txtfld_MatPrice3.getText());
         dblMatPrice4 = Float.parseFloat(txtfld_MatPrice4.getText());
-            tempMatPrice.add(MatPrice1);
-            tempMatPrice.add(MatPrice2);
-            tempMatPrice.add(MatPrice3);
-            tempMatPrice.add(MatPrice4);
+            tempMatPrice.add(dblMatPrice1);
+            tempMatPrice.add(dblMatPrice2);
+            tempMatPrice.add(dblMatPrice3);
+            tempMatPrice.add(dblMatPrice4);
 
         ArrayList<Float> tempMatAmount = new ArrayList<>();
         dblAmount1 = Float.parseFloat(txtfld_Amount1.getText());
-        dblAmount1 = Float.parseFloat(txtfld_Amount1.getText());
-        dblAmount1 = Float.parseFloat(txtfld_Amount1.getText());
-        dblAmount1 = Float.parseFloat(txtfld_Amount1.getText());
-            tempMatAmount.add(Amount1);
-            tempMatAmount.add(Amount2);
-            tempMatAmount.add(Amount3);
-            tempMatAmount.add(Amount4);
+        dblAmount2 = Float.parseFloat(txtfld_Amount1.getText());
+        dblAmount3 = Float.parseFloat(txtfld_Amount1.getText());
+        dblAmount4 = Float.parseFloat(txtfld_Amount1.getText());
+            tempMatAmount.add(dblAmount1);
+            tempMatAmount.add(dblAmount2);
+            tempMatAmount.add(dblAmount3);
+            tempMatAmount.add(dblAmount4);
             
         ArrayList<Integer> tempHours = new ArrayList<>();
         int hrs1 = Integer.parseInt(txtfld_hrs1.getText());
@@ -3081,83 +3091,83 @@ public class WOInputForm extends javax.swing.JFrame {
     
         ArrayList<Float> tempLaborAmount = new ArrayList<>();
         dblTotalLaborInit = Float.parseFloat(txtfld_TotalLaborInit.getText());
-            tempLaborAmount.add(TotalLaborInit);
-            
-         
-         String txtdateofcreation = txtfld_dateofcreation.getText();
-String txtTime = txtfld_Time.getText();
-String txtTakenBy = txtfld_Takenby.getText();
-String txtRequestedBy = txtfld_Requestedby.getText();
-String txtDept = txtfld_Dept.getText();
-String txtBldgfloor = txtfld_bldgfloor1.getText();
-int MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
-String txtDateWanted = txtfld_DateWanted.getText();
-String txtScheduleDate = txtfld_ScheduledDate.getText();
-String txtTimeSched = txtfld_TimeSched.getText();
-String txtChargeTo = txtfld_ChargeTo.getText();
-String txtWrkCompBy = txtfld_WrkCompBy.getText();
-String txtDateComp = txtfld_DateComp.getText();
-String txtTOTAL = txtfld_TOTAL.getText();
-String txtInsAppBy = txtfld_InspAppBy.getText();
-String txtDateInsp = txtfld_DateInsp.getText();
+            tempLaborAmount.add(dblTotalLaborInit);
+
+        String txtdateofcreation = txtfld_dateofcreation.getText();
+        String txtTime = txtfld_Time.getText() + TimeCreation;
+        String txtTakenBy = txtfld_Takenby.getText();
+        String txtRequestedBy = txtfld_Requestedby.getText();
+        String txtDept = txtfld_Dept.getText();
+        String txtBldgfloor = txtfld_bldgfloor1.getText();
+        int MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
+        String txtDateWanted = txtfld_DateWanted.getText();
+        String txtScheduleDate = txtfld_ScheduledDate.getText();
+        String txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
+        String txtChargeTo = txtfld_ChargeTo.getText();
+        String txtWrkCompBy = txtfld_WrkCompBy.getText();
+        String txtDateComp = txtfld_DateComp.getText();
+        String txtTOTAL = txtfld_TOTAL.getText();
+        String txtInsAppBy = txtfld_InspAppBy.getText();
+        String txtDateInsp = txtfld_DateInsp.getText();
+
+        if(!txtfld_DateInsp.getText().isEmpty() && !txtfld_Descrption1.getText().isEmpty() && !txtfld_DateInsp.getText().isEmpty() && !txtfld_InspAppBy.getText().isEmpty()){
+            bttnSave.setEnabled(true);
+        }
+
+        if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
+        if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
+        if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
+        if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
+
+        try {
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://src//main//java//sourcecode//workorderinputform//WODatabase.accdb");
+
+            Statement st = objConn.createStatement()
+
+            String SQLWorkOrder = "INSERT INTO WORK_ORDER" +
+                    "(DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy,"
+                    + "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total) VALUES " +
 
 
+           String SQLService = "INSERT INTO SERVICE" +
+                    "(ServiceID, NatureofService, Description) VALUES " +
 
 
+           String SQLMaterial = "INSERT INTO MATERIAL" +
+                    "(MatID, QTY, MatName, MatPrice, MatAmount) VALUES " +
 
-        
-        
 
-//        try {
-//
-//            Class.forName(strDriver);
-//            objConn = DriverManager.getConnection(strConn, strUser, strPass);
-//
-//            String SQLWorkOrder = "INSERT INTO WORK_ORDER" +
-//                    "(DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy,"
-//                    + "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total) VALUES " +
-//                    "('" + txtCFBDATE + "', '" + txtCFBNAME + "', '" + strCFBPosition + "', '" + txtCFB1Address + "', '" + txtCFB2Date + "', '" + txtCFB3Cough + "', "
-//                    + boolCFB1 + ", " + boolCFB2 + ", " + boolCFB3 + ", " + boolCFB4 + ");";
-//
-//           String SQLService = "INSERT INTO SERVICE" +
-//                    "(ServiceID, NatureofService, Description) VALUES " +
-//
-//
-//           String SQLMaterial = "INSERT INTO MATERIAL" +
-//                    "(MatID, QTY, MatName, MatPrice, MatAmount) VALUES " +
-//
-//
-//           String SQLLabor = "INSERT INTO LABOR" +
-//                    "(Hours, Labor, LaborAmount) VALUES " +
-//
-//            Statement objSQLQuery = objConn.createStatement();
-//
-//            System.out.println("Database setup complete.");
-//            objSQLQuery.executeUpdate(strSQLCFBInsertCFB);
-//            System.out.println("Database insert complete.");
-//
-//
-//        } catch (Exception objEx) {
-//
-//            System.out.println("Database setup failed!");
-//            System.out.println(objEx.toString());
-//
-//        } finally {
-//
-//            if (objConn != null) {
-//
-//                try {
-//                    objConn.close();
-//                } catch (Exception objEx) {
-//                    System.out.println("Problem closing the database!");
-//                    System.out.println(objEx);
-//                }
-//
-//            }
-//
-//            System.out.println("The finally block will always execute..");
-//
-//      }
+           String SQLLabor = "INSERT INTO LABOR" +
+                    "(Hours, Labor, LaborAmount) VALUES " +
+
+            Statement objSQLQuery = objConn.createStatement();
+
+            System.out.println("Database setup complete.");
+            objSQLQuery.executeUpdate(strSQLCFBInsertCFB);
+            System.out.println("Database insert complete.");
+
+
+        } catch (Exception objEx) {
+
+            System.out.println("Database setup failed!");
+            System.out.println(objEx.toString());
+
+        } finally {
+
+            if (objConn != null) {
+
+                try {
+                    objConn.close();
+                } catch (Exception objEx) {
+                    System.out.println("Problem closing the database!");
+                    System.out.println(objEx);
+                }
+
+            }
+
+            System.out.println("The finally block will always execute..");
+
+      }
     }
 
 

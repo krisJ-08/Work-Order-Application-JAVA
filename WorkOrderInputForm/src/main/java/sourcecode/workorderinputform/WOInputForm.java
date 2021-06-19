@@ -7,9 +7,7 @@ package sourcecode.workorderinputform;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +17,8 @@ import java.util.ArrayList;
 public class WOInputForm extends javax.swing.JFrame {
 
     static Connection objConn;
+
+
 
     private String TimeCreation;
     private String SchedTime;
@@ -31,6 +31,19 @@ public class WOInputForm extends javax.swing.JFrame {
     private float dblAmount3;
     private float dblAmount4;
     private float dblTotalLaborInit;
+    private float dblLaborPrice1;
+    private float dblLaborPrice2;
+    private float dblLaborPrice3;
+    private float dblLaborPrice4;
+    private int qty4;
+    private int qty1;
+    private int qty2;
+    private int qty3;
+    private int hrs1;
+    private int hrs2;
+    private int hrs3;
+    private int MachineNo;
+
 
     /**
      * Creates new form WOInputForm
@@ -246,17 +259,18 @@ public class WOInputForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Work Order Input Form");
         setAlwaysOnTop(true);
-        setMinimumSize(new java.awt.Dimension(700, 700));
+        setMinimumSize(new java.awt.Dimension(700, 600));
         setName("woinputFrame"); // NOI18N
         setPreferredSize(new java.awt.Dimension(715, 600));
+        setSize(new java.awt.Dimension(715, 600));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBar(null);
-        jScrollPane1.setMinimumSize(new java.awt.Dimension(700, 700));
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(700, 1560));
+        jScrollPane1.setMinimumSize(new java.awt.Dimension(700, 600));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(700, 1580));
 
         jPanel2.setBackground(new java.awt.Color(243, 243, 243));
-        jPanel2.setPreferredSize(new java.awt.Dimension(700, 1560));
+        jPanel2.setPreferredSize(new java.awt.Dimension(700, 1580));
 
         jLabel33.setFont(new java.awt.Font("Montserrat SemiBold", 0, 36)); // NOI18N
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -344,22 +358,14 @@ public class WOInputForm extends javax.swing.JFrame {
         hckbox_TimeCreationPm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         hckbox_TimeCreationPm.setText("PM");
         hckbox_TimeCreationPm.setName("hckbox_TimeCreationPm"); // NOI18N
-        hckbox_TimeCreationPm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hckbox_TimeCreationPmActionPerformed(evt);
-            }
-        });
+        hckbox_TimeCreationPm.addActionListener(this::hckbox_TimeCreationPmActionPerformed);
 
         chckbox_TimeCreationAm.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpTimeCreation.add(chckbox_TimeCreationAm);
         chckbox_TimeCreationAm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_TimeCreationAm.setText("AM");
         chckbox_TimeCreationAm.setName("chckbox_TimeCreationAm"); // NOI18N
-        chckbox_TimeCreationAm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_TimeCreationAmActionPerformed(evt);
-            }
-        });
+        chckbox_TimeCreationAm.addActionListener(this::chckbox_TimeCreationAmActionPerformed);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -616,21 +622,13 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc1.add(chckbox_Rep1);
         chckbox_Rep1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep1.setText("Repair");
-        chckbox_Rep1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Rep1ActionPerformed(evt);
-            }
-        });
+        chckbox_Rep1.addActionListener(this::chckbox_Rep1ActionPerformed);
 
         chckbox_Main1.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc1.add(chckbox_Main1);
         chckbox_Main1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main1.setText("Maintenance");
-        chckbox_Main1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Main1ActionPerformed(evt);
-            }
-        });
+        chckbox_Main1.addActionListener(this::chckbox_Main1ActionPerformed);
 
         txtfld_Descrption1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption1.setName("txtfld_Descrption1"); // NOI18N
@@ -671,21 +669,13 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc2.add(chckbox_Rep2);
         chckbox_Rep2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep2.setText("Repair");
-        chckbox_Rep2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Rep2ActionPerformed(evt);
-            }
-        });
+        chckbox_Rep2.addActionListener(this::chckbox_Rep2ActionPerformed);
 
         chckbox_Main2.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc2.add(chckbox_Main2);
         chckbox_Main2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main2.setText("Maintenance");
-        chckbox_Main2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Main2ActionPerformed(evt);
-            }
-        });
+        chckbox_Main2.addActionListener(this::chckbox_Main2ActionPerformed);
 
         txtfld_Descrption2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption2.setName("txtfld_Descrption2"); // NOI18N
@@ -726,21 +716,13 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc3.add(chckbox_Rep3);
         chckbox_Rep3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep3.setText("Repair");
-        chckbox_Rep3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Rep3ActionPerformed(evt);
-            }
-        });
+        chckbox_Rep3.addActionListener(this::chckbox_Rep3ActionPerformed);
 
         chckbox_Main3.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc3.add(chckbox_Main3);
         chckbox_Main3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main3.setText("Maintenance");
-        chckbox_Main3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Main3ActionPerformed(evt);
-            }
-        });
+        chckbox_Main3.addActionListener(this::chckbox_Main3ActionPerformed);
 
         txtfld_Descrption3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption3.setName("txtfld_Descrption3"); // NOI18N
@@ -781,21 +763,13 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc4.add(chckbox_Rep4);
         chckbox_Rep4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep4.setText("Repair");
-        chckbox_Rep4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Rep4ActionPerformed(evt);
-            }
-        });
+        chckbox_Rep4.addActionListener(this::chckbox_Rep4ActionPerformed);
 
         chckbox_Main4.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc4.add(chckbox_Main4);
         chckbox_Main4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main4.setText("Maintenance");
-        chckbox_Main4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Main4ActionPerformed(evt);
-            }
-        });
+        chckbox_Main4.addActionListener(this::chckbox_Main4ActionPerformed);
 
         txtfld_Descrption4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption4.setName("txtfld_Descrption4"); // NOI18N
@@ -836,21 +810,13 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc5.add(chckbox_Rep5);
         chckbox_Rep5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep5.setText("Repair");
-        chckbox_Rep5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Rep5ActionPerformed(evt);
-            }
-        });
+        chckbox_Rep5.addActionListener(this::chckbox_Rep5ActionPerformed);
 
         chckbox_Main5.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc5.add(chckbox_Main5);
         chckbox_Main5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main5.setText("Maintenance");
-        chckbox_Main5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Main5ActionPerformed(evt);
-            }
-        });
+        chckbox_Main5.addActionListener(this::chckbox_Main5ActionPerformed);
 
         txtfld_Descrption5.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption5.setName("txtfld_Descrption5"); // NOI18N
@@ -891,21 +857,13 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc6.add(chckbox_Rep6);
         chckbox_Rep6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep6.setText("Repair");
-        chckbox_Rep6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Rep6ActionPerformed(evt);
-            }
-        });
+        chckbox_Rep6.addActionListener(this::chckbox_Rep6ActionPerformed);
 
         chckbox_Main6.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc6.add(chckbox_Main6);
         chckbox_Main6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main6.setText("Maintenance");
-        chckbox_Main6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Main6ActionPerformed(evt);
-            }
-        });
+        chckbox_Main6.addActionListener(this::chckbox_Main6ActionPerformed);
 
         txtfld_Descrption6.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption6.setName("txtfld_Descrption6"); // NOI18N
@@ -946,21 +904,13 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc7.add(chckbox_Rep7);
         chckbox_Rep7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep7.setText("Repair");
-        chckbox_Rep7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Rep7ActionPerformed(evt);
-            }
-        });
+        chckbox_Rep7.addActionListener(this::chckbox_Rep7ActionPerformed);
 
         chckbox_Main7.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc7.add(chckbox_Main7);
         chckbox_Main7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main7.setText("Maintenance");
-        chckbox_Main7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_Main7ActionPerformed(evt);
-            }
-        });
+        chckbox_Main7.addActionListener(this::chckbox_Main7ActionPerformed);
 
         txtfld_Descrption7.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption7.setName("txtfld_Descrption7"); // NOI18N
@@ -1038,22 +988,14 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_SchedCreationAm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_SchedCreationAm.setText("AM");
         chckbox_SchedCreationAm.setName("chckbox_SchedCreationAm"); // NOI18N
-        chckbox_SchedCreationAm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_SchedCreationAmActionPerformed(evt);
-            }
-        });
+        chckbox_SchedCreationAm.addActionListener(this::chckbox_SchedCreationAmActionPerformed);
 
         chckbox_SchedCreationPM.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpScheduledTime.add(chckbox_SchedCreationPM);
         chckbox_SchedCreationPM.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_SchedCreationPM.setText("PM");
         chckbox_SchedCreationPM.setName("chckbox_SchedCreationPM"); // NOI18N
-        chckbox_SchedCreationPM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckbox_SchedCreationPMActionPerformed(evt);
-            }
-        });
+        chckbox_SchedCreationPM.addActionListener(this::chckbox_SchedCreationPMActionPerformed);
 
         txtfld_TimeSched.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("h:mm"))));
         txtfld_TimeSched.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
@@ -1270,7 +1212,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel28.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_MatPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_MatPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_MatPrice1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice1.setName("txtfld_MatPrice1"); // NOI18N
 
@@ -1301,7 +1243,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel29.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_Amount1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_Amount1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_Amount1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount1.setName("txtfld_Amount1"); // NOI18N
 
@@ -1392,7 +1334,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel32.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_MatPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_MatPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_MatPrice2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice2.setName("txtfld_MatPrice2"); // NOI18N
 
@@ -1423,7 +1365,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel33.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_Amount2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_Amount2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_Amount2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount2.setName("txtfld_Amount2"); // NOI18N
 
@@ -1516,7 +1458,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel36.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_MatPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_MatPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_MatPrice3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice3.setName("txtfld_MatPrice3"); // NOI18N
 
@@ -1547,7 +1489,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel37.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_Amount3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_Amount3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_Amount3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount3.setName("txtfld_Amount3"); // NOI18N
 
@@ -1611,7 +1553,6 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_MaterialsParts4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MaterialsParts4.setName("txtfld_Materials/Parts4"); // NOI18N
 
-
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
@@ -1639,7 +1580,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel40.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_MatPrice4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_MatPrice4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_MatPrice4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice4.setName("txtfld_MatPrice4"); // NOI18N
 
@@ -1670,7 +1611,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel41.setPreferredSize(new java.awt.Dimension(110, 35));
 
-        txtfld_Amount4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_Amount4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_Amount4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount4.setName("txtfld_Amount4"); // NOI18N
 
@@ -1808,7 +1749,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        txtfld_TotalMat.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_TotalMat.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_TotalMat.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TotalMat.setName("txtfld_TotalMat"); // NOI18N
 
@@ -1901,7 +1842,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel49.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        txtfld_LbrPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_LbrPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_LbrPrice1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice1.setName("txtfld_LbrPrice1"); // NOI18N
 
@@ -1966,7 +1907,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        txtfld_TotalLbr.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_TotalLbr.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_TotalLbr.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TotalLbr.setName("txtfld_TotalLbr"); // NOI18N
 
@@ -2066,7 +2007,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel54.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        txtfld_LbrPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_LbrPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_LbrPrice2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice2.setName("txtfld_LbrPrice2"); // NOI18N
 
@@ -2215,7 +2156,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel59.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        txtfld_LbrPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_LbrPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_LbrPrice3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice3.setName("txtfld_LbrPrice3"); // NOI18N
 
@@ -2334,7 +2275,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel63.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        txtfld_TotalLaborInit.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_TotalLaborInit.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_TotalLaborInit.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TotalLaborInit.setName("txtfld_TotalLbr"); // NOI18N
 
@@ -2607,7 +2548,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel37.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        txtfld_TOTAL.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        txtfld_TOTAL.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         txtfld_TOTAL.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TOTAL.setName("txtfld_TOTAL"); // NOI18N
 
@@ -2711,12 +2652,7 @@ public class WOInputForm extends javax.swing.JFrame {
         bttnSave.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 18)); // NOI18N
         bttnSave.setText("SAVE");
         bttnSave.setBorder(new javax.swing.border.MatteBorder(null));
-        bttnSave.setEnabled(false);
-        bttnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttnSaveActionPerformed(evt);
-            }
-        });
+        bttnSave.addActionListener(this::bttnSaveActionPerformed);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -2727,7 +2663,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2741,7 +2677,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1342, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel2);
@@ -2754,9 +2690,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1591, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -2844,9 +2778,9 @@ public class WOInputForm extends javax.swing.JFrame {
 
 
     private void bttnSaveActionPerformed(java.awt.event.ActionEvent evt) {
-        {
-            ArrayList<String> tempServiceID = new ArrayList<String>();
-            ArrayList<String> tempNatureofService = new ArrayList<String>();
+
+            ArrayList<String> tempServiceID = new ArrayList<>();
+            ArrayList<String> tempNatureofService = new ArrayList<>();
 
             if (chckbox_Main1.isSelected()) {
                 tempServiceID.add("M0001");
@@ -3012,145 +2946,208 @@ public class WOInputForm extends javax.swing.JFrame {
                     tempServiceID.add("R0001");
                 }
             }
-        } //ServiceID & Nature of Service
 
-        ArrayList<String> tempDescription = new ArrayList<>();
-        String txtDescription1 = txtfld_Descrption1.getText();
-        String txtDescription2 = txtfld_Descrption2.getText();
-        String txtDescription3 = txtfld_Descrption3.getText();
-        String txtDescription4 = txtfld_Descrption4.getText();
-        String txtDescription5 = txtfld_Descrption5.getText();
-        String txtDescription6 = txtfld_Descrption6.getText();
-        String txtDescription7 = txtfld_Descrption7.getText();
+            ArrayList<String> tempDescription = new ArrayList<>();
+            String txtDescription1 = txtfld_Descrption1.getText();
+            String txtDescription2 = txtfld_Descrption2.getText();
+            String txtDescription3 = txtfld_Descrption3.getText();
+            String txtDescription4 = txtfld_Descrption4.getText();
+            String txtDescription5 = txtfld_Descrption5.getText();
+            String txtDescription6 = txtfld_Descrption6.getText();
+            String txtDescription7 = txtfld_Descrption7.getText();
+
             tempDescription.add(txtDescription1);
-            tempDescription.add(txtDescription2);
-            tempDescription.add(txtDescription3);
-            tempDescription.add(txtDescription4);
-            tempDescription.add(txtDescription5);
-            tempDescription.add(txtDescription6);
-            tempDescription.add(txtDescription7);
-       
-        ArrayList<String> tempMatID = new ArrayList<>();
-        
-        
-        ArrayList<Integer> tempQTY = new ArrayList<>();
-        int qty1 = Integer.parseInt(txtfld_qty1.getText());
-        int qty2 = Integer.parseInt(txtfld_qty2.getText());
-        int qty3 = Integer.parseInt(txtfld_qty3.getText());
-        int qty4 = Integer.parseInt(txtfld_qty4.getText());
-            tempQTY.add(qty1);
-            tempQTY.add(qty2);
-            tempQTY.add(qty3);
-            tempQTY.add(qty4);
-            
-        ArrayList<String> tempMatParts = new ArrayList<>();
-        String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
-        String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
-        String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
-        String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
-            tempMatParts.add(txtMaterialsParts1);
-            tempMatParts.add(txtMaterialsParts2);
-            tempMatParts.add(txtMaterialsParts3);
-            tempMatParts.add(txtMaterialsParts4);
+        if (!txtfld_Descrption1.getText().isEmpty() && !txtfld_Descrption2.getText().isEmpty()) tempDescription.add(txtDescription2);
+        if (!txtfld_Descrption2.getText().isEmpty() && !txtfld_Descrption3.getText().isEmpty()) tempDescription.add(txtDescription3);
+        if (!txtfld_Descrption3.getText().isEmpty() && !txtfld_Descrption4.getText().isEmpty()) tempDescription.add(txtDescription4);
+        if (!txtfld_Descrption4.getText().isEmpty() && !txtfld_Descrption5.getText().isEmpty()) tempDescription.add(txtDescription5);
+        if (!txtfld_Descrption5.getText().isEmpty() && !txtfld_Descrption6.getText().isEmpty()) tempDescription.add(txtDescription6);
+        if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty()) tempDescription.add(txtDescription7);
 
-        ArrayList<Float> tempMatPrice = new ArrayList<>();
-        dblMatPrice1 = Float.parseFloat(txtfld_MatPrice1.getText());
-        dblMatPrice2 = Float.parseFloat(txtfld_MatPrice2.getText());
-        dblMatPrice3 = Float.parseFloat(txtfld_MatPrice3.getText());
-        dblMatPrice4 = Float.parseFloat(txtfld_MatPrice4.getText());
-            tempMatPrice.add(dblMatPrice1);
-            tempMatPrice.add(dblMatPrice2);
-            tempMatPrice.add(dblMatPrice3);
-            tempMatPrice.add(dblMatPrice4);
 
-        ArrayList<Float> tempMatAmount = new ArrayList<>();
-        dblAmount1 = Float.parseFloat(txtfld_Amount1.getText());
-        dblAmount2 = Float.parseFloat(txtfld_Amount1.getText());
-        dblAmount3 = Float.parseFloat(txtfld_Amount1.getText());
-        dblAmount4 = Float.parseFloat(txtfld_Amount1.getText());
-            tempMatAmount.add(dblAmount1);
-            tempMatAmount.add(dblAmount2);
-            tempMatAmount.add(dblAmount3);
-            tempMatAmount.add(dblAmount4);
-            
-        ArrayList<Integer> tempHours = new ArrayList<>();
-        int hrs1 = Integer.parseInt(txtfld_hrs1.getText());
-        int hrs2 = Integer.parseInt(txtfld_hrs2.getText());
-        int hrs3 = Integer.parseInt(txtfld_hrs3.getText());
-            tempHours.add(hrs1);
-            tempHours.add(hrs2);
-            tempHours.add(hrs3);
-            
-        ArrayList<String> tempLabor = new ArrayList<>();
-        String txtLabor1 = txtfld_Labor1.getText();
-        String txtLabor2 = txtfld_Labor2.getText();
-        String txtLabor3 = txtfld_Labor3.getText();
-            tempLabor.add(txtLabor1);
-            tempLabor.add(txtLabor2);
-            tempLabor.add(txtLabor3);
-    
-        ArrayList<Float> tempLaborAmount = new ArrayList<>();
-        dblTotalLaborInit = Float.parseFloat(txtfld_TotalLaborInit.getText());
-            tempLaborAmount.add(dblTotalLaborInit);
+//            ArrayList<Integer> tempQTY = new ArrayList<>();
+//            qty1 = Integer.parseInt(txtfld_qty1.getText());
+//            qty2 = Integer.parseInt(txtfld_qty2.getText());
+//            qty3 = Integer.parseInt(txtfld_qty3.getText());
+//            qty4 = Integer.parseInt(txtfld_qty4.getText());
+//            tempQTY.add(qty1);
+//            tempQTY.add(qty2);
+//            tempQTY.add(qty3);
+//            tempQTY.add(qty4);
+//
+//            ArrayList<String> tempMatParts = new ArrayList<>();
+//            String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
+//            String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
+//            String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
+//            String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
+//            tempMatParts.add(txtMaterialsParts1);
+//            tempMatParts.add(txtMaterialsParts2);
+//            tempMatParts.add(txtMaterialsParts3);
+//            tempMatParts.add(txtMaterialsParts4);
+//
+//            ArrayList<Float> tempMatPrice = new ArrayList<>();
+//            dblMatPrice1 = Float.parseFloat(txtfld_MatPrice1.getText());
+//            dblMatPrice2 = Float.parseFloat(txtfld_MatPrice2.getText());
+//            dblMatPrice3 = Float.parseFloat(txtfld_MatPrice3.getText());
+//            dblMatPrice4 = Float.parseFloat(txtfld_MatPrice4.getText());
+//            tempMatPrice.add(dblMatPrice1);
+//            tempMatPrice.add(dblMatPrice2);
+//            tempMatPrice.add(dblMatPrice3);
+//            tempMatPrice.add(dblMatPrice4);
+//
+//            ArrayList<Float> tempMatAmount = new ArrayList<>();
+//            dblAmount1 = Float.parseFloat(txtfld_Amount1.getText());
+//            dblAmount2 = Float.parseFloat(txtfld_Amount1.getText());
+//            dblAmount3 = Float.parseFloat(txtfld_Amount1.getText());
+//            dblAmount4 = Float.parseFloat(txtfld_Amount1.getText());
+//            tempMatAmount.add(dblAmount1);
+//            tempMatAmount.add(dblAmount2);
+//            tempMatAmount.add(dblAmount3);
+//            tempMatAmount.add(dblAmount4);
+//
+//            ArrayList<Integer> tempHours = new ArrayList<>();
+//            hrs1 = Integer.parseInt(txtfld_hrs1.getText());
+//            hrs2 = Integer.parseInt(txtfld_hrs2.getText());
+//            hrs3 = Integer.parseInt(txtfld_hrs3.getText());
+//            tempHours.add(hrs1);
+//            tempHours.add(hrs2);
+//            tempHours.add(hrs3);
+//
+//            ArrayList<String> tempLabor = new ArrayList<>();
+//            String txtLabor1 = txtfld_Labor1.getText();
+//            String txtLabor2 = txtfld_Labor2.getText();
+//            String txtLabor3 = txtfld_Labor3.getText();
+//            tempLabor.add(txtLabor1);
+//            tempLabor.add(txtLabor2);
+//            tempLabor.add(txtLabor3);
+//
+//            ArrayList<Float> tempLaborAmount = new ArrayList<>();
+//            dblLaborPrice1 = Float.parseFloat(txtfld_LbrPrice1.getText());
+//            dblLaborPrice2 = Float.parseFloat(txtfld_LbrPrice2.getText());
+//            dblLaborPrice3 = Float.parseFloat(txtfld_LbrPrice3.getText());
+//            tempLaborAmount.add(dblLaborPrice1);
+//            tempLaborAmount.add(dblLaborPrice2);
+//            tempLaborAmount.add(dblLaborPrice3);
+//
+//            String txtdateofcreation = txtfld_dateofcreation.getText();
+//            String txtTime = txtfld_Time.getText() + TimeCreation;
+//            String txtTakenBy = txtfld_Takenby.getText();
+//            String txtRequestedBy = txtfld_Requestedby.getText();
+//            String txtDept = txtfld_Dept.getText();
+//            String txtBldgfloor = txtfld_bldgfloor1.getText();
+//            MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
+//            String txtDateWanted = txtfld_DateWanted.getText();
+//            String txtScheduleDate = txtfld_ScheduledDate.getText();
+//            String txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
+//            String txtChargeTo = txtfld_ChargeTo.getText();
+//            String txtWrkCompBy = txtfld_WrkCompBy.getText();
+//            String txtDateComp = txtfld_DateComp.getText();
+//            String txtTOTAL = txtfld_TOTAL.getText();
+//            String txtInsAppBy = txtfld_InspAppBy.getText();
+//            String txtDateInsp = txtfld_DateInsp.getText();
+//
+//        if(!txtfld_DateInsp.getText().isEmpty() && !txtfld_Descrption1.getText().isEmpty() && !txtfld_DateInsp.getText().isEmpty() && !txtfld_InspAppBy.getText().isEmpty()){
+//            bttnSave.setEnabled(true);
+//        }
+//
+//        ArrayList<String> tempMatID = new ArrayList<>();
+//        if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
+//        if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
+//        if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
+//        if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
 
-        String txtdateofcreation = txtfld_dateofcreation.getText();
-        String txtTime = txtfld_Time.getText() + TimeCreation;
-        String txtTakenBy = txtfld_Takenby.getText();
-        String txtRequestedBy = txtfld_Requestedby.getText();
-        String txtDept = txtfld_Dept.getText();
-        String txtBldgfloor = txtfld_bldgfloor1.getText();
-        int MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
-        String txtDateWanted = txtfld_DateWanted.getText();
-        String txtScheduleDate = txtfld_ScheduledDate.getText();
-        String txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
-        String txtChargeTo = txtfld_ChargeTo.getText();
-        String txtWrkCompBy = txtfld_WrkCompBy.getText();
-        String txtDateComp = txtfld_DateComp.getText();
-        String txtTOTAL = txtfld_TOTAL.getText();
-        String txtInsAppBy = txtfld_InspAppBy.getText();
-        String txtDateInsp = txtfld_DateInsp.getText();
+        ArrayList<String> tempMat_ID = new ArrayList<>();
 
-        if(!txtfld_DateInsp.getText().isEmpty() && !txtfld_Descrption1.getText().isEmpty() && !txtfld_DateInsp.getText().isEmpty() && !txtfld_InspAppBy.getText().isEmpty()){
-            bttnSave.setEnabled(true);
-        }
-
-        if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
-        if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
-        if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
-        if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
 
         try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://src//main//java//sourcecode//workorderinputform//WODatabase.accdb");
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            try {
+                objConn.setAutoCommit(false);
+                PreparedStatement psService = objConn.prepareStatement("INSERT INTO SERVICE (ServiceID, NatureofService, Description)" + " VALUES (?, ?, ?)");
+                for (int i = 0; i < tempServiceID.size(); i++) {
+                    psService.setString(1, tempServiceID.get(i));
+                    psService.setString(2, tempNatureofService.get(i));
+                    psService.setString(3, tempDescription.get(i));
+                    psService.addBatch();
+//                    psService.setString(4, tempMat_ID.get(i));
+                }
+                psService.executeBatch();
+                objConn.commit();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
 
-            Statement st = objConn.createStatement()
+//            try {
+//                objConn.setAutoCommit(false);
+//                String serviceIDSQL = "INSERT INTO WORK_Order (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
+//                        "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+//                PreparedStatement psServID = objConn.prepareStatement(serviceIDSQL);
+//                    psServID.setString(1, txtdateofcreation);
+//                    psServID.setString(2, txtTakenBy);
+//                    psServID.setString(3, txtRequestedBy);
+//                    psServID.setString(4, txtdateofcreation);
+//                    psServID.setString(5, txtTakenBy);
+//                    psServID.setString(6, txtRequestedBy);
+//                    psServID.setString(7, txtdateofcreation);
+//                    psServID.setString(8, txtTakenBy);
+//                    psServID.setString(9, txtRequestedBy);
+//                    psServID.setString(10, txtdateofcreation);
+//                    psServID.setString(11, txtTakenBy);
+//                    psServID.setString(12, txtRequestedBy);
+//                    psServID.setString(13, txtdateofcreation);
+//                    psServID.setString(14, txtTakenBy);
+//                    psServID.setString(15, txtRequestedBy);
+//                    psServID.setString(16, txtRequestedBy);
+//                    psServID.executeUpdate();
+//                    objConn.commit();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//
+//            try{
+//                objConn.setAutoCommit(false);
+//                String serviceIDSQL = "INSERT INTO WORK_Order (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
+//                        "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+//                PreparedStatement psServID = objConn.prepareStatement(serviceIDSQL);
+//                psServID.setString(1, txtdateofcreation);
+//                psServID.setString(2, txtTakenBy);
+//                psServID.setString(3, txtRequestedBy);
+//                psServID.setString(4, txtdateofcreation);
+//                psServID.setString(5, txtTakenBy);
+//                psServID.setString(6, txtRequestedBy);
+//                psServID.setString(7, txtdateofcreation);
+//                psServID.setString(8, txtTakenBy);
+//                psServID.setString(9, txtRequestedBy);
+//                psServID.setString(10, txtdateofcreation);
+//                psServID.setString(11, txtTakenBy);
+//                psServID.setString(12, txtRequestedBy);
+//                psServID.setString(13, txtdateofcreation);
+//                psServID.setString(14, txtTakenBy);
+//                psServID.setString(15, txtRequestedBy);
+//                psServID.setString(16, txtRequestedBy);
+//                psServID.executeUpdate();
+//                objConn.commit();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
 
-            String SQLWorkOrder = "INSERT INTO WORK_ORDER" +
-                    "(DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy,"
-                    + "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total) VALUES " +
+
+//            psServ.setString (4, mat_id.toString());
 
 
-           String SQLService = "INSERT INTO SERVICE" +
-                    "(ServiceID, NatureofService, Description) VALUES " +
 
 
-           String SQLMaterial = "INSERT INTO MATERIAL" +
-                    "(MatID, QTY, MatName, MatPrice, MatAmount) VALUES " +
+//           String SQLMaterial = "INSERT INTO MATERIAL" +
+//                    "(MatID, QTY, MatName, MatPrice, MatAmount) VALUES " +
+//
+//
+//           String SQLLabor = "INSERT INTO LABOR" +
+//                    "(Hours, Labor, LaborAmount) VALUES " +
+//
+        }catch (Exception objEx) {
 
-
-           String SQLLabor = "INSERT INTO LABOR" +
-                    "(Hours, Labor, LaborAmount) VALUES " +
-
-            Statement objSQLQuery = objConn.createStatement();
-
-            System.out.println("Database setup complete.");
-            objSQLQuery.executeUpdate(strSQLCFBInsertCFB);
-            System.out.println("Database insert complete.");
-
-
-        } catch (Exception objEx) {
-
-            System.out.println("Database setup failed!");
-            System.out.println(objEx.toString());
+            System.out.println("Database failed!");
+            System.out.println(objEx);
 
         } finally {
 
@@ -3165,7 +3162,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
             }
 
-            System.out.println("The finally block will always execute..");
+            System.out.println("Records inserted");
 
       }
     }
@@ -3174,7 +3171,7 @@ public class WOInputForm extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String... args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -3204,6 +3201,25 @@ public class WOInputForm extends javax.swing.JFrame {
                 new WOInputForm().setVisible(true);
             }
         });
+
+        try {
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+        }catch (Exception objEx) {
+
+            System.out.println("Database failed!");
+            System.out.println(objEx);
+
+        }finally{
+            if (objConn != null) {
+                try {
+                    objConn.close();
+                } catch (Exception objEx) {
+                    System.out.println("Problem closing the database!");
+                    System.out.println(objEx);
+                }
+            }
+            System.out.println("Database Connected");
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

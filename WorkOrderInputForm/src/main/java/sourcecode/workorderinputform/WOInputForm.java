@@ -76,7 +76,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -266,15 +265,16 @@ public class WOInputForm extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(700, 600));
         setName("woinputFrame"); // NOI18N
         setPreferredSize(new java.awt.Dimension(715, 600));
+        setResizable(false);
         setSize(new java.awt.Dimension(715, 600));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBar(null);
         jScrollPane1.setMinimumSize(new java.awt.Dimension(700, 600));
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(700, 1580));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(700, 1620));
 
         jPanel2.setBackground(new java.awt.Color(243, 243, 243));
-        jPanel2.setPreferredSize(new java.awt.Dimension(700, 1580));
+        jPanel2.setPreferredSize(new java.awt.Dimension(700, 1620));
 
         jLabel33.setFont(new java.awt.Font("Montserrat SemiBold", 0, 36)); // NOI18N
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -283,8 +283,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel40.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText("INFORMATION TECHNOLOGY DEPARTMENT");
-
-        jLabel42.setText("jLabel42");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -296,8 +294,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42))
                     .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -307,9 +304,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel40)
-                    .addComponent(jLabel42))
+                .addComponent(jLabel40)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -368,14 +363,22 @@ public class WOInputForm extends javax.swing.JFrame {
         hckbox_TimeCreationPm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         hckbox_TimeCreationPm.setText("PM");
         hckbox_TimeCreationPm.setName("hckbox_TimeCreationPm"); // NOI18N
-        hckbox_TimeCreationPm.addActionListener(this::hckbox_TimeCreationPmActionPerformed);
+        hckbox_TimeCreationPm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hckbox_TimeCreationPmActionPerformed(evt);
+            }
+        });
 
         chckbox_TimeCreationAm.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpTimeCreation.add(chckbox_TimeCreationAm);
         chckbox_TimeCreationAm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_TimeCreationAm.setText("AM");
         chckbox_TimeCreationAm.setName("chckbox_TimeCreationAm"); // NOI18N
-        chckbox_TimeCreationAm.addActionListener(this::chckbox_TimeCreationAmActionPerformed);
+        chckbox_TimeCreationAm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_TimeCreationAmActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -632,13 +635,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc1.add(chckbox_Rep1);
         chckbox_Rep1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep1.setText("Repair");
-        chckbox_Rep1.addActionListener(this::chckbox_Rep1ActionPerformed);
+        chckbox_Rep1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep1ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main1.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc1.add(chckbox_Main1);
         chckbox_Main1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main1.setText("Maintenance");
-        chckbox_Main1.addActionListener(this::chckbox_Main1ActionPerformed);
+        chckbox_Main1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main1ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption1.setName("txtfld_Descrption1"); // NOI18N
@@ -679,13 +690,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc2.add(chckbox_Rep2);
         chckbox_Rep2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep2.setText("Repair");
-        chckbox_Rep2.addActionListener(this::chckbox_Rep2ActionPerformed);
+        chckbox_Rep2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep2ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main2.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc2.add(chckbox_Main2);
         chckbox_Main2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main2.setText("Maintenance");
-        chckbox_Main2.addActionListener(this::chckbox_Main2ActionPerformed);
+        chckbox_Main2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main2ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption2.setName("txtfld_Descrption2"); // NOI18N
@@ -726,13 +745,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc3.add(chckbox_Rep3);
         chckbox_Rep3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep3.setText("Repair");
-        chckbox_Rep3.addActionListener(this::chckbox_Rep3ActionPerformed);
+        chckbox_Rep3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep3ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main3.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc3.add(chckbox_Main3);
         chckbox_Main3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main3.setText("Maintenance");
-        chckbox_Main3.addActionListener(this::chckbox_Main3ActionPerformed);
+        chckbox_Main3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main3ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption3.setName("txtfld_Descrption3"); // NOI18N
@@ -773,13 +800,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc4.add(chckbox_Rep4);
         chckbox_Rep4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep4.setText("Repair");
-        chckbox_Rep4.addActionListener(this::chckbox_Rep4ActionPerformed);
+        chckbox_Rep4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep4ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main4.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc4.add(chckbox_Main4);
         chckbox_Main4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main4.setText("Maintenance");
-        chckbox_Main4.addActionListener(this::chckbox_Main4ActionPerformed);
+        chckbox_Main4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main4ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption4.setName("txtfld_Descrption4"); // NOI18N
@@ -820,13 +855,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc5.add(chckbox_Rep5);
         chckbox_Rep5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep5.setText("Repair");
-        chckbox_Rep5.addActionListener(this::chckbox_Rep5ActionPerformed);
+        chckbox_Rep5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep5ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main5.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc5.add(chckbox_Main5);
         chckbox_Main5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main5.setText("Maintenance");
-        chckbox_Main5.addActionListener(this::chckbox_Main5ActionPerformed);
+        chckbox_Main5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main5ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption5.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption5.setName("txtfld_Descrption5"); // NOI18N
@@ -867,13 +910,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc6.add(chckbox_Rep6);
         chckbox_Rep6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep6.setText("Repair");
-        chckbox_Rep6.addActionListener(this::chckbox_Rep6ActionPerformed);
+        chckbox_Rep6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep6ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main6.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc6.add(chckbox_Main6);
         chckbox_Main6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main6.setText("Maintenance");
-        chckbox_Main6.addActionListener(this::chckbox_Main6ActionPerformed);
+        chckbox_Main6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main6ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption6.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption6.setName("txtfld_Descrption6"); // NOI18N
@@ -914,13 +965,21 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc7.add(chckbox_Rep7);
         chckbox_Rep7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep7.setText("Repair");
-        chckbox_Rep7.addActionListener(this::chckbox_Rep7ActionPerformed);
+        chckbox_Rep7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Rep7ActionPerformed(evt);
+            }
+        });
 
         chckbox_Main7.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc7.add(chckbox_Main7);
         chckbox_Main7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main7.setText("Maintenance");
-        chckbox_Main7.addActionListener(this::chckbox_Main7ActionPerformed);
+        chckbox_Main7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_Main7ActionPerformed(evt);
+            }
+        });
 
         txtfld_Descrption7.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption7.setName("txtfld_Descrption7"); // NOI18N
@@ -998,14 +1057,22 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_SchedCreationAm.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_SchedCreationAm.setText("AM");
         chckbox_SchedCreationAm.setName("chckbox_SchedCreationAm"); // NOI18N
-        chckbox_SchedCreationAm.addActionListener(this::chckbox_SchedCreationAmActionPerformed);
+        chckbox_SchedCreationAm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_SchedCreationAmActionPerformed(evt);
+            }
+        });
 
         chckbox_SchedCreationPM.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpScheduledTime.add(chckbox_SchedCreationPM);
         chckbox_SchedCreationPM.setFont(new java.awt.Font("Montserrat Light", 0, 10)); // NOI18N
         chckbox_SchedCreationPM.setText("PM");
         chckbox_SchedCreationPM.setName("chckbox_SchedCreationPM"); // NOI18N
-        chckbox_SchedCreationPM.addActionListener(this::chckbox_SchedCreationPMActionPerformed);
+        chckbox_SchedCreationPM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chckbox_SchedCreationPMActionPerformed(evt);
+            }
+        });
 
         txtfld_TimeSched.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("h:mm"))));
         txtfld_TimeSched.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
@@ -2662,7 +2729,11 @@ public class WOInputForm extends javax.swing.JFrame {
         bttnSave.setFont(new java.awt.Font("Montserrat ExtraBold", 0, 18)); // NOI18N
         bttnSave.setText("SAVE");
         bttnSave.setBorder(new javax.swing.border.MatteBorder(null));
-        bttnSave.addActionListener(this::bttnSaveActionPerformed);
+        bttnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -2687,7 +2758,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1342, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel2);
@@ -3297,7 +3368,6 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

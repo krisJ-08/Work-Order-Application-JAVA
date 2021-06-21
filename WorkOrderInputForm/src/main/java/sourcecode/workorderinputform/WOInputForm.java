@@ -1637,6 +1637,11 @@ public class WOInputForm extends javax.swing.JFrame {
 
         txtfld_MaterialsParts4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MaterialsParts4.setName("txtfld_Materials/Parts4"); // NOI18N
+        txtfld_MaterialsParts4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfld_MaterialsParts4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);

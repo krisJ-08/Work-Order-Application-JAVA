@@ -22,19 +22,18 @@ public class WOInputForm extends javax.swing.JFrame {
 
     private String TimeCreation;
     private String SchedTime;
-    private float dblMatPrice1;
-    private float dblMatPrice2;
-    private float dblMatPrice3;
-    private float dblMatPrice4;
-    private float dblAmount1;
-    private float dblAmount2;
-    private float dblAmount3;
-    private float dblAmount4;
-    private float dblTotalLaborInit;
-    private float dblLaborPrice1;
-    private float dblLaborPrice2;
-    private float dblLaborPrice3;
-    private float dblLaborPrice4;
+    private double dblMatPrice1;
+    private double dblMatPrice2;
+    private double dblMatPrice3;
+    private double dblMatPrice4;
+    private double dblAmount1;
+    private double dblAmount2;
+    private double dblAmount3;
+    private double dblAmount4;
+    private double dblTotalLaborInit;
+    private double dblLaborPrice1;
+    private double dblLaborPrice2;
+    private double dblLaborPrice3;
     private int qty4;
     private int qty1;
     private int qty2;
@@ -43,6 +42,9 @@ public class WOInputForm extends javax.swing.JFrame {
     private int hrs2;
     private int hrs3;
     private int MachineNo;
+    private String sqlWOID;
+    private double dblTotalMaterials;
+    private double dblTotal;
 
 
     /**
@@ -3045,111 +3047,192 @@ public class WOInputForm extends javax.swing.JFrame {
         if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty()) tempDescription.add(txtDescription7);
 
 
-//            ArrayList<Integer> tempQTY = new ArrayList<>();
-//            qty1 = Integer.parseInt(txtfld_qty1.getText());
-//            qty2 = Integer.parseInt(txtfld_qty2.getText());
-//            qty3 = Integer.parseInt(txtfld_qty3.getText());
-//            qty4 = Integer.parseInt(txtfld_qty4.getText());
-//            tempQTY.add(qty1);
-//            tempQTY.add(qty2);
-//            tempQTY.add(qty3);
-//            tempQTY.add(qty4);
-//
-//            ArrayList<String> tempMatParts = new ArrayList<>();
-//            String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
-//            String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
-//            String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
-//            String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
-//            tempMatParts.add(txtMaterialsParts1);
-//            tempMatParts.add(txtMaterialsParts2);
-//            tempMatParts.add(txtMaterialsParts3);
-//            tempMatParts.add(txtMaterialsParts4);
-//
-//            ArrayList<Float> tempMatPrice = new ArrayList<>();
-//            dblMatPrice1 = Float.parseFloat(txtfld_MatPrice1.getText());
-//            dblMatPrice2 = Float.parseFloat(txtfld_MatPrice2.getText());
-//            dblMatPrice3 = Float.parseFloat(txtfld_MatPrice3.getText());
-//            dblMatPrice4 = Float.parseFloat(txtfld_MatPrice4.getText());
-//            tempMatPrice.add(dblMatPrice1);
-//            tempMatPrice.add(dblMatPrice2);
-//            tempMatPrice.add(dblMatPrice3);
-//            tempMatPrice.add(dblMatPrice4);
-//
-//            ArrayList<Float> tempMatAmount = new ArrayList<>();
-//            dblAmount1 = Float.parseFloat(txtfld_Amount1.getText());
-//            dblAmount2 = Float.parseFloat(txtfld_Amount1.getText());
-//            dblAmount3 = Float.parseFloat(txtfld_Amount1.getText());
-//            dblAmount4 = Float.parseFloat(txtfld_Amount1.getText());
-//            tempMatAmount.add(dblAmount1);
-//            tempMatAmount.add(dblAmount2);
-//            tempMatAmount.add(dblAmount3);
-//            tempMatAmount.add(dblAmount4);
-//
-//            ArrayList<Integer> tempHours = new ArrayList<>();
-//            hrs1 = Integer.parseInt(txtfld_hrs1.getText());
-//            hrs2 = Integer.parseInt(txtfld_hrs2.getText());
-//            hrs3 = Integer.parseInt(txtfld_hrs3.getText());
-//            tempHours.add(hrs1);
-//            tempHours.add(hrs2);
-//            tempHours.add(hrs3);
-//
-//            ArrayList<String> tempLabor = new ArrayList<>();
-//            String txtLabor1 = txtfld_Labor1.getText();
-//            String txtLabor2 = txtfld_Labor2.getText();
-//            String txtLabor3 = txtfld_Labor3.getText();
-//            tempLabor.add(txtLabor1);
-//            tempLabor.add(txtLabor2);
-//            tempLabor.add(txtLabor3);
-//
-//            ArrayList<Float> tempLaborAmount = new ArrayList<>();
-//            dblLaborPrice1 = Float.parseFloat(txtfld_LbrPrice1.getText());
-//            dblLaborPrice2 = Float.parseFloat(txtfld_LbrPrice2.getText());
-//            dblLaborPrice3 = Float.parseFloat(txtfld_LbrPrice3.getText());
-//            tempLaborAmount.add(dblLaborPrice1);
-//            tempLaborAmount.add(dblLaborPrice2);
-//            tempLaborAmount.add(dblLaborPrice3);
-//
-//            String txtdateofcreation = txtfld_dateofcreation.getText();
-//            String txtTime = txtfld_Time.getText() + TimeCreation;
-//            String txtTakenBy = txtfld_Takenby.getText();
-//            String txtRequestedBy = txtfld_Requestedby.getText();
-//            String txtDept = txtfld_Dept.getText();
-//            String txtBldgfloor = txtfld_bldgfloor1.getText();
-//            MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
-//            String txtDateWanted = txtfld_DateWanted.getText();
-//            String txtScheduleDate = txtfld_ScheduledDate.getText();
-//            String txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
-//            String txtChargeTo = txtfld_ChargeTo.getText();
-//            String txtWrkCompBy = txtfld_WrkCompBy.getText();
-//            String txtDateComp = txtfld_DateComp.getText();
-//            String txtTOTAL = txtfld_TOTAL.getText();
-//            String txtInsAppBy = txtfld_InspAppBy.getText();
-//            String txtDateInsp = txtfld_DateInsp.getText();
-//
-//        if(!txtfld_DateInsp.getText().isEmpty() && !txtfld_Descrption1.getText().isEmpty() && !txtfld_DateInsp.getText().isEmpty() && !txtfld_InspAppBy.getText().isEmpty()){
-//            bttnSave.setEnabled(true);
-//        }
-//
-//        ArrayList<String> tempMatID = new ArrayList<>();
-//        if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
-//        if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
-//        if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
-//        if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
+            ArrayList<Integer> tempQTY = new ArrayList<>();
+        if (!txtfld_qty1.getText().isEmpty()) {
+            qty1 = Integer.parseInt(txtfld_qty1.getText());
+            tempQTY.add(qty1);
+        }
+        if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
+            qty2 = Integer.parseInt(txtfld_qty2.getText());
+            tempQTY.add(qty2);
+        }
+        if (!txtfld_qty2.getText().isEmpty() && !txtfld_qty3.getText().isEmpty()) {
+            qty3 = Integer.parseInt(txtfld_qty3.getText());
+            tempQTY.add(qty3);
+        }
+        if (!txtfld_qty3.getText().isEmpty() && !txtfld_qty4.getText().isEmpty()) {
+            qty4 = Integer.parseInt(txtfld_qty4.getText());
+            tempQTY.add(qty4);
+        }
 
-        ArrayList<String> tempMat_ID = new ArrayList<>();
+            ArrayList<String> tempMatParts = new ArrayList<>();
+            String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
+            String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
+            String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
+            String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
+            tempMatParts.add(txtMaterialsParts1);
+            tempMatParts.add(txtMaterialsParts2);
+            tempMatParts.add(txtMaterialsParts3);
+            tempMatParts.add(txtMaterialsParts4);
+
+
+            ArrayList<Double> tempMatPrice = new ArrayList<>();
+        if (!txtfld_MatPrice1.getText().isEmpty()) {
+            dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
+            tempMatPrice.add(dblMatPrice1);
+        }
+        if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
+            dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
+            tempMatPrice.add(dblMatPrice2);
+        }
+        if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
+            dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
+            tempMatPrice.add(dblMatPrice3);
+        }
+        if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
+            dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
+            tempMatPrice.add(dblMatPrice4);
+        }
+
+            ArrayList<Double> tempMatAmount = new ArrayList<>();
+        if (!txtfld_Amount1.getText().isEmpty()) {
+            dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
+            tempMatAmount.add(dblAmount1);
+        }
+        if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
+            dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
+            tempMatAmount.add(dblAmount2);
+        }
+        if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
+            dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
+            tempMatAmount.add(dblAmount3);
+        }
+        if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
+            dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
+            tempMatAmount.add(dblAmount4);
+        }
+
+            ArrayList<Integer> tempHours = new ArrayList<>();
+        if (!txtfld_hrs1.getText().isEmpty()) {
+            hrs1 = Integer.parseInt(txtfld_hrs1.getText());
+            tempHours.add(hrs1);
+        }
+        if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
+            hrs2 = Integer.parseInt(txtfld_qty2.getText());
+            tempHours.add(hrs2);
+        }
+        if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
+            hrs3 = Integer.parseInt(txtfld_qty3.getText());
+            tempHours.add(hrs3);
+        }
+
+            ArrayList<String> tempLabor = new ArrayList<>();
+            String txtLabor1 = txtfld_Labor1.getText();
+            String txtLabor2 = txtfld_Labor2.getText();
+            String txtLabor3 = txtfld_Labor3.getText();
+            tempLabor.add(txtLabor1);
+            tempLabor.add(txtLabor2);
+            tempLabor.add(txtLabor3);
+
+            ArrayList<Double> tempLaborAmount = new ArrayList<>();
+        if (!txtfld_LbrPrice1.getText().isEmpty()) {
+            dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
+            tempLaborAmount.add(dblLaborPrice1);
+        }
+        if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
+            dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
+            tempLaborAmount.add(dblLaborPrice2);
+        }
+        if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
+            dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
+            tempLaborAmount.add(dblLaborPrice3);
+        }
+
+            String txtdateofcreation = txtfld_dateofcreation.getText();
+            String txtTime = txtfld_Time.getText() + TimeCreation;
+            String txtTakenBy = txtfld_Takenby.getText();
+            String txtRequestedBy = txtfld_Requestedby.getText();
+            String txtDept = txtfld_Dept.getText();
+            String txtBldgfloor = txtfld_bldgfloor1.getText();
+            MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
+            String txtDateWanted = txtfld_DateWanted.getText();
+            String txtScheduleDate = txtfld_ScheduledDate.getText();
+            String txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
+            String txtChargeTo = txtfld_ChargeTo.getText();
+            String txtWrkCompBy = txtfld_WrkCompBy.getText();
+            String txtDateComp = txtfld_DateComp.getText();
+            String txtInsAppBy = txtfld_InspAppBy.getText();
+            String txtDateInsp = txtfld_DateInsp.getText();
+            dblTotalLaborInit = Double.parseDouble(txtfld_TotalLaborInit.getText());
+            dblTotalMaterials = Double.parseDouble(txtfld_TotalMat.getText());
+            dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
+
+        if(!txtfld_DateInsp.getText().isEmpty() && !txtfld_Descrption1.getText().isEmpty() && !txtfld_DateInsp.getText().isEmpty() && !txtfld_InspAppBy.getText().isEmpty()){
+            bttnSave.setEnabled(true);
+        }
+
+        ArrayList<String> tempMatID = new ArrayList<>();
+        if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
+        if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
+        if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
+        if (!txtfld_qty4.getText().isEmpty());
+
+        ArrayList<String> tempLbrID = new ArrayList<>();
+        if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
+        if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
+        if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
 
 
         try {
             objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+
             try {
                 objConn.setAutoCommit(false);
-                PreparedStatement psService = objConn.prepareStatement("INSERT INTO SERVICE (ServiceID, NatureofService, Description)" + " VALUES (?, ?, ?)");
+                String sqlWorkOrder = "INSERT INTO WORK_ORDER (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
+                        "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                PreparedStatement psWorkOrder = objConn.prepareStatement(sqlWorkOrder);
+                    psWorkOrder.setString(1, txtdateofcreation);
+                    psWorkOrder.setString(2, txtTakenBy);
+                    psWorkOrder.setString(3, txtRequestedBy);
+                    psWorkOrder.setString(4, txtdateofcreation);
+                    psWorkOrder.setString(5, txtTakenBy);
+                    psWorkOrder.setString(6, txtRequestedBy);
+                    psWorkOrder.setString(7, txtdateofcreation);
+                    psWorkOrder.setString(8, txtTakenBy);
+                    psWorkOrder.setString(9, txtRequestedBy);
+                    psWorkOrder.setString(10, txtdateofcreation);
+                    psWorkOrder.setString(11, txtTakenBy);
+                    psWorkOrder.setString(12, txtRequestedBy);
+                    psWorkOrder.setString(13, txtdateofcreation);
+//                    psWorkOrder.setDouble(14, txtTakenBy);
+//                    psWorkOrder.setDouble(15, txtRequestedBy);
+//                    psWorkOrder.setDouble(16, txtRequestedBy);
+                    psWorkOrder.executeUpdate();
+                    objConn.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            try {
+                ResultSet rs;
+                Statement st = objConn.createStatement();
+                String query = ("SELECT * FROM WORK_ORDER ORDER BY WorkOrderID DESC LIMIT 1;");
+                rs = st.executeQuery(query);
+                if (rs.next()) {
+                    sqlWOID = rs.getString("WorkOrderID");
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            try {
+                objConn.setAutoCommit(false);
+                PreparedStatement psService = objConn.prepareStatement("INSERT INTO SERVICE (Work_Order_ID, ServiceID, NatureofService, Description)" + " VALUES (?, ?, ?, ?)");
                 for (int i = 0; i < tempServiceID.size(); i++) {
-                    psService.setString(1, tempServiceID.get(i));
-                    psService.setString(2, tempNatureofService.get(i));
-                    psService.setString(3, tempDescription.get(i));
+                    psService.setString(1, sqlWOID);
+                    psService.setString(2, tempServiceID.get(i));
+                    psService.setString(3, tempNatureofService.get(i));
+                    psService.setString(4, tempDescription.get(i));
                     psService.addBatch();
-//                    psService.setString(4, tempMat_ID.get(i));
                 }
                 psService.executeBatch();
                 objConn.commit();
@@ -3157,73 +3240,40 @@ public class WOInputForm extends javax.swing.JFrame {
                 throwables.printStackTrace();
             }
 
-//            try {
-//                objConn.setAutoCommit(false);
-//                String serviceIDSQL = "INSERT INTO WORK_Order (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
-//                        "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-//                PreparedStatement psServID = objConn.prepareStatement(serviceIDSQL);
-//                    psServID.setString(1, txtdateofcreation);
-//                    psServID.setString(2, txtTakenBy);
-//                    psServID.setString(3, txtRequestedBy);
-//                    psServID.setString(4, txtdateofcreation);
-//                    psServID.setString(5, txtTakenBy);
-//                    psServID.setString(6, txtRequestedBy);
-//                    psServID.setString(7, txtdateofcreation);
-//                    psServID.setString(8, txtTakenBy);
-//                    psServID.setString(9, txtRequestedBy);
-//                    psServID.setString(10, txtdateofcreation);
-//                    psServID.setString(11, txtTakenBy);
-//                    psServID.setString(12, txtRequestedBy);
-//                    psServID.setString(13, txtdateofcreation);
-//                    psServID.setString(14, txtTakenBy);
-//                    psServID.setString(15, txtRequestedBy);
-//                    psServID.setString(16, txtRequestedBy);
-//                    psServID.executeUpdate();
-//                    objConn.commit();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//
-//            try{
-//                objConn.setAutoCommit(false);
-//                String serviceIDSQL = "INSERT INTO WORK_Order (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
-//                        "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-//                PreparedStatement psServID = objConn.prepareStatement(serviceIDSQL);
-//                psServID.setString(1, txtdateofcreation);
-//                psServID.setString(2, txtTakenBy);
-//                psServID.setString(3, txtRequestedBy);
-//                psServID.setString(4, txtdateofcreation);
-//                psServID.setString(5, txtTakenBy);
-//                psServID.setString(6, txtRequestedBy);
-//                psServID.setString(7, txtdateofcreation);
-//                psServID.setString(8, txtTakenBy);
-//                psServID.setString(9, txtRequestedBy);
-//                psServID.setString(10, txtdateofcreation);
-//                psServID.setString(11, txtTakenBy);
-//                psServID.setString(12, txtRequestedBy);
-//                psServID.setString(13, txtdateofcreation);
-//                psServID.setString(14, txtTakenBy);
-//                psServID.setString(15, txtRequestedBy);
-//                psServID.setString(16, txtRequestedBy);
-//                psServID.executeUpdate();
-//                objConn.commit();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
+            try{
+                objConn.setAutoCommit(false);
+                PreparedStatement psMaterial = objConn.prepareStatement("INSERT INTO MATERIAL (Work_Order_ID, MatID, QTY, MatName, MatPrice, MatAmount)" + " VALUES (?, ?, ?, ?, ?, ?)");
+                for (int i = 0; i < tempMatID.size(); i++) {
+                    psMaterial.setString(1, sqlWOID);
+                    psMaterial.setString(2, tempMatID.get(i));
+                    psMaterial.setInt(3, tempQTY.get(i));
+                    psMaterial.setString(4, tempMatParts.get(i));
+                    psMaterial.setDouble(5, tempMatPrice.get(i));
+                    psMaterial.setDouble(6, tempMatAmount.get(i));
+                    psMaterial.addBatch();
+                }
+                psMaterial.executeBatch();
+                objConn.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
-
-//            psServ.setString (4, mat_id.toString());
-
-
-
-
-//           String SQLMaterial = "INSERT INTO MATERIAL" +
-//                    "(MatID, QTY, MatName, MatPrice, MatAmount) VALUES " +
-//
-//
-//           String SQLLabor = "INSERT INTO LABOR" +
-//                    "(Hours, Labor, LaborAmount) VALUES " +
-//
+            try{
+                objConn.setAutoCommit(false);
+                PreparedStatement psLabor = objConn.prepareStatement("INSERT INTO LABOR (Work_Order_ID, LaborID, Hours, Labor, LaborAmount)" + " VALUES (?, ?, ?, ?, ?)");
+                for (int i = 0; i < tempLbrID.size(); i++) {
+                    psLabor.setString(1, sqlWOID);
+                    psLabor.setString(2, tempLbrID.get(i));
+                    psLabor.setInt(3, tempHours.get(i));
+                    psLabor.setString(4, tempLabor.get(i));
+                    psLabor.setDouble(5, tempLaborAmount.get(i));
+                    psLabor.addBatch();
+                }
+                psLabor.executeBatch();
+                objConn.commit();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }catch (Exception objEx) {
 
             System.out.println("Database failed!");

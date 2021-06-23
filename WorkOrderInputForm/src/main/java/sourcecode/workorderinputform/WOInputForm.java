@@ -3013,7 +3013,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
 
         pack();
@@ -3425,7 +3425,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
 
         try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
 
             try {
                 objConn.setAutoCommit(false);
@@ -3574,7 +3574,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
         }catch (Exception objEx) {
 
             System.out.println("Database failed!");

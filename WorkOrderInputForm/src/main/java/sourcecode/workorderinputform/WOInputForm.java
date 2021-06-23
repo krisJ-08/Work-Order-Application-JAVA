@@ -30,7 +30,7 @@ public class WOInputForm extends javax.swing.JFrame {
     private double dblAmount2;
     private double dblAmount3;
     private double dblAmount4;
-    private double dblTotalLaborInit = 0.0;
+    private double dblTotalLaborInit;
     private double dblLaborPrice1;
     private double dblLaborPrice2;
     private double dblLaborPrice3;
@@ -41,10 +41,10 @@ public class WOInputForm extends javax.swing.JFrame {
     private int hrs1;
     private int hrs2;
     private int hrs3;
-    private int MachineNo = 0;
+    private int MachineNo;
     private String sqlWOID;
-    private double dblTotalMaterials = 0.0;
-    private double dblTotal = 0.0;
+    private double dblTotalMaterials;
+    private double dblTotal;
 
 
     /**
@@ -291,7 +291,6 @@ public class WOInputForm extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setMinimumSize(new java.awt.Dimension(700, 600));
         setName("woinputFrame"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(715, 600));
         setResizable(false);
         setSize(new java.awt.Dimension(715, 600));
 
@@ -350,7 +349,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_dateofcreation.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_dateofcreation.setName("txtfld_dateofcreation"); // NOI18N
 
-        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel43.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(204, 0, 0));
         jLabel43.setText("*");
 
@@ -414,7 +413,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel44.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(204, 0, 0));
         jLabel44.setText("*");
 
@@ -462,7 +461,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel3.setText("Taken By");
 
-        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel45.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(204, 0, 0));
         jLabel45.setText("*");
 
@@ -505,7 +504,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_Requestedby.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Requestedby.setName("txtfld_Requestedby"); // NOI18N
 
-        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel47.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(204, 0, 0));
         jLabel47.setText("*");
 
@@ -528,7 +527,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(jLabel47))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtfld_Requestedby, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -545,7 +544,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_Dept.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Dept.setName("txtfld_Dept"); // NOI18N
 
-        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel49.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(204, 0, 0));
         jLabel49.setText("*");
 
@@ -584,7 +583,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_bldgfloor1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_bldgfloor1.setName("txtfld_bldg/floor1"); // NOI18N
 
-        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel50.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(204, 0, 0));
         jLabel50.setText("*");
 
@@ -624,7 +623,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_MachineNo.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MachineNo.setName("txtfld_MachineNo"); // NOI18N
 
-        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel48.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(204, 0, 0));
         jLabel48.setText("*");
 
@@ -637,7 +636,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
             .addComponent(txtfld_MachineNo, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel10Layout.setVerticalGroup(
@@ -665,7 +664,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_DateWanted.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateWanted.setName("txtfld_DateWanted"); // NOI18N
 
-        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel51.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(204, 0, 0));
         jLabel51.setText("*");
 
@@ -704,7 +703,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("DESCRIPTION OF WORK REQUIRED");
 
-        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel52.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel52.setForeground(new java.awt.Color(204, 0, 0));
         jLabel52.setText("*");
 
@@ -1128,7 +1127,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_ScheduledDate.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_ScheduledDate.setName("txtfld_ScheduledDate"); // NOI18N
 
-        jLabel53.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel53.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(204, 0, 0));
         jLabel53.setText("*");
 
@@ -1194,7 +1193,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_TimeSched.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_TimeSched.setName("txtfld_TimeSched"); // NOI18N
 
-        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel54.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(204, 0, 0));
         jLabel54.setText("*");
 
@@ -1847,7 +1846,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("Hours");
 
-        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel55.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(204, 0, 0));
         jLabel55.setText("*");
 
@@ -1860,16 +1859,16 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
         );
         jPanel42Layout.setVerticalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel42Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel55)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel42);
@@ -1883,7 +1882,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Labor");
 
-        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel56.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel56.setForeground(new java.awt.Color(204, 0, 0));
         jLabel56.setText("*");
 
@@ -1896,16 +1895,16 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80))
             .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel43Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel56)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel43);
@@ -1920,7 +1919,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel18.setText("Price");
         jLabel18.setPreferredSize(new java.awt.Dimension(35, 18));
 
-        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel57.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel57.setForeground(new java.awt.Color(204, 0, 0));
         jLabel57.setText("*");
 
@@ -1940,9 +1939,9 @@ public class WOInputForm extends javax.swing.JFrame {
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel57)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel44);
@@ -1957,7 +1956,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel41.setText("<html><p style=\"text-align: center;\">Total<br> Materials</p></html>");
         jLabel41.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel58.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel58.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel58.setForeground(new java.awt.Color(204, 0, 0));
         jLabel58.setText("*");
 
@@ -2127,7 +2126,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("Total Labor");
 
-        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel60.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel60.setForeground(new java.awt.Color(204, 0, 0));
         jLabel60.setText("*");
 
@@ -2502,7 +2501,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("TOTAL LABOR");
 
-        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel61.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel61.setForeground(new java.awt.Color(204, 0, 0));
         jLabel61.setText("*");
 
@@ -2511,7 +2510,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel62Layout.setHorizontalGroup(
             jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
-                .addContainerGap(205, Short.MAX_VALUE)
+                .addContainerGap(207, Short.MAX_VALUE)
                 .addComponent(jLabel61)
                 .addGap(127, 127, 127))
             .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2634,7 +2633,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_ChargeTo.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_ChargeTo.setName("txtfld_ChargeTo"); // NOI18N
 
-        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel62.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel62.setForeground(new java.awt.Color(204, 0, 0));
         jLabel62.setText("*");
 
@@ -2728,7 +2727,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_WrkCompBy.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_WrkCompBy.setName("txtfld_WrkCompBy"); // NOI18N
 
-        jLabel63.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel63.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel63.setForeground(new java.awt.Color(204, 0, 0));
         jLabel63.setText("*");
 
@@ -2769,7 +2768,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_DateComp.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateComp.setName("txtfld_DateComp"); // NOI18N
 
-        jLabel64.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel64.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel64.setForeground(new java.awt.Color(204, 0, 0));
         jLabel64.setText("*");
 
@@ -2807,7 +2806,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel36.setText("TOTAL");
 
-        jLabel65.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel65.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel65.setForeground(new java.awt.Color(204, 0, 0));
         jLabel65.setText("*");
 
@@ -2890,7 +2889,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_InspAppBy.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_InspAppBy.setName("txtfld_Insp/AppBy"); // NOI18N
 
-        jLabel66.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel66.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel66.setForeground(new java.awt.Color(204, 0, 0));
         jLabel66.setText("*");
 
@@ -2931,7 +2930,7 @@ public class WOInputForm extends javax.swing.JFrame {
         txtfld_DateInsp.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateInsp.setName("txtfld_DateInsp"); // NOI18N
 
-        jLabel67.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel67.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel67.setForeground(new java.awt.Color(204, 0, 0));
         jLabel67.setText("*");
 
@@ -2970,7 +2969,7 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel42.setFont(new java.awt.Font("Tahoma", 3, 10)); // NOI18N
+        jLabel42.setFont(new java.awt.Font("Montserrat", 0, 10)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(204, 0, 0));
         jLabel42.setText("*Required");
 
@@ -3426,7 +3425,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
 
         try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
 
             try {
                 objConn.setAutoCommit(false);
@@ -3436,24 +3435,23 @@ public class WOInputForm extends javax.swing.JFrame {
                     psWorkOrder.setString(1, txtdateofcreation);
                     psWorkOrder.setString(2, txtTakenBy);
                     psWorkOrder.setString(3, txtRequestedBy);
-                    psWorkOrder.setString(4, txtdateofcreation);
-                    psWorkOrder.setString(5, txtTakenBy);
-                    psWorkOrder.setString(6, txtRequestedBy);
-                    psWorkOrder.setString(7, txtdateofcreation);
-                    psWorkOrder.setString(8, txtTakenBy);
-                    psWorkOrder.setString(9, txtRequestedBy);
-                    psWorkOrder.setString(10, txtdateofcreation);
-                    psWorkOrder.setString(11, txtTakenBy);
-                    psWorkOrder.setString(12, txtRequestedBy);
-                    psWorkOrder.setString(13, txtdateofcreation);
-//                    psWorkOrder.setDouble(14, txtTakenBy);
-//                    psWorkOrder.setDouble(15, txtRequestedBy);
-//                    psWorkOrder.setDouble(16, txtRequestedBy);
-                    psWorkOrder.addBatch();
-                    psWorkOrder.executeBatch();
+                    psWorkOrder.setString(4, txtDept);
+                    psWorkOrder.setString(5, txtBldgfloor);
+                    psWorkOrder.setInt(6, MachineNo);
+                    psWorkOrder.setString(7, txtScheduleDate);
+                    psWorkOrder.setString(8, txtTimeSched);
+                    psWorkOrder.setString(9, txtChargeTo);
+                    psWorkOrder.setString(10, txtWrkCompBy);
+                    psWorkOrder.setString(11, txtDateComp);
+                    psWorkOrder.setString(12, txtInsAppBy);
+                    psWorkOrder.setString(13, txtDateInsp );
+                    psWorkOrder.setDouble(14, dblTotalLaborInit);
+                    psWorkOrder.setDouble(15, dblTotalMaterials);
+                    psWorkOrder.setDouble(16,  dblTotal);
+                    psWorkOrder.executeUpdate();
                     objConn.commit();
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+                e.printStackTrace();
             }
 
             try {
@@ -3515,11 +3513,12 @@ public class WOInputForm extends javax.swing.JFrame {
                 psLabor.executeBatch();
                 objConn.commit();
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+                e.printStackTrace();
             }
         }catch (Exception objEx) {
+
             System.out.println("Database failed!");
-            System.out.println(objEx.getMessage());
+            System.out.println(objEx);
 
         } finally {
 
@@ -3575,11 +3574,11 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
         }catch (Exception objEx) {
 
             System.out.println("Database failed!");
-            System.out.println(objEx.getMessage());
+            System.out.println(objEx);
 
         }finally{
             if (objConn != null) {

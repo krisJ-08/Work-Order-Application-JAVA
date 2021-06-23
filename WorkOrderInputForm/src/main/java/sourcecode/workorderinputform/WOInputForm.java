@@ -30,7 +30,7 @@ public class WOInputForm extends javax.swing.JFrame {
     private double dblAmount2;
     private double dblAmount3;
     private double dblAmount4;
-    private double dblTotalLaborInit;
+    private double dblTotalLaborInit = 0.0;
     private double dblLaborPrice1;
     private double dblLaborPrice2;
     private double dblLaborPrice3;
@@ -41,10 +41,10 @@ public class WOInputForm extends javax.swing.JFrame {
     private int hrs1;
     private int hrs2;
     private int hrs3;
-    private int MachineNo;
+    private int MachineNo = 0;
     private String sqlWOID;
-    private double dblTotalMaterials;
-    private double dblTotal;
+    private double dblTotalMaterials = 0.0;
+    private double dblTotal = 0.0;
 
 
     /**
@@ -3449,10 +3449,11 @@ public class WOInputForm extends javax.swing.JFrame {
 //                    psWorkOrder.setDouble(14, txtTakenBy);
 //                    psWorkOrder.setDouble(15, txtRequestedBy);
 //                    psWorkOrder.setDouble(16, txtRequestedBy);
-                    psWorkOrder.executeUpdate();
+                    psWorkOrder.addBatch();
+                    psWorkOrder.executeBatch();
                     objConn.commit();
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
 
             try {
@@ -3514,12 +3515,11 @@ public class WOInputForm extends javax.swing.JFrame {
                 psLabor.executeBatch();
                 objConn.commit();
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }catch (Exception objEx) {
-
             System.out.println("Database failed!");
-            System.out.println(objEx);
+            System.out.println(objEx.getMessage());
 
         } finally {
 
@@ -3579,7 +3579,7 @@ public class WOInputForm extends javax.swing.JFrame {
         }catch (Exception objEx) {
 
             System.out.println("Database failed!");
-            System.out.println(objEx);
+            System.out.println(objEx.getMessage());
 
         }finally{
             if (objConn != null) {

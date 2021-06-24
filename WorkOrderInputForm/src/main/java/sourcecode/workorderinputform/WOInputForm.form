@@ -127,7 +127,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="0" pref="989" max="32767" attributes="0"/>
+          <Component id="jScrollPane1" alignment="0" pref="1569" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -321,7 +321,7 @@
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_dateofcreation">
                       <Properties>
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-                          <Format subtype="1" type="1"/>
+                          <Format format="MM/dd/y" subtype="-1" type="1"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
@@ -432,9 +432,6 @@
                         <Property name="text" type="java.lang.String" value="PM"/>
                         <Property name="name" type="java.lang.String" value="hckbox_TimeCreationPm" noResource="true"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hckbox_TimeCreationPmActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_TimeCreationAm">
                       <Properties>
@@ -450,9 +447,6 @@
                         <Property name="text" type="java.lang.String" value="AM"/>
                         <Property name="name" type="java.lang.String" value="chckbox_TimeCreationAm" noResource="true"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_TimeCreationAmActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel44">
                       <Properties>
@@ -894,7 +888,7 @@
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_DateWanted">
                       <Properties>
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-                          <Format subtype="1" type="1"/>
+                          <Format format="MM/dd/y" subtype="-1" type="1"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
@@ -1043,9 +1037,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Rep1ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_Main1">
                       <Properties>
@@ -1060,9 +1051,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Main1ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_Descrption1">
                       <Properties>
@@ -1135,9 +1123,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Rep2ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_Main2">
                       <Properties>
@@ -1152,9 +1137,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Main2ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_Descrption2">
                       <Properties>
@@ -1227,9 +1209,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Rep3ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_Main3">
                       <Properties>
@@ -1244,9 +1223,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Main3ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_Descrption3">
                       <Properties>
@@ -1319,9 +1295,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Rep4ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_Main4">
                       <Properties>
@@ -1336,9 +1309,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Main4ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_Descrption4">
                       <Properties>
@@ -1411,9 +1381,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Rep5ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_Main5">
                       <Properties>
@@ -1428,9 +1395,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Main5ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_Descrption5">
                       <Properties>
@@ -1503,9 +1467,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Rep6ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_Main6">
                       <Properties>
@@ -1520,9 +1481,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Main6ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_Descrption6">
                       <Properties>
@@ -1595,9 +1553,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Repair"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Rep7ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chckbox_Main7">
                       <Properties>
@@ -1612,9 +1567,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Maintenance"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chckbox_Main7ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_Descrption7">
                       <Properties>
@@ -1686,7 +1638,7 @@
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_ScheduledDate">
                       <Properties>
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-                          <Format subtype="1" type="1"/>
+                          <Format format="MM/dd/y" subtype="-1" type="1"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
@@ -2076,7 +2028,6 @@
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_qty1">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="0"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2184,7 +2135,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2240,7 +2190,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2401,7 +2350,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2457,7 +2405,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2621,7 +2568,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2677,7 +2623,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2838,7 +2783,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -2894,7 +2838,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -3408,7 +3351,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -3711,7 +3653,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -3974,7 +3915,6 @@
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                           <Format format="###0.###" subtype="-1" type="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="0.00"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
                         </Property>
@@ -4612,7 +4552,7 @@
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_DateComp">
                       <Properties>
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-                          <Format subtype="1" type="1"/>
+                          <Format format="MM/dd/y" subtype="-1" type="1"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>
@@ -4906,7 +4846,7 @@
                     <Component class="javax.swing.JFormattedTextField" name="txtfld_DateInsp">
                       <Properties>
                         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-                          <Format subtype="1" type="1"/>
+                          <Format format="MM/dd/y" subtype="-1" type="1"/>
                         </Property>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Montserrat" size="12" style="0"/>

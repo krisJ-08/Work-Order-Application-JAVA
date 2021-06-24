@@ -385,7 +385,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel1.setText("Date");
 
-        txtfld_dateofcreation.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        txtfld_dateofcreation.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_dateofcreation.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_dateofcreation.setName("txtfld_dateofcreation"); // NOI18N
 
@@ -692,7 +692,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel8.setText("Date Wanted");
 
-        txtfld_DateWanted.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        txtfld_DateWanted.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_DateWanted.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateWanted.setName("txtfld_DateWanted"); // NOI18N
 
@@ -772,12 +772,10 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_Rep1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep1.setText("Repair");
 
-
         chckbox_Main1.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc1.add(chckbox_Main1);
         chckbox_Main1.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main1.setText("Maintenance");
-
 
         txtfld_Descrption1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption1.setName("txtfld_Descrption1"); // NOI18N
@@ -819,12 +817,10 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_Rep2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep2.setText("Repair");
 
-
         chckbox_Main2.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc2.add(chckbox_Main2);
         chckbox_Main2.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main2.setText("Maintenance");
-
 
         txtfld_Descrption2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption2.setName("txtfld_Descrption2"); // NOI18N
@@ -866,12 +862,10 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_Rep3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep3.setText("Repair");
 
-
         chckbox_Main3.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc3.add(chckbox_Main3);
         chckbox_Main3.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main3.setText("Maintenance");
-
 
         txtfld_Descrption3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption3.setName("txtfld_Descrption3"); // NOI18N
@@ -913,12 +907,10 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_Rep4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep4.setText("Repair");
 
-
         chckbox_Main4.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc4.add(chckbox_Main4);
         chckbox_Main4.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main4.setText("Maintenance");
-
 
         txtfld_Descrption4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption4.setName("txtfld_Descrption4"); // NOI18N
@@ -960,12 +952,10 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_Rep5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep5.setText("Repair");
 
-
         chckbox_Main5.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc5.add(chckbox_Main5);
         chckbox_Main5.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main5.setText("Maintenance");
-
 
         txtfld_Descrption5.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption5.setName("txtfld_Descrption5"); // NOI18N
@@ -1007,12 +997,10 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_Rep6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep6.setText("Repair");
 
-
         chckbox_Main6.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc6.add(chckbox_Main6);
         chckbox_Main6.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main6.setText("Maintenance");
-
 
         txtfld_Descrption6.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption6.setName("txtfld_Descrption6"); // NOI18N
@@ -1054,12 +1042,10 @@ public class WOInputForm extends javax.swing.JFrame {
         chckbox_Rep7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Rep7.setText("Repair");
 
-
         chckbox_Main7.setBackground(new java.awt.Color(246, 246, 246));
         bttngrpDesc7.add(chckbox_Main7);
         chckbox_Main7.setFont(new java.awt.Font("Montserrat Light", 0, 12)); // NOI18N
         chckbox_Main7.setText("Maintenance");
-
 
         txtfld_Descrption7.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Descrption7.setName("txtfld_Descrption7"); // NOI18N
@@ -1099,7 +1085,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel10.setText("Scheduled Date");
 
-        txtfld_ScheduledDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        txtfld_ScheduledDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_ScheduledDate.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_ScheduledDate.setName("txtfld_ScheduledDate"); // NOI18N
 
@@ -1328,7 +1314,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel26.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_qty1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtfld_qty1.setText("0");
         txtfld_qty1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_qty1.setName("txtfld_qty1"); // NOI18N
 
@@ -1390,7 +1375,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel28.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_MatPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_MatPrice1.setText("0.00");
         txtfld_MatPrice1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice1.setName("txtfld_MatPrice1"); // NOI18N
 
@@ -1422,7 +1406,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel29.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_Amount1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_Amount1.setText("0.00");
         txtfld_Amount1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount1.setName("txtfld_Amount1"); // NOI18N
 
@@ -1515,7 +1498,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel32.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_MatPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_MatPrice2.setText("0.00");
         txtfld_MatPrice2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice2.setName("txtfld_MatPrice2"); // NOI18N
 
@@ -1547,7 +1529,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel33.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_Amount2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_Amount2.setText("0.00");
         txtfld_Amount2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount2.setName("txtfld_Amount2"); // NOI18N
 
@@ -1642,7 +1623,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel36.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_MatPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_MatPrice3.setText("0.00");
         txtfld_MatPrice3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice3.setName("txtfld_MatPrice3"); // NOI18N
 
@@ -1674,7 +1654,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel37.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_Amount3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_Amount3.setText("0.00");
         txtfld_Amount3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount3.setName("txtfld_Amount3"); // NOI18N
 
@@ -1767,7 +1746,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel40.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_MatPrice4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_MatPrice4.setText("0.00");
         txtfld_MatPrice4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_MatPrice4.setName("txtfld_MatPrice4"); // NOI18N
 
@@ -1799,7 +1777,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel41.setPreferredSize(new java.awt.Dimension(110, 35));
 
         txtfld_Amount4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_Amount4.setText("0.00");
         txtfld_Amount4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_Amount4.setName("txtfld_Amount4"); // NOI18N
 
@@ -2082,7 +2059,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel49.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_LbrPrice1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_LbrPrice1.setText("0.00");
         txtfld_LbrPrice1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice1.setName("txtfld_LbrPrice1"); // NOI18N
 
@@ -2254,7 +2230,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel54.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_LbrPrice2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_LbrPrice2.setText("0.00");
         txtfld_LbrPrice2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice2.setName("txtfld_LbrPrice2"); // NOI18N
 
@@ -2405,7 +2380,6 @@ public class WOInputForm extends javax.swing.JFrame {
         jPanel59.setPreferredSize(new java.awt.Dimension(100, 35));
 
         txtfld_LbrPrice3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
-        txtfld_LbrPrice3.setText("0.00");
         txtfld_LbrPrice3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_LbrPrice3.setName("txtfld_LbrPrice3"); // NOI18N
 
@@ -2762,7 +2736,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel35.setText("Date");
 
-        txtfld_DateComp.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        txtfld_DateComp.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_DateComp.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateComp.setName("txtfld_DateComp"); // NOI18N
 
@@ -2925,7 +2899,7 @@ public class WOInputForm extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Montserrat", 1, 14)); // NOI18N
         jLabel39.setText("Date");
 
-        txtfld_DateInsp.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        txtfld_DateInsp.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("MM/dd/y"))));
         txtfld_DateInsp.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         txtfld_DateInsp.setName("txtfld_DateInsp"); // NOI18N
 
@@ -3012,7 +2986,7 @@ public class WOInputForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 989, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1569, Short.MAX_VALUE)
         );
 
         pack();
@@ -3233,6 +3207,8 @@ public class WOInputForm extends javax.swing.JFrame {
             if (!txtfld_qty1.getText().isEmpty()) {
                 qty1 = Integer.parseInt(txtfld_qty1.getText());
                 tempQTY.add(qty1);
+            }else{
+                tempQTY.add(0, 0);
             }
             if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
                 qty2 = Integer.parseInt(txtfld_qty2.getText());
@@ -3264,6 +3240,8 @@ public class WOInputForm extends javax.swing.JFrame {
             if (!txtfld_MatPrice1.getText().isEmpty()) {
                 dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
                 tempMatPrice.add(dblMatPrice1);
+            }else{
+                tempMatPrice.add(0, 0.00);
             }
             if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
                 dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
@@ -3282,6 +3260,8 @@ public class WOInputForm extends javax.swing.JFrame {
             if (!txtfld_Amount1.getText().isEmpty()) {
                 dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
                 tempMatAmount.add(dblAmount1);
+            }else{
+                tempMatAmount.add(0, 0.00);
             }
             if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
                 dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
@@ -3351,7 +3331,7 @@ public class WOInputForm extends javax.swing.JFrame {
             dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
 
             ArrayList<String> tempMatID = new ArrayList<>();
-            if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
+            tempMatID.add("MAT0001");
             if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
             if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
             if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");

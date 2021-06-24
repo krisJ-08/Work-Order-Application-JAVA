@@ -5,6 +5,7 @@
  */
 package sourcecode.workorderinputform;
 
+import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.sql.*;
@@ -72,7 +73,9 @@ public class WOInputForm extends javax.swing.JFrame {
         bttngrpDesc5 = new javax.swing.ButtonGroup();
         bttngrpDesc6 = new javax.swing.ButtonGroup();
         bttngrpDesc7 = new javax.swing.ButtonGroup();
+        frameErrorMessage = new javax.swing.JDialog();
         jLabel21 = new javax.swing.JLabel();
+        bttnOkError = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -284,7 +287,49 @@ public class WOInputForm extends javax.swing.JFrame {
         bttnSave = new javax.swing.JButton();
         jLabel42 = new javax.swing.JLabel();
 
-        jLabel21.setText("jLabel21");
+        frameErrorMessage.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        frameErrorMessage.setTitle("Error");
+        frameErrorMessage.setAlwaysOnTop(true);
+        frameErrorMessage.setLocationRelativeTo(null);
+        frameErrorMessage.setModalityType(java.awt.Dialog.ModalityType.APPLICATION_MODAL);
+        frameErrorMessage.setPreferredSize(new java.awt.Dimension(325, 150));
+        frameErrorMessage.setResizable(false);
+        frameErrorMessage.setSize(new java.awt.Dimension(325, 150));
+        frameErrorMessage.setType(java.awt.Window.Type.POPUP);
+
+        jLabel21.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
+        jLabel21.setText("Fill up all required labels!");
+
+        bttnOkError.setFont(new java.awt.Font("Montserrat", 0, 14)); // NOI18N
+        bttnOkError.setText("OK");
+        bttnOkError.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttnOkErrorActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout frameErrorMessageLayout = new javax.swing.GroupLayout(frameErrorMessage.getContentPane());
+        frameErrorMessage.getContentPane().setLayout(frameErrorMessageLayout);
+        frameErrorMessageLayout.setHorizontalGroup(
+            frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameErrorMessageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bttnOkError)
+                .addGap(35, 35, 35))
+            .addGroup(frameErrorMessageLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jLabel21)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        frameErrorMessageLayout.setVerticalGroup(
+            frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(frameErrorMessageLayout.createSequentialGroup()
+                .addContainerGap(60, Short.MAX_VALUE)
+                .addComponent(jLabel21)
+                .addGap(29, 29, 29)
+                .addComponent(bttnOkError)
+                .addContainerGap())
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Work Order Input Form");
@@ -474,7 +519,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
             .addComponent(txtfld_Takenby, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel1Layout.setVerticalGroup(
@@ -483,13 +528,13 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel45)
-                        .addGap(18, 18, 18)))
-                .addComponent(txtfld_Takenby, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)))
+                .addComponent(txtfld_Takenby, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(9, 9, 9))
         );
 
         jPanel4.add(jPanel1);
@@ -636,8 +681,10 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
-            .addComponent(txtfld_MachineNo, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addComponent(txtfld_MachineNo, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -768,13 +815,13 @@ public class WOInputForm extends javax.swing.JFrame {
                     .addComponent(chckbox_Main1)
                     .addComponent(chckbox_Rep1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption1)
+                .addComponent(txtfld_Descrption1, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(96, 96, 96)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(txtfld_Descrption1)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
@@ -2988,7 +3035,7 @@ public class WOInputForm extends javax.swing.JFrame {
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addComponent(jLabel42))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3000,7 +3047,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1342, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel2);
@@ -3099,9 +3146,13 @@ public class WOInputForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_chckbox_Rep7ActionPerformed
 
+    private void bttnOkErrorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnOkErrorActionPerformed
+        frameErrorMessage.dispose();
+    }//GEN-LAST:event_bttnOkErrorActionPerformed
+
 
     private void bttnSaveActionPerformed(java.awt.event.ActionEvent evt) {
-
+        try {
             ArrayList<String> tempServiceID = new ArrayList<>();
             ArrayList<String> tempNatureofService = new ArrayList<>();
 
@@ -3280,31 +3331,37 @@ public class WOInputForm extends javax.swing.JFrame {
             String txtDescription7 = txtfld_Descrption7.getText();
 
             tempDescription.add(txtDescription1);
-        if (!txtfld_Descrption1.getText().isEmpty() && !txtfld_Descrption2.getText().isEmpty()) tempDescription.add(txtDescription2);
-        if (!txtfld_Descrption2.getText().isEmpty() && !txtfld_Descrption3.getText().isEmpty()) tempDescription.add(txtDescription3);
-        if (!txtfld_Descrption3.getText().isEmpty() && !txtfld_Descrption4.getText().isEmpty()) tempDescription.add(txtDescription4);
-        if (!txtfld_Descrption4.getText().isEmpty() && !txtfld_Descrption5.getText().isEmpty()) tempDescription.add(txtDescription5);
-        if (!txtfld_Descrption5.getText().isEmpty() && !txtfld_Descrption6.getText().isEmpty()) tempDescription.add(txtDescription6);
-        if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty()) tempDescription.add(txtDescription7);
+            if (!txtfld_Descrption1.getText().isEmpty() && !txtfld_Descrption2.getText().isEmpty())
+                tempDescription.add(txtDescription2);
+            if (!txtfld_Descrption2.getText().isEmpty() && !txtfld_Descrption3.getText().isEmpty())
+                tempDescription.add(txtDescription3);
+            if (!txtfld_Descrption3.getText().isEmpty() && !txtfld_Descrption4.getText().isEmpty())
+                tempDescription.add(txtDescription4);
+            if (!txtfld_Descrption4.getText().isEmpty() && !txtfld_Descrption5.getText().isEmpty())
+                tempDescription.add(txtDescription5);
+            if (!txtfld_Descrption5.getText().isEmpty() && !txtfld_Descrption6.getText().isEmpty())
+                tempDescription.add(txtDescription6);
+            if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty())
+                tempDescription.add(txtDescription7);
 
 
             ArrayList<Integer> tempQTY = new ArrayList<>();
-        if (!txtfld_qty1.getText().isEmpty()) {
-            qty1 = Integer.parseInt(txtfld_qty1.getText());
-            tempQTY.add(qty1);
-        }
-        if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
-            qty2 = Integer.parseInt(txtfld_qty2.getText());
-            tempQTY.add(qty2);
-        }
-        if (!txtfld_qty2.getText().isEmpty() && !txtfld_qty3.getText().isEmpty()) {
-            qty3 = Integer.parseInt(txtfld_qty3.getText());
-            tempQTY.add(qty3);
-        }
-        if (!txtfld_qty3.getText().isEmpty() && !txtfld_qty4.getText().isEmpty()) {
-            qty4 = Integer.parseInt(txtfld_qty4.getText());
-            tempQTY.add(qty4);
-        }
+            if (!txtfld_qty1.getText().isEmpty()) {
+                qty1 = Integer.parseInt(txtfld_qty1.getText());
+                tempQTY.add(qty1);
+            }
+            if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
+                qty2 = Integer.parseInt(txtfld_qty2.getText());
+                tempQTY.add(qty2);
+            }
+            if (!txtfld_qty2.getText().isEmpty() && !txtfld_qty3.getText().isEmpty()) {
+                qty3 = Integer.parseInt(txtfld_qty3.getText());
+                tempQTY.add(qty3);
+            }
+            if (!txtfld_qty3.getText().isEmpty() && !txtfld_qty4.getText().isEmpty()) {
+                qty4 = Integer.parseInt(txtfld_qty4.getText());
+                tempQTY.add(qty4);
+            }
 
             ArrayList<String> tempMatParts = new ArrayList<>();
             String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
@@ -3318,54 +3375,54 @@ public class WOInputForm extends javax.swing.JFrame {
 
 
             ArrayList<Double> tempMatPrice = new ArrayList<>();
-        if (!txtfld_MatPrice1.getText().isEmpty()) {
-            dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
-            tempMatPrice.add(dblMatPrice1);
-        }
-        if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
-            dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
-            tempMatPrice.add(dblMatPrice2);
-        }
-        if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
-            dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
-            tempMatPrice.add(dblMatPrice3);
-        }
-        if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
-            dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
-            tempMatPrice.add(dblMatPrice4);
-        }
+            if (!txtfld_MatPrice1.getText().isEmpty()) {
+                dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
+                tempMatPrice.add(dblMatPrice1);
+            }
+            if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
+                dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                tempMatPrice.add(dblMatPrice2);
+            }
+            if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
+                dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                tempMatPrice.add(dblMatPrice3);
+            }
+            if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
+                dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                tempMatPrice.add(dblMatPrice4);
+            }
 
             ArrayList<Double> tempMatAmount = new ArrayList<>();
-        if (!txtfld_Amount1.getText().isEmpty()) {
-            dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
-            tempMatAmount.add(dblAmount1);
-        }
-        if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
-            dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
-            tempMatAmount.add(dblAmount2);
-        }
-        if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
-            dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
-            tempMatAmount.add(dblAmount3);
-        }
-        if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
-            dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
-            tempMatAmount.add(dblAmount4);
-        }
+            if (!txtfld_Amount1.getText().isEmpty()) {
+                dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
+                tempMatAmount.add(dblAmount1);
+            }
+            if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
+                dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                tempMatAmount.add(dblAmount2);
+            }
+            if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
+                dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                tempMatAmount.add(dblAmount3);
+            }
+            if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
+                dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                tempMatAmount.add(dblAmount4);
+            }
 
             ArrayList<Integer> tempHours = new ArrayList<>();
-        if (!txtfld_hrs1.getText().isEmpty()) {
-            hrs1 = Integer.parseInt(txtfld_hrs1.getText());
-            tempHours.add(hrs1);
-        }
-        if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
-            hrs2 = Integer.parseInt(txtfld_qty2.getText());
-            tempHours.add(hrs2);
-        }
-        if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
-            hrs3 = Integer.parseInt(txtfld_qty3.getText());
-            tempHours.add(hrs3);
-        }
+            if (!txtfld_hrs1.getText().isEmpty()) {
+                hrs1 = Integer.parseInt(txtfld_hrs1.getText());
+                tempHours.add(hrs1);
+            }
+            if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
+                hrs2 = Integer.parseInt(txtfld_qty2.getText());
+                tempHours.add(hrs2);
+            }
+            if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
+                hrs3 = Integer.parseInt(txtfld_qty3.getText());
+                tempHours.add(hrs3);
+            }
 
             ArrayList<String> tempLabor = new ArrayList<>();
             String txtLabor1 = txtfld_Labor1.getText();
@@ -3376,18 +3433,18 @@ public class WOInputForm extends javax.swing.JFrame {
             tempLabor.add(txtLabor3);
 
             ArrayList<Double> tempLaborAmount = new ArrayList<>();
-        if (!txtfld_LbrPrice1.getText().isEmpty()) {
-            dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
-            tempLaborAmount.add(dblLaborPrice1);
-        }
-        if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
-            dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
-            tempLaborAmount.add(dblLaborPrice2);
-        }
-        if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
-            dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
-            tempLaborAmount.add(dblLaborPrice3);
-        }
+            if (!txtfld_LbrPrice1.getText().isEmpty()) {
+                dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                tempLaborAmount.add(dblLaborPrice1);
+            }
+            if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
+                dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                tempLaborAmount.add(dblLaborPrice2);
+            }
+            if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
+                dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                tempLaborAmount.add(dblLaborPrice3);
+            }
 
             String txtdateofcreation = txtfld_dateofcreation.getText();
             String txtTime = txtfld_Time.getText() + TimeCreation;
@@ -3408,30 +3465,30 @@ public class WOInputForm extends javax.swing.JFrame {
             dblTotalMaterials = Double.parseDouble(txtfld_TotalMat.getText());
             dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
 
-        if(!txtfld_DateInsp.getText().isEmpty() && !txtfld_Descrption1.getText().isEmpty() && !txtfld_DateInsp.getText().isEmpty() && !txtfld_InspAppBy.getText().isEmpty()){
-            bttnSave.setEnabled(true);
-        }
+            if (!txtfld_DateInsp.getText().isEmpty() && !txtfld_Descrption1.getText().isEmpty() && !txtfld_DateInsp.getText().isEmpty() && !txtfld_InspAppBy.getText().isEmpty()) {
+                bttnSave.setEnabled(true);
+            }
 
-        ArrayList<String> tempMatID = new ArrayList<>();
-        if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
-        if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
-        if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
-        if (!txtfld_qty4.getText().isEmpty());
+            ArrayList<String> tempMatID = new ArrayList<>();
+            if (!txtfld_qty1.getText().isEmpty()) tempMatID.add("MAT0001");
+            if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
+            if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
+            if (!txtfld_qty4.getText().isEmpty()) ;
 
-        ArrayList<String> tempLbrID = new ArrayList<>();
-        if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
-        if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
-        if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
+            ArrayList<String> tempLbrID = new ArrayList<>();
+            if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
+            if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
+            if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
 
-
-        try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
 
             try {
-                objConn.setAutoCommit(false);
-                String sqlWorkOrder = "INSERT INTO WORK_ORDER (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
-                        "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-                PreparedStatement psWorkOrder = objConn.prepareStatement(sqlWorkOrder);
+                objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+
+                try {
+                    objConn.setAutoCommit(false);
+                    String sqlWorkOrder = "INSERT INTO WORK_ORDER (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
+                            "DateInspected, ScheduledDate, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                    PreparedStatement psWorkOrder = objConn.prepareStatement(sqlWorkOrder);
                     psWorkOrder.setString(1, txtdateofcreation);
                     psWorkOrder.setString(2, txtTakenBy);
                     psWorkOrder.setString(3, txtRequestedBy);
@@ -3444,98 +3501,102 @@ public class WOInputForm extends javax.swing.JFrame {
                     psWorkOrder.setString(10, txtWrkCompBy);
                     psWorkOrder.setString(11, txtDateComp);
                     psWorkOrder.setString(12, txtInsAppBy);
-                    psWorkOrder.setString(13, txtDateInsp );
+                    psWorkOrder.setString(13, txtDateInsp);
                     psWorkOrder.setDouble(14, dblTotalLaborInit);
                     psWorkOrder.setDouble(15, dblTotalMaterials);
-                    psWorkOrder.setDouble(16,  dblTotal);
+                    psWorkOrder.setDouble(16, dblTotal);
                     psWorkOrder.executeUpdate();
                     objConn.commit();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            try {
-                ResultSet rs;
-                Statement st = objConn.createStatement();
-                String query = ("SELECT * FROM WORK_ORDER ORDER BY WorkOrderID DESC LIMIT 1;");
-                rs = st.executeQuery(query);
-                if (rs.next()) {
-                    sqlWOID = rs.getString("WorkOrderID");
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-            try {
-                objConn.setAutoCommit(false);
-                PreparedStatement psService = objConn.prepareStatement("INSERT INTO SERVICE (Work_Order_ID, ServiceID, NatureofService, Description)" + " VALUES (?, ?, ?, ?)");
-                for (int i = 0; i < tempServiceID.size(); i++) {
-                    psService.setString(1, sqlWOID);
-                    psService.setString(2, tempServiceID.get(i));
-                    psService.setString(3, tempNatureofService.get(i));
-                    psService.setString(4, tempDescription.get(i));
-                    psService.addBatch();
-                }
-                psService.executeBatch();
-                objConn.commit();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
-
-            try{
-                objConn.setAutoCommit(false);
-                PreparedStatement psMaterial = objConn.prepareStatement("INSERT INTO MATERIAL (Work_Order_ID, MatID, QTY, MatName, MatPrice, MatAmount)" + " VALUES (?, ?, ?, ?, ?, ?)");
-                for (int i = 0; i < tempMatID.size(); i++) {
-                    psMaterial.setString(1, sqlWOID);
-                    psMaterial.setString(2, tempMatID.get(i));
-                    psMaterial.setInt(3, tempQTY.get(i));
-                    psMaterial.setString(4, tempMatParts.get(i));
-                    psMaterial.setDouble(5, tempMatPrice.get(i));
-                    psMaterial.setDouble(6, tempMatAmount.get(i));
-                    psMaterial.addBatch();
-                }
-                psMaterial.executeBatch();
-                objConn.commit();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            try{
-                objConn.setAutoCommit(false);
-                PreparedStatement psLabor = objConn.prepareStatement("INSERT INTO LABOR (Work_Order_ID, LaborID, Hours, Labor, LaborAmount)" + " VALUES (?, ?, ?, ?, ?)");
-                for (int i = 0; i < tempLbrID.size(); i++) {
-                    psLabor.setString(1, sqlWOID);
-                    psLabor.setString(2, tempLbrID.get(i));
-                    psLabor.setInt(3, tempHours.get(i));
-                    psLabor.setString(4, tempLabor.get(i));
-                    psLabor.setDouble(5, tempLaborAmount.get(i));
-                    psLabor.addBatch();
-                }
-                psLabor.executeBatch();
-                objConn.commit();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }catch (Exception objEx) {
-
-            System.out.println("Database failed!");
-            System.out.println(objEx);
-
-        } finally {
-
-            if (objConn != null) {
 
                 try {
-                    objConn.close();
-                } catch (Exception objEx) {
-                    System.out.println("Problem closing the database!");
-                    System.out.println(objEx);
+                    ResultSet rs;
+                    Statement st = objConn.createStatement();
+                    String query = ("SELECT * FROM WORK_ORDER ORDER BY WorkOrderID DESC LIMIT 1;");
+                    rs = st.executeQuery(query);
+                    if (rs.next()) {
+                        sqlWOID = rs.getString("WorkOrderID");
+                    }
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+                try {
+                    objConn.setAutoCommit(false);
+                    PreparedStatement psService = objConn.prepareStatement("INSERT INTO SERVICE (Work_Order_ID, ServiceID, NatureofService, Description)" + " VALUES (?, ?, ?, ?)");
+                    for (int i = 0; i < tempServiceID.size(); i++) {
+                        psService.setString(1, sqlWOID);
+                        psService.setString(2, tempServiceID.get(i));
+                        psService.setString(3, tempNatureofService.get(i));
+                        psService.setString(4, tempDescription.get(i));
+                        psService.addBatch();
+                    }
+                    psService.executeBatch();
+                    objConn.commit();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
 
+                try {
+                    objConn.setAutoCommit(false);
+                    PreparedStatement psMaterial = objConn.prepareStatement("INSERT INTO MATERIAL (Work_Order_ID, MatID, QTY, MatName, MatPrice, MatAmount)" + " VALUES (?, ?, ?, ?, ?, ?)");
+                    for (int i = 0; i < tempMatID.size(); i++) {
+                        psMaterial.setString(1, sqlWOID);
+                        psMaterial.setString(2, tempMatID.get(i));
+                        psMaterial.setInt(3, tempQTY.get(i));
+                        psMaterial.setString(4, tempMatParts.get(i));
+                        psMaterial.setDouble(5, tempMatPrice.get(i));
+                        psMaterial.setDouble(6, tempMatAmount.get(i));
+                        psMaterial.addBatch();
+                    }
+                    psMaterial.executeBatch();
+                    objConn.commit();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    objConn.setAutoCommit(false);
+                    PreparedStatement psLabor = objConn.prepareStatement("INSERT INTO LABOR (Work_Order_ID, LaborID, Hours, Labor, LaborAmount)" + " VALUES (?, ?, ?, ?, ?)");
+                    for (int i = 0; i < tempLbrID.size(); i++) {
+                        psLabor.setString(1, sqlWOID);
+                        psLabor.setString(2, tempLbrID.get(i));
+                        psLabor.setInt(3, tempHours.get(i));
+                        psLabor.setString(4, tempLabor.get(i));
+                        psLabor.setDouble(5, tempLaborAmount.get(i));
+                        psLabor.addBatch();
+                    }
+                    psLabor.executeBatch();
+                    objConn.commit();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } catch (Exception objEx) {
+
+                System.out.println("Database failed!");
+                System.out.println(objEx);
+
+            } finally {
+
+                if (objConn != null) {
+
+                    try {
+                        objConn.close();
+                    } catch (Exception objEx) {
+                        System.out.println("Problem closing the database!");
+                        System.out.println(objEx);
+                    }
+                }
+                System.out.println("Records inserted");
             }
+        }catch(Exception objEx){
+            frameErrorMessage.setVisible(true);
 
-            System.out.println("Records inserted");
+            frameErrorMessage.setSize(325, 150);
 
-      }
+            System.out.println("fill up all required fields");
+        }
     }
 
 
@@ -3575,6 +3636,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
         try {
             objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            System.out.println("Database Connected");
         }catch (Exception objEx) {
 
             System.out.println("Database failed!");
@@ -3589,11 +3651,12 @@ public class WOInputForm extends javax.swing.JFrame {
                     System.out.println(objEx);
                 }
             }
-            System.out.println("Database Connected");
+
         }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bttnOkError;
     private javax.swing.JButton bttnSave;
     private javax.swing.ButtonGroup bttngrpDesc1;
     private javax.swing.ButtonGroup bttngrpDesc2;
@@ -3621,6 +3684,7 @@ public class WOInputForm extends javax.swing.JFrame {
     private javax.swing.JCheckBox chckbox_SchedCreationAm;
     private javax.swing.JCheckBox chckbox_SchedCreationPM;
     private javax.swing.JCheckBox chckbox_TimeCreationAm;
+    private javax.swing.JDialog frameErrorMessage;
     private javax.swing.JCheckBox hckbox_TimeCreationPm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

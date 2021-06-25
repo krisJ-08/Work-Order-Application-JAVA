@@ -291,8 +291,9 @@ public class WOInputForm extends javax.swing.JFrame {
         frameErrorMessage.setSize(new java.awt.Dimension(325, 150));
         frameErrorMessage.setType(java.awt.Window.Type.POPUP);
 
-        jLabel21.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
-        jLabel21.setText("Fill up all required labels!");
+        jLabel21.setFont(new java.awt.Font("Montserrat Medium", 0, 14)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Please fill up all required labels!");
 
         bttnOkError.setFont(new java.awt.Font("Montserrat", 0, 14)); // NOI18N
         bttnOkError.setText("OK");
@@ -306,21 +307,18 @@ public class WOInputForm extends javax.swing.JFrame {
         frameErrorMessage.getContentPane().setLayout(frameErrorMessageLayout);
         frameErrorMessageLayout.setHorizontalGroup(
             frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frameErrorMessageLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameErrorMessageLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bttnOkError)
                 .addGap(35, 35, 35))
-            .addGroup(frameErrorMessageLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel21)
-                .addContainerGap(52, Short.MAX_VALUE))
+            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 363, Short.MAX_VALUE)
         );
         frameErrorMessageLayout.setVerticalGroup(
             frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frameErrorMessageLayout.createSequentialGroup()
-                .addContainerGap(60, Short.MAX_VALUE)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addComponent(jLabel21)
-                .addGap(29, 29, 29)
+                .addGap(31, 31, 31)
                 .addComponent(bttnOkError)
                 .addContainerGap())
         );
@@ -3455,8 +3453,6 @@ public class WOInputForm extends javax.swing.JFrame {
             frameErrorMessage.setVisible(true);
 
             frameErrorMessage.setSize(325, 150);
-            System.out.println(objEx);
-            System.out.println("fill up all required fields");
         }
     }
 

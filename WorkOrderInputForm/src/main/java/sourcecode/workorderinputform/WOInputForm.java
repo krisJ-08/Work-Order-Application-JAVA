@@ -3365,8 +3365,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     psWorkOrder.setDouble(16, dblTotalLaborInit);
                     psWorkOrder.setDouble(17, dblTotal);
                     psWorkOrder.executeUpdate();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
 
                 try {
@@ -3411,8 +3411,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     }
                     psMaterial.executeBatch();
                     objConn.commit();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
 
                 try {
@@ -3428,8 +3428,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     }
                     psLabor.executeBatch();
                     objConn.commit();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
                 }
             } catch (Exception objEx) {
 
@@ -3451,7 +3451,6 @@ public class WOInputForm extends javax.swing.JFrame {
             }
         }catch(Exception objEx){
             frameErrorMessage.setVisible(true);
-
             frameErrorMessage.setSize(325, 150);
         }
     }

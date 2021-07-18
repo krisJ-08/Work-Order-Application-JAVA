@@ -3341,7 +3341,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
 
             try {
-                objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+                objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
 
                 try {
                     String sqlWorkOrder = "INSERT INTO WORK_ORDER (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
@@ -3492,7 +3492,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUP Docs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
             System.out.println("Database Connected");
         }catch (Exception objEx) {
 

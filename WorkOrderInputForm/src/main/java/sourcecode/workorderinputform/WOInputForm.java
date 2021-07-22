@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package sourcecode.workorderinputform;
+import org.hsqldb.DatabaseType;
+import org.hsqldb.lib.HsqlArrayList;
+
 import java.awt.event.ActionEvent;
 import java.sql.*;
 import java.util.ArrayList;
@@ -41,6 +44,19 @@ public class WOInputForm extends javax.swing.JFrame {
     private String sqlWOID;
     private double dblTotalMaterials;
     private double dblTotal;
+    private String txtTakenBy;
+    private String txtRequestedBy;
+    private String txtChargeTo;
+    private String txtDept;
+    private String txtBldgfloor;
+    private String txtTimeSched;
+    private String txtWrkCompBy;
+    private String txtInsAppBy;
+    private String txtdateofcreation;
+    private String txtDateWanted;
+    private String txtScheduleDate;
+    private String txtDateComp;
+    private String txtDateInsp;
 
 
 
@@ -3005,371 +3021,448 @@ public class WOInputForm extends javax.swing.JFrame {
 
     private void bttnOkErrorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnOkErrorActionPerformed
         frameErrorMessage.dispose();
+        frameErrorMessage.setVisible(false);
     }//GEN-LAST:event_bttnOkErrorActionPerformed
 
 
     private void bttnSaveActionPerformed(ActionEvent evt) {
+        ArrayList<Double>  tempMatAmount       = new ArrayList<>();
+        ArrayList<String>  tempServiceID       = new ArrayList<>();
+        ArrayList<String>  tempNatureofService = new ArrayList<>();
+        ArrayList<String>  tempDescription     = new ArrayList<>();
+        ArrayList<Integer> tempQTY             = new ArrayList<>();
+        ArrayList<String>  tempMatParts        = new ArrayList<>();
+        ArrayList<Double>  tempMatPrice        = new ArrayList<>();
+        ArrayList<Integer> tempHours           = new ArrayList<>();
+        ArrayList<String>  tempLabor           = new ArrayList<>();
+        ArrayList<String>  tempLbrID           = new ArrayList<>();
+        ArrayList<Double>  tempLaborAmount     = new ArrayList<>();
+        ArrayList<String>  tempMatID           = new ArrayList<>();
         try {
-            ArrayList<String> tempServiceID = new ArrayList<>();
-            ArrayList<String> tempNatureofService = new ArrayList<>();
+            ArrayList <Integer> errors = new ArrayList<>();
+            do {
 
-            if (chckbox_Main1.isSelected()) {
-                tempServiceID.add("M0001");
-                tempNatureofService.add("Maintenance");
-            }
-            if (chckbox_Rep1.isSelected()) {
-                tempServiceID.add("R0001");
-                tempNatureofService.add("Repair");
-            }
-            if (chckbox_Main2.isSelected()) {
-                tempNatureofService.add("Maintenance");
-                if (tempServiceID.contains("M0001")) {
-                    tempServiceID.add("M0002");
-                } else {
-                    tempServiceID.add("M0001");
-                }
-            }
-            if (chckbox_Rep2.isSelected()) {
-                tempNatureofService.add("Repair");
-                if (tempServiceID.contains("R0001")) {
-                    tempServiceID.add("R0002");
-                } else {
-                    tempServiceID.add("R0001");
-                }
-            }
-            if (chckbox_Main3.isSelected()) {
-                tempNatureofService.add("Maintenance");
-                if (tempServiceID.contains("M0002")) {
-                    tempServiceID.add("M0003");
-                } else if (tempServiceID.contains("M0001")) {
-                    tempServiceID.add("M0002");
-                } else {
-                    tempServiceID.add("M0001");
-                }
-            }
-            if (chckbox_Rep3.isSelected()) {
-                tempNatureofService.add("Repair");
-                if (tempServiceID.contains("R0002")) {
-                    tempServiceID.add("R0003");
-                } else if (tempServiceID.contains("R0001")) {
-                    tempServiceID.add("R0002");
-                } else {
-                    tempServiceID.add("R0001");
-                }
-            }
-            if (chckbox_Main4.isSelected()) {
-                tempNatureofService.add("Maintenance");
-                if (tempServiceID.contains("M0003")) {
-                    tempServiceID.add("M0004");
-                } else if (tempServiceID.contains("M0002")) {
-                    tempServiceID.add("M0003");
-                } else if (tempServiceID.contains("M0001")) {
-                    tempServiceID.add("M0002");
-                } else {
-                    tempServiceID.add("M0001");
-                }
-            }
-            if (chckbox_Rep4.isSelected()) {
-                tempNatureofService.add("Repair");
-                if (tempServiceID.contains("R0003")) {
-                    tempServiceID.add("R0004");
-                } else if (tempServiceID.contains("R0002")) {
-                    tempServiceID.add("R0003");
-                } else if (tempServiceID.contains("R0001")) {
-                    tempServiceID.add("R0002");
-                } else {
-                    tempServiceID.add("R0001");
-                }
-            }
-            if (chckbox_Main5.isSelected()) {
-                tempNatureofService.add("Maintenance");
-                if (tempServiceID.contains("M0004")) {
-                    tempServiceID.add("M0005");
-                } else if (tempServiceID.contains("M0003")) {
-                    tempServiceID.add("M0004");
-                } else if (tempServiceID.contains("M0002")) {
-                    tempServiceID.add("M0003");
-                } else if (tempServiceID.contains("M0001")) {
-                    tempServiceID.add("M0002");
-                } else {
-                    tempServiceID.add("M0001");
-                }
-            }
-            if (chckbox_Rep5.isSelected()) {
-                tempNatureofService.add("Repair");
-                if (tempServiceID.contains("R0004")) {
-                    tempServiceID.add("R0005");
-                } else if (tempServiceID.contains("R0003")) {
-                    tempServiceID.add("R0004");
-                } else if (tempServiceID.contains("R0002")) {
-                    tempServiceID.add("R0003");
-                } else if (tempServiceID.contains("R0001")) {
-                    tempServiceID.add("R0002");
-                } else {
-                    tempServiceID.add("R0001");
-                }
-            }
-            if (chckbox_Main6.isSelected()) {
-                tempNatureofService.add("Maintenance");
-                if (tempServiceID.contains("M0005")) {
-                    tempServiceID.add("M0006");
-                } else if (tempServiceID.contains("M0004")) {
-                    tempServiceID.add("M0005");
-                } else if (tempServiceID.contains("M0003")) {
-                    tempServiceID.add("M0004");
-                } else if (tempServiceID.contains("M0002")) {
-                    tempServiceID.add("M0003");
-                } else if (tempServiceID.contains("M0001")) {
-                    tempServiceID.add("M0002");
-                } else {
-                    tempServiceID.add("M0001");
-                }
-            }
-            if (chckbox_Rep6.isSelected()) {
-                tempNatureofService.add("Repair");
-                if (tempServiceID.contains("R0005")) {
-                    tempServiceID.add("R0006");
-                } else if (tempServiceID.contains("R0004")) {
-                    tempServiceID.add("R0005");
-                } else if (tempServiceID.contains("R0003")) {
-                    tempServiceID.add("R0004");
-                } else if (tempServiceID.contains("R0002")) {
-                    tempServiceID.add("R0003");
-                } else if (tempServiceID.contains("R0001")) {
-                    tempServiceID.add("R0002");
-                } else {
-                    tempServiceID.add("R0001");
-                }
-            }
-            if (chckbox_Main7.isSelected()) {
-                tempNatureofService.add("Maintenance");
-                if (tempServiceID.contains("M0006")) {
-                    tempServiceID.add("M0007");
-                } else if (tempServiceID.contains("M0005")) {
-                    tempServiceID.add("M0006");
-                } else if (tempServiceID.contains("M0004")) {
-                    tempServiceID.add("M0005");
-                } else if (tempServiceID.contains("M0003")) {
-                    tempServiceID.add("M0004");
-                } else if (tempServiceID.contains("M0002")) {
-                    tempServiceID.add("M0003");
-                } else if (tempServiceID.contains("M0001")) {
-                    tempServiceID.add("M0002");
-                } else {
-                    tempServiceID.add("M0001");
-                }
-            }
-            if (chckbox_Rep7.isSelected()) {
-                tempNatureofService.add("Repair");
-                if (tempServiceID.contains("R0006")) {
-                    tempServiceID.add("R0007");
-                } else if (tempServiceID.contains("R0005")) {
-                    tempServiceID.add("R0006");
-                } else if (tempServiceID.contains("R0004")) {
-                    tempServiceID.add("R0005");
-                } else if (tempServiceID.contains("R0003")) {
-                    tempServiceID.add("R0004");
-                } else if (tempServiceID.contains("R0002")) {
-                    tempServiceID.add("R0003");
-                } else if (tempServiceID.contains("R0001")) {
-                    tempServiceID.add("R0002");
-                } else {
-                    tempServiceID.add("R0001");
-                }
-            }
+                    errors.clear();
+                    tempMatAmount.clear();
+                    tempServiceID.clear();
+                    tempNatureofService.clear();
+                    tempDescription.clear();
+                    tempQTY.clear();
+                    tempMatParts.clear();
+                    tempMatPrice.clear();
+                    tempHours.clear();
+                    tempLabor.clear();
+                    tempLbrID.clear();
+                    tempLaborAmount.clear();
+                    tempMatID.clear();
 
-            ArrayList<String> tempDescription = new ArrayList<>();
-            String txtDescription1 = txtfld_Descrption1.getText();
-            String txtDescription2 = txtfld_Descrption2.getText();
-            String txtDescription3 = txtfld_Descrption3.getText();
-            String txtDescription4 = txtfld_Descrption4.getText();
-            String txtDescription5 = txtfld_Descrption5.getText();
-            String txtDescription6 = txtfld_Descrption6.getText();
-            String txtDescription7 = txtfld_Descrption7.getText();
+                    if (chckbox_Main1.isSelected()) {
+                        tempServiceID.add("M0001");
+                        tempNatureofService.add("Maintenance");
+                    } else if (!chckbox_Rep1.isSelected()) {
+                        errors.add(1);
+                    }
+                    if (chckbox_Rep1.isSelected()) {
+                        tempServiceID.add("R0001");
+                        tempNatureofService.add("Repair");
+                    } else if (!chckbox_Main1.isSelected()) {
+                        errors.add(1);
+                    }
+                    if (chckbox_Main2.isSelected()) {
+                        tempNatureofService.add("Maintenance");
+                        if (tempServiceID.contains("M0001")) {
+                            tempServiceID.add("M0002");
+                        } else {
+                            tempServiceID.add("M0001");
+                        }
+                    }
+                    if (chckbox_Rep2.isSelected()) {
+                        tempNatureofService.add("Repair");
+                        if (tempServiceID.contains("R0001")) {
+                            tempServiceID.add("R0002");
+                        } else {
+                            tempServiceID.add("R0001");
+                        }
+                    }
+                    if (chckbox_Main3.isSelected()) {
+                        tempNatureofService.add("Maintenance");
+                        if (tempServiceID.contains("M0002")) {
+                            tempServiceID.add("M0003");
+                        } else if (tempServiceID.contains("M0001")) {
+                            tempServiceID.add("M0002");
+                        } else {
+                            tempServiceID.add("M0001");
+                        }
+                    }
+                    if (chckbox_Rep3.isSelected()) {
+                        tempNatureofService.add("Repair");
+                        if (tempServiceID.contains("R0002")) {
+                            tempServiceID.add("R0003");
+                        } else if (tempServiceID.contains("R0001")) {
+                            tempServiceID.add("R0002");
+                        } else {
+                            tempServiceID.add("R0001");
+                        }
+                    }
+                    if (chckbox_Main4.isSelected()) {
+                        tempNatureofService.add("Maintenance");
+                        if (tempServiceID.contains("M0003")) {
+                            tempServiceID.add("M0004");
+                        } else if (tempServiceID.contains("M0002")) {
+                            tempServiceID.add("M0003");
+                        } else if (tempServiceID.contains("M0001")) {
+                            tempServiceID.add("M0002");
+                        } else {
+                            tempServiceID.add("M0001");
+                        }
+                    }
+                    if (chckbox_Rep4.isSelected()) {
+                        tempNatureofService.add("Repair");
+                        if (tempServiceID.contains("R0003")) {
+                            tempServiceID.add("R0004");
+                        } else if (tempServiceID.contains("R0002")) {
+                            tempServiceID.add("R0003");
+                        } else if (tempServiceID.contains("R0001")) {
+                            tempServiceID.add("R0002");
+                        } else {
+                            tempServiceID.add("R0001");
+                        }
+                    }
+                    if (chckbox_Main5.isSelected()) {
+                        tempNatureofService.add("Maintenance");
+                        if (tempServiceID.contains("M0004")) {
+                            tempServiceID.add("M0005");
+                        } else if (tempServiceID.contains("M0003")) {
+                            tempServiceID.add("M0004");
+                        } else if (tempServiceID.contains("M0002")) {
+                            tempServiceID.add("M0003");
+                        } else if (tempServiceID.contains("M0001")) {
+                            tempServiceID.add("M0002");
+                        } else {
+                            tempServiceID.add("M0001");
+                        }
+                    }
+                    if (chckbox_Rep5.isSelected()) {
+                        tempNatureofService.add("Repair");
+                        if (tempServiceID.contains("R0004")) {
+                            tempServiceID.add("R0005");
+                        } else if (tempServiceID.contains("R0003")) {
+                            tempServiceID.add("R0004");
+                        } else if (tempServiceID.contains("R0002")) {
+                            tempServiceID.add("R0003");
+                        } else if (tempServiceID.contains("R0001")) {
+                            tempServiceID.add("R0002");
+                        } else {
+                            tempServiceID.add("R0001");
+                        }
+                    }
+                    if (chckbox_Main6.isSelected()) {
+                        tempNatureofService.add("Maintenance");
+                        if (tempServiceID.contains("M0005")) {
+                            tempServiceID.add("M0006");
+                        } else if (tempServiceID.contains("M0004")) {
+                            tempServiceID.add("M0005");
+                        } else if (tempServiceID.contains("M0003")) {
+                            tempServiceID.add("M0004");
+                        } else if (tempServiceID.contains("M0002")) {
+                            tempServiceID.add("M0003");
+                        } else if (tempServiceID.contains("M0001")) {
+                            tempServiceID.add("M0002");
+                        } else {
+                            tempServiceID.add("M0001");
+                        }
+                    }
+                    if (chckbox_Rep6.isSelected()) {
+                        tempNatureofService.add("Repair");
+                        if (tempServiceID.contains("R0005")) {
+                            tempServiceID.add("R0006");
+                        } else if (tempServiceID.contains("R0004")) {
+                            tempServiceID.add("R0005");
+                        } else if (tempServiceID.contains("R0003")) {
+                            tempServiceID.add("R0004");
+                        } else if (tempServiceID.contains("R0002")) {
+                            tempServiceID.add("R0003");
+                        } else if (tempServiceID.contains("R0001")) {
+                            tempServiceID.add("R0002");
+                        } else {
+                            tempServiceID.add("R0001");
+                        }
+                    }
+                    if (chckbox_Main7.isSelected()) {
+                        tempNatureofService.add("Maintenance");
+                        if (tempServiceID.contains("M0006")) {
+                            tempServiceID.add("M0007");
+                        } else if (tempServiceID.contains("M0005")) {
+                            tempServiceID.add("M0006");
+                        } else if (tempServiceID.contains("M0004")) {
+                            tempServiceID.add("M0005");
+                        } else if (tempServiceID.contains("M0003")) {
+                            tempServiceID.add("M0004");
+                        } else if (tempServiceID.contains("M0002")) {
+                            tempServiceID.add("M0003");
+                        } else if (tempServiceID.contains("M0001")) {
+                            tempServiceID.add("M0002");
+                        } else {
+                            tempServiceID.add("M0001");
+                        }
+                    }
+                    if (chckbox_Rep7.isSelected()) {
+                        tempNatureofService.add("Repair");
+                        if (tempServiceID.contains("R0006")) {
+                            tempServiceID.add("R0007");
+                        } else if (tempServiceID.contains("R0005")) {
+                            tempServiceID.add("R0006");
+                        } else if (tempServiceID.contains("R0004")) {
+                            tempServiceID.add("R0005");
+                        } else if (tempServiceID.contains("R0003")) {
+                            tempServiceID.add("R0004");
+                        } else if (tempServiceID.contains("R0002")) {
+                            tempServiceID.add("R0003");
+                        } else if (tempServiceID.contains("R0001")) {
+                            tempServiceID.add("R0002");
+                        } else {
+                            tempServiceID.add("R0001");
+                        }
+                    }
 
-            tempDescription.add(txtDescription1);
-            if (!txtfld_Descrption1.getText().isEmpty() && !txtfld_Descrption2.getText().isEmpty())
-                tempDescription.add(txtDescription2);
-            if (!txtfld_Descrption2.getText().isEmpty() && !txtfld_Descrption3.getText().isEmpty())
-                tempDescription.add(txtDescription3);
-            if (!txtfld_Descrption3.getText().isEmpty() && !txtfld_Descrption4.getText().isEmpty())
-                tempDescription.add(txtDescription4);
-            if (!txtfld_Descrption4.getText().isEmpty() && !txtfld_Descrption5.getText().isEmpty())
-                tempDescription.add(txtDescription5);
-            if (!txtfld_Descrption5.getText().isEmpty() && !txtfld_Descrption6.getText().isEmpty())
-                tempDescription.add(txtDescription6);
-            if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty())
-                tempDescription.add(txtDescription7);
 
-            ArrayList<Integer> tempQTY = new ArrayList<>();
-            if (!txtfld_qty1.getText().isEmpty()) {
-                qty1 = Integer.parseInt(txtfld_qty1.getText());
-                tempQTY.add(qty1);
-            }else{
-                tempQTY.add(0, 0);
-            }
-            if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
-                qty2 = Integer.parseInt(txtfld_qty2.getText());
-                tempQTY.add(qty2);
-            }
-            if (!txtfld_qty2.getText().isEmpty() && !txtfld_qty3.getText().isEmpty()) {
-                qty3 = Integer.parseInt(txtfld_qty3.getText());
-                tempQTY.add(qty3);
-            }
-            if (!txtfld_qty3.getText().isEmpty() && !txtfld_qty4.getText().isEmpty()) {
-                qty4 = Integer.parseInt(txtfld_qty4.getText());
-                tempQTY.add(qty4);
-            }
+                    String txtDescription1 = txtfld_Descrption1.getText();
+                    if (txtDescription1.equals(""))
+                        errors.add(1);
+                    String txtDescription2 = txtfld_Descrption2.getText();
+                    String txtDescription3 = txtfld_Descrption3.getText();
+                    String txtDescription4 = txtfld_Descrption4.getText();
+                    String txtDescription5 = txtfld_Descrption5.getText();
+                    String txtDescription6 = txtfld_Descrption6.getText();
+                    String txtDescription7 = txtfld_Descrption7.getText();
 
-            ArrayList<String> tempMatParts = new ArrayList<>();
-            String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
-            String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
-            String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
-            String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
-            if (txtfld_MaterialsParts1.getText().isEmpty()){
-                tempMatParts.add("No Materials/Parts");
-            }
-            tempMatParts.add(txtMaterialsParts1);
-            tempMatParts.add(txtMaterialsParts2);
-            tempMatParts.add(txtMaterialsParts3);
-            tempMatParts.add(txtMaterialsParts4);
+                    tempDescription.add(txtDescription1);
+                    if (!txtfld_Descrption1.getText().isEmpty() && !txtfld_Descrption2.getText().isEmpty())
+                        tempDescription.add(txtDescription2);
+                    if (!txtfld_Descrption2.getText().isEmpty() && !txtfld_Descrption3.getText().isEmpty())
+                        tempDescription.add(txtDescription3);
+                    if (!txtfld_Descrption3.getText().isEmpty() && !txtfld_Descrption4.getText().isEmpty())
+                        tempDescription.add(txtDescription4);
+                    if (!txtfld_Descrption4.getText().isEmpty() && !txtfld_Descrption5.getText().isEmpty())
+                        tempDescription.add(txtDescription5);
+                    if (!txtfld_Descrption5.getText().isEmpty() && !txtfld_Descrption6.getText().isEmpty())
+                        tempDescription.add(txtDescription6);
+                    if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty())
+                        tempDescription.add(txtDescription7);
 
-            ArrayList<Double> tempMatPrice = new ArrayList<>();
-            if (!txtfld_MatPrice1.getText().isEmpty()) {
-                dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
-                tempMatPrice.add(dblMatPrice1);
-            }else{
-                tempMatPrice.add(0, 0.00);
-            }
-            if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
-                dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
-                tempMatPrice.add(dblMatPrice2);
-            }
-            if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
-                dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
-                tempMatPrice.add(dblMatPrice3);
-            }
-            if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
-                dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
-                tempMatPrice.add(dblMatPrice4);
-            }
 
-            ArrayList<Double> tempMatAmount = new ArrayList<>();
-            if (!txtfld_Amount1.getText().isEmpty()) {
-                dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
-                tempMatAmount.add(dblAmount1);
-            }else{
-                tempMatAmount.add(0, 0.00);
-            }
-            if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
-                dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
-                tempMatAmount.add(dblAmount2);
-            }
-            if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
-                dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
-                tempMatAmount.add(dblAmount3);
-            }
-            if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
-                dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
-                tempMatAmount.add(dblAmount4);
-            }
+                    if (!txtfld_qty1.getText().isEmpty()) {
+                        qty1 = Integer.parseInt(txtfld_qty1.getText());
+                        tempQTY.add(qty1);
+                    } else {
+                        tempQTY.add(0, 0);
+                    }
+                    if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
+                        qty2 = Integer.parseInt(txtfld_qty2.getText());
+                        tempQTY.add(qty2);
+                    }
+                    if (!txtfld_qty2.getText().isEmpty() && !txtfld_qty3.getText().isEmpty()) {
+                        qty3 = Integer.parseInt(txtfld_qty3.getText());
+                        tempQTY.add(qty3);
+                    }
+                    if (!txtfld_qty3.getText().isEmpty() && !txtfld_qty4.getText().isEmpty()) {
+                        qty4 = Integer.parseInt(txtfld_qty4.getText());
+                        tempQTY.add(qty4);
+                    }
 
-            ArrayList<Integer> tempHours = new ArrayList<>();
-            if (!txtfld_hrs1.getText().isEmpty()) {
-                hrs1 = Integer.parseInt(txtfld_hrs1.getText());
-                tempHours.add(hrs1);
-            }
-            if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
-                hrs2 = Integer.parseInt(txtfld_qty2.getText());
-                tempHours.add(hrs2);
-            }
-            if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
-                hrs3 = Integer.parseInt(txtfld_qty3.getText());
-                tempHours.add(hrs3);
-            }
+                    String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
+                    String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
+                    String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
+                    String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
+                    if (txtfld_MaterialsParts1.getText().isEmpty()) {
+                        tempMatParts.add("No Materials/Parts");
+                    }
+                    tempMatParts.add(txtMaterialsParts1);
+                    tempMatParts.add(txtMaterialsParts2);
+                    tempMatParts.add(txtMaterialsParts3);
+                    tempMatParts.add(txtMaterialsParts4);
 
-            ArrayList<String> tempLabor = new ArrayList<>();
-            String txtLabor1 = txtfld_Labor1.getText();
-            String txtLabor2 = txtfld_Labor2.getText();
-            String txtLabor3 = txtfld_Labor3.getText();
-            tempLabor.add(txtLabor1);
-            tempLabor.add(txtLabor2);
-            tempLabor.add(txtLabor3);
 
-            ArrayList<Double> tempLaborAmount = new ArrayList<>();
-            if (!txtfld_LbrPrice1.getText().isEmpty()) {
-                dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
-                tempLaborAmount.add(dblLaborPrice1);
-            }
-            if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
-                dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
-                tempLaborAmount.add(dblLaborPrice2);
-            }
-            if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
-                dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
-                tempLaborAmount.add(dblLaborPrice3);
-            }
+                    if (!txtfld_MatPrice1.getText().isEmpty()) {
+                        dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
+                        tempMatPrice.add(dblMatPrice1);
+                    } else {
+                        tempMatPrice.add(0, 0.00);
+                    }
+                    if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
+                        dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                        tempMatPrice.add(dblMatPrice2);
+                    }
+                    if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
+                        dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                        tempMatPrice.add(dblMatPrice3);
+                    }
+                    if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
+                        dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                        tempMatPrice.add(dblMatPrice4);
+                    }
 
-            String txtTakenBy = txtfld_Takenby.getText();
-            String txtRequestedBy = txtfld_Requestedby.getText();
-            String txtDept = txtfld_Dept.getText();
-            String txtBldgfloor = txtfld_bldgfloor1.getText();
-            MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
-            String txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
-            String txtChargeTo = txtfld_ChargeTo.getText();
-            String txtWrkCompBy = txtfld_WrkCompBy.getText();
-            String txtInsAppBy = txtfld_InspAppBy.getText();
-            String txtdateofcreation = txtfld_dateofcreation.getText();
-            String txtDateWanted = txtfld_DateWanted.getText();
-            String txtScheduleDate = txtfld_ScheduledDate.getText();
-            String txtDateComp = txtfld_DateComp.getText();
-            String txtDateInsp = txtfld_DateInsp.getText();
-            dblTotalLaborInit = Double.parseDouble(txtfld_TotalLaborInit.getText());
-            dblTotalMaterials = Double.parseDouble(txtfld_TotalMat.getText());
-            dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
 
-            ArrayList<String> tempMatID = new ArrayList<>();
-            tempMatID.add("MAT0001");
-            if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
-            if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
-            if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
+                    if (!txtfld_Amount1.getText().isEmpty()) {
+                        dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
+                        tempMatAmount.add(dblAmount1);
+                    } else {
+                        tempMatAmount.add(0, 0.00);
+                    }
+                    if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
+                        dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                        tempMatAmount.add(dblAmount2);
+                    }
+                    if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
+                        dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                        tempMatAmount.add(dblAmount3);
+                    }
+                    if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
+                        dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                        tempMatAmount.add(dblAmount4);
+                    }
 
-            ArrayList<String> tempLbrID = new ArrayList<>();
-            if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
-            if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
-            if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
+                    if (!txtfld_hrs1.getText().isEmpty()) {
+                        hrs1 = Integer.parseInt(txtfld_hrs1.getText());
+                        tempHours.add(hrs1);
+                    } else
+                        errors.add(1);
+                    if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
+                        hrs2 = Integer.parseInt(txtfld_qty2.getText());
+                        tempHours.add(hrs2);
+                    }
+                    if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
+                        hrs3 = Integer.parseInt(txtfld_qty3.getText());
+                        tempHours.add(hrs3);
+                    }
+
+
+                    String txtLabor1 = txtfld_Labor1.getText();
+                    if (txtLabor1.equals(""))
+                        errors.add(1);
+                    String txtLabor2 = txtfld_Labor2.getText();
+                    String txtLabor3 = txtfld_Labor3.getText();
+                    tempLabor.add(txtLabor1);
+                    tempLabor.add(txtLabor2);
+                    tempLabor.add(txtLabor3);
+
+                    if (!txtfld_LbrPrice1.getText().isEmpty()) {
+                        dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                        tempLaborAmount.add(dblLaborPrice1);
+                    }
+                    if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
+                        dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                        tempLaborAmount.add(dblLaborPrice2);
+                    }
+                    if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
+                        dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                        tempLaborAmount.add(dblLaborPrice3);
+                    }
+
+                    txtTakenBy = txtfld_Takenby.getText();
+                    if (txtTakenBy.equals(""))
+                        errors.add(1);
+                    txtRequestedBy = txtfld_Requestedby.getText();
+                    if (txtRequestedBy.equals(""))
+                        errors.add(1);
+                    txtDept = txtfld_Dept.getText();
+                    if (txtDept.equals(""))
+                        errors.add(1);
+                    txtBldgfloor = txtfld_bldgfloor1.getText();
+                    if (txtBldgfloor.equals(""))
+                        errors.add(1);
+                    MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
+                    txtTimeSched = txtfld_TimeSched.getText();
+                    if (txtTimeSched.equals(""))
+                        errors.add(1);
+                    else {
+                        txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
+                    }
+                    txtChargeTo = txtfld_ChargeTo.getText();
+                    if (txtChargeTo.equals(""))
+                        errors.add(1);
+                    txtWrkCompBy = txtfld_WrkCompBy.getText();
+                    if (txtWrkCompBy.equals(""))
+                        errors.add(1);
+                    txtInsAppBy = txtfld_InspAppBy.getText();
+                    if (txtInsAppBy.equals(""))
+                        errors.add(1);
+                    txtdateofcreation = txtfld_dateofcreation.getText();
+                    if (txtdateofcreation.equals(""))
+                        errors.add(1);
+                    txtDateWanted = txtfld_DateWanted.getText();
+                    if (txtDateWanted.equals(""))
+                        errors.add(1);
+                    txtScheduleDate = txtfld_ScheduledDate.getText();
+                    if (txtScheduleDate.equals(""))
+                        errors.add(1);
+                    txtDateComp = txtfld_DateComp.getText();
+                    if (txtDateComp.equals(""))
+                        errors.add(1);
+                    txtDateInsp = txtfld_DateInsp.getText();
+                    if (txtDateInsp.equals(""))
+                        errors.add(1);
+                    dblTotalLaborInit = Double.parseDouble(txtfld_TotalLaborInit.getText());
+                    dblTotalMaterials = Double.parseDouble(txtfld_TotalMat.getText());
+                    dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
+
+                    tempMatID.add("MAT0001");
+                    if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
+                    if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
+                    if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
+
+
+                    if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
+                    else errors.add(1);
+                    if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
+                    if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
+
+                    if(!errors.isEmpty()){
+                        frameErrorMessage.setVisible(true);
+                        frameErrorMessage.setLocationRelativeTo(null);
+                        frameErrorMessage.setSize(325, 150);
+                        break;
+                    }
+
+
+                } while (!errors.isEmpty());
+
 
 
             try {
+
                 objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUPDocs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase Sample.accdb");
 
                 try {
                     String sqlWorkOrder = "INSERT INTO WORK_ORDER (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
                             "DateInspected, ScheduledDate, ScheduledTime, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                     PreparedStatement psWorkOrder = objConn.prepareStatement(sqlWorkOrder);
-                    psWorkOrder.setString(1, txtdateofcreation);
-                    psWorkOrder.setString(2, txtTakenBy);
-                    psWorkOrder.setString(3, txtRequestedBy);
-                    psWorkOrder.setString(4, txtDept);
-                    psWorkOrder.setString(5, txtBldgfloor);
-                    psWorkOrder.setInt(6, MachineNo);
-                    psWorkOrder.setString(7, txtDateWanted);
-                    psWorkOrder.setString(8, txtChargeTo);
-                    psWorkOrder.setString(9, txtWrkCompBy);
-                    psWorkOrder.setString(10, txtDateComp);
-                    psWorkOrder.setString(11, txtInsAppBy);
-                    psWorkOrder.setString(12, txtDateInsp);
-                    psWorkOrder.setString(13, txtScheduleDate);
-                    psWorkOrder.setString(14, txtTimeSched);
-                    psWorkOrder.setDouble(15, dblTotalMaterials);
-                    psWorkOrder.setDouble(16, dblTotalLaborInit);
-                    psWorkOrder.setDouble(17, dblTotal);
-                    if(txtdateofcreation == null || txtTakenBy == null)
-                        frameErrorMessage.setVisible(true);
-                        frameErrorMessage.setSize(325, 150);
-                    psWorkOrder.executeUpdate();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+                    if(errors.isEmpty()) {
+                        psWorkOrder.setString(1, txtdateofcreation);
+                        psWorkOrder.setString(2, txtTakenBy);
+                        psWorkOrder.setString(3, txtRequestedBy);
+                        psWorkOrder.setString(4, txtDept);
+                        psWorkOrder.setString(5, txtBldgfloor);
+                        psWorkOrder.setInt(6, MachineNo);
+                        psWorkOrder.setString(7, txtDateWanted);
+                        psWorkOrder.setString(8, txtChargeTo);
+                        psWorkOrder.setString(9, txtWrkCompBy);
+                        psWorkOrder.setString(10, txtDateComp);
+                        psWorkOrder.setString(11, txtInsAppBy);
+                        psWorkOrder.setString(12, txtDateInsp);
+                        psWorkOrder.setString(13, txtScheduleDate);
+                        psWorkOrder.setString(14, txtTimeSched);
+                        psWorkOrder.setDouble(15, dblTotalMaterials);
+                        psWorkOrder.setDouble(16, dblTotalLaborInit);
+                        psWorkOrder.setDouble(17, dblTotal);
+
+                        psWorkOrder.executeUpdate();
+                    }
+                } catch (Exception objEx) {
+                    System.out.println(objEx);
+                    frameErrorMessage.setVisible(true);
+                    frameErrorMessage.setLocationRelativeTo(null);
+                    frameErrorMessage.setSize(325, 150);
                 }
 
                 try {
@@ -3380,8 +3473,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     if (rs.next()) {
                         sqlWOID = rs.getString("WorkOrderID");
                     }
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+                } catch (Exception objEx) {
+                    System.out.println(objEx);
                 }
                 try {
                     objConn.setAutoCommit(false);
@@ -3396,8 +3489,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     }
                     psService.executeBatch();
                     objConn.commit();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+                } catch (Exception objEx) {
+                    System.out.println(objEx);
                 }
 
                 try {
@@ -3414,8 +3507,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     }
                     psMaterial.executeBatch();
                     objConn.commit();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+                } catch (Exception objEx) {
+                    System.out.println(objEx);
                 }
 
                 try {
@@ -3431,8 +3524,8 @@ public class WOInputForm extends javax.swing.JFrame {
                     }
                     psLabor.executeBatch();
                     objConn.commit();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
+                } catch (Exception objEx) {
+                    System.out.println(objEx);
                 }
             } catch (Exception objEx) {
 
@@ -3453,8 +3546,7 @@ public class WOInputForm extends javax.swing.JFrame {
                 System.out.println("SQL completed");
             }
         }catch(Exception objEx){
-            frameErrorMessage.setVisible(true);
-            frameErrorMessage.setSize(325, 150);
+            System.out.println(objEx);
         }
     }
 

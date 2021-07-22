@@ -3341,7 +3341,7 @@ public class WOInputForm extends javax.swing.JFrame {
 
 
             try {
-                objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+                objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUPDocs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase Sample.accdb");
 
                 try {
                     String sqlWorkOrder = "INSERT INTO WORK_ORDER (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
@@ -3364,6 +3364,9 @@ public class WOInputForm extends javax.swing.JFrame {
                     psWorkOrder.setDouble(15, dblTotalMaterials);
                     psWorkOrder.setDouble(16, dblTotalLaborInit);
                     psWorkOrder.setDouble(17, dblTotal);
+                    if(txtdateofcreation == null || txtTakenBy == null)
+                        frameErrorMessage.setVisible(true);
+                        frameErrorMessage.setSize(325, 150);
                     psWorkOrder.executeUpdate();
                 } catch (SQLException throwables) {
                     throwables.printStackTrace();
@@ -3491,7 +3494,7 @@ public class WOInputForm extends javax.swing.JFrame {
         });
 
         try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\jerold bongabong\\Documents\\NetBeansProjects\\Work-Order-Application-JAVA\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase.accdb");
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUPDocs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase Sample.accdb");
             System.out.println("Database Connected");
         }catch (Exception objEx) {
 

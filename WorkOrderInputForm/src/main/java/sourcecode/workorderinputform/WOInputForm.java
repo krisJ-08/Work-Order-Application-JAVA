@@ -4,16 +4,18 @@
  * and open the template in the editor.
  */
 package sourcecode.workorderinputform;
+
 import org.hsqldb.DatabaseType;
 import org.hsqldb.lib.HsqlArrayList;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.sql.*;
 import java.util.ArrayList;
 
 
 /**
- *
  * @author Kristian
  */
 public class WOInputForm extends javax.swing.JFrame {
@@ -57,14 +59,289 @@ public class WOInputForm extends javax.swing.JFrame {
     private String txtScheduleDate;
     private String txtDateComp;
     private String txtDateInsp;
-
-
-
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bttnOkError;
+    private javax.swing.JButton bttnSave;
+    private javax.swing.ButtonGroup bttngrpDesc1;
+    private javax.swing.ButtonGroup bttngrpDesc2;
+    private javax.swing.ButtonGroup bttngrpDesc3;
+    private javax.swing.ButtonGroup bttngrpDesc4;
+    private javax.swing.ButtonGroup bttngrpDesc5;
+    private javax.swing.ButtonGroup bttngrpDesc6;
+    private javax.swing.ButtonGroup bttngrpDesc7;
+    private javax.swing.ButtonGroup bttngrpScheduledTime;
+    private javax.swing.ButtonGroup bttngrpTimeCreation;
+    private javax.swing.JCheckBox chckbox_Main1;
+    private javax.swing.JCheckBox chckbox_Main2;
+    private javax.swing.JCheckBox chckbox_Main3;
+    private javax.swing.JCheckBox chckbox_Main4;
+    private javax.swing.JCheckBox chckbox_Main5;
+    private javax.swing.JCheckBox chckbox_Main6;
+    private javax.swing.JCheckBox chckbox_Main7;
+    private javax.swing.JCheckBox chckbox_Rep1;
+    private javax.swing.JCheckBox chckbox_Rep2;
+    private javax.swing.JCheckBox chckbox_Rep3;
+    private javax.swing.JCheckBox chckbox_Rep4;
+    private javax.swing.JCheckBox chckbox_Rep5;
+    private javax.swing.JCheckBox chckbox_Rep6;
+    private javax.swing.JCheckBox chckbox_Rep7;
+    private javax.swing.JCheckBox chckbox_SchedCreationAm;
+    private javax.swing.JCheckBox chckbox_SchedCreationPM;
+    private javax.swing.JCheckBox chckbox_TimeCreationAm;
+    private javax.swing.JDialog frameErrorMessage;
+    private javax.swing.JCheckBox hckbox_TimeCreationPm;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel56;
+    private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel58;
+    private javax.swing.JPanel jPanel59;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel60;
+    private javax.swing.JPanel jPanel61;
+    private javax.swing.JPanel jPanel62;
+    private javax.swing.JPanel jPanel63;
+    private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
+    private javax.swing.JPanel jPanel67;
+    private javax.swing.JPanel jPanel68;
+    private javax.swing.JPanel jPanel69;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel70;
+    private javax.swing.JPanel jPanel71;
+    private javax.swing.JPanel jPanel72;
+    private javax.swing.JPanel jPanel73;
+    private javax.swing.JPanel jPanel74;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JFormattedTextField txtfld_Amount1;
+    private javax.swing.JFormattedTextField txtfld_Amount2;
+    private javax.swing.JFormattedTextField txtfld_Amount3;
+    private javax.swing.JFormattedTextField txtfld_Amount4;
+    private javax.swing.JFormattedTextField txtfld_ChargeTo;
+    private javax.swing.JFormattedTextField txtfld_DateComp;
+    private javax.swing.JFormattedTextField txtfld_DateInsp;
+    private javax.swing.JFormattedTextField txtfld_DateWanted;
+    private javax.swing.JFormattedTextField txtfld_Dept;
+    private javax.swing.JFormattedTextField txtfld_Descrption1;
+    private javax.swing.JFormattedTextField txtfld_Descrption2;
+    private javax.swing.JFormattedTextField txtfld_Descrption3;
+    private javax.swing.JFormattedTextField txtfld_Descrption4;
+    private javax.swing.JFormattedTextField txtfld_Descrption5;
+    private javax.swing.JFormattedTextField txtfld_Descrption6;
+    private javax.swing.JFormattedTextField txtfld_Descrption7;
+    private javax.swing.JFormattedTextField txtfld_InspAppBy;
+    private javax.swing.JFormattedTextField txtfld_Labor1;
+    private javax.swing.JFormattedTextField txtfld_Labor2;
+    private javax.swing.JFormattedTextField txtfld_Labor3;
+    private javax.swing.JFormattedTextField txtfld_LbrPrice1;
+    private javax.swing.JFormattedTextField txtfld_LbrPrice2;
+    private javax.swing.JFormattedTextField txtfld_LbrPrice3;
+    private javax.swing.JFormattedTextField txtfld_MachineNo;
+    private javax.swing.JFormattedTextField txtfld_MatPrice1;
+    private javax.swing.JFormattedTextField txtfld_MatPrice2;
+    private javax.swing.JFormattedTextField txtfld_MatPrice3;
+    private javax.swing.JFormattedTextField txtfld_MatPrice4;
+    private javax.swing.JFormattedTextField txtfld_MaterialsParts1;
+    private javax.swing.JFormattedTextField txtfld_MaterialsParts2;
+    private javax.swing.JFormattedTextField txtfld_MaterialsParts3;
+    private javax.swing.JFormattedTextField txtfld_MaterialsParts4;
+    private javax.swing.JFormattedTextField txtfld_Requestedby;
+    private javax.swing.JFormattedTextField txtfld_ScheduledDate;
+    private javax.swing.JFormattedTextField txtfld_TOTAL;
+    private javax.swing.JFormattedTextField txtfld_Takenby;
+    private javax.swing.JFormattedTextField txtfld_Time;
+    private javax.swing.JFormattedTextField txtfld_TimeSched;
+    private javax.swing.JFormattedTextField txtfld_TotalLaborInit;
+    private javax.swing.JFormattedTextField txtfld_TotalLbr;
+    private javax.swing.JFormattedTextField txtfld_TotalMat;
+    private javax.swing.JFormattedTextField txtfld_WrkCompBy;
+    private javax.swing.JFormattedTextField txtfld_bldgfloor1;
+    private javax.swing.JFormattedTextField txtfld_dateofcreation;
+    private javax.swing.JFormattedTextField txtfld_hrs1;
+    private javax.swing.JFormattedTextField txtfld_hrs2;
+    private javax.swing.JFormattedTextField txtfld_hrs3;
+    private javax.swing.JFormattedTextField txtfld_qty1;
+    private javax.swing.JFormattedTextField txtfld_qty2;
+    private javax.swing.JFormattedTextField txtfld_qty3;
+    private javax.swing.JFormattedTextField txtfld_qty4;
     /**
      * Creates new form WOInputForm
      */
     public WOInputForm() {
         initComponents();
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String... args) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new WOInputForm().setVisible(true);
+            }
+        });
+
+        try {
+            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUPDocs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase Sample.accdb");
+            System.out.println("Database Connected");
+        } catch (Exception objEx) {
+
+            System.out.println("Database failed!");
+            System.out.println(objEx);
+
+        } finally {
+            if (objConn != null) {
+                try {
+                    objConn.close();
+                } catch (Exception objEx) {
+                    System.out.println("Problem closing the database!");
+                    System.out.println(objEx);
+                }
+            }
+
+        }
     }
 
     /**
@@ -322,21 +599,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout frameErrorMessageLayout = new javax.swing.GroupLayout(frameErrorMessage.getContentPane());
         frameErrorMessage.getContentPane().setLayout(frameErrorMessageLayout);
         frameErrorMessageLayout.setHorizontalGroup(
-            frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameErrorMessageLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bttnOkError)
-                .addGap(35, 35, 35))
-            .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 363, Short.MAX_VALUE)
+                frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frameErrorMessageLayout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(bttnOkError)
+                                .addGap(35, 35, 35))
+                        .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, 363, Short.MAX_VALUE)
         );
         frameErrorMessageLayout.setVerticalGroup(
-            frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frameErrorMessageLayout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
-                .addComponent(jLabel21)
-                .addGap(31, 31, 31)
-                .addComponent(bttnOkError)
-                .addContainerGap())
+                frameErrorMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(frameErrorMessageLayout.createSequentialGroup()
+                                .addContainerGap(63, Short.MAX_VALUE)
+                                .addComponent(jLabel21)
+                                .addGap(31, 31, 31)
+                                .addComponent(bttnOkError)
+                                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -367,25 +644,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(42, 42, 42)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGap(42, 42, 42)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel33)
-                .addGap(21, 21, 21)
-                .addComponent(jLabel40)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel33)
+                                .addGap(21, 21, 21)
+                                .addComponent(jLabel40)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -410,24 +687,24 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtfld_dateofcreation)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(154, Short.MAX_VALUE))
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtfld_dateofcreation)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(154, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel43))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_dateofcreation, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel1)
+                                        .addComponent(jLabel43))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_dateofcreation, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
         );
 
         txtfld_dateofcreation.getAccessibleContext().setAccessibleName("txtfld_dateofcreation");
@@ -464,33 +741,33 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addComponent(chckbox_TimeCreationAm)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(hckbox_TimeCreationPm)
-                .addContainerGap())
-            .addComponent(txtfld_Time, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                                .addComponent(chckbox_TimeCreationAm)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(hckbox_TimeCreationPm)
+                                .addContainerGap())
+                        .addComponent(txtfld_Time, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(hckbox_TimeCreationPm)
-                        .addComponent(chckbox_TimeCreationAm)
-                        .addComponent(jLabel44)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtfld_Time, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jLabel2))
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(hckbox_TimeCreationPm)
+                                                .addComponent(chckbox_TimeCreationAm)
+                                                .addComponent(jLabel44)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtfld_Time, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
         );
 
         jPanel4.add(jPanel6);
@@ -512,28 +789,28 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
-            .addComponent(txtfld_Takenby, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(117, Short.MAX_VALUE))
+                        .addComponent(txtfld_Takenby, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel45)
-                        .addGap(10, 10, 10)))
-                .addComponent(txtfld_Takenby, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9))
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jLabel3))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel45)
+                                                .addGap(10, 10, 10)))
+                                .addComponent(txtfld_Takenby, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(9, 9, 9))
         );
 
         jPanel4.add(jPanel1);
@@ -555,25 +832,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtfld_Requestedby)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(302, Short.MAX_VALUE))
+                jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtfld_Requestedby)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(302, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel47))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_Requestedby, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel47))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_Requestedby, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel7);
@@ -595,24 +872,24 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(148, Short.MAX_VALUE))
-            .addComponent(txtfld_Dept)
+                jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(148, Short.MAX_VALUE))
+                        .addComponent(txtfld_Dept)
         );
         jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel49))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtfld_Dept, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel5)
+                                        .addComponent(jLabel49))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtfld_Dept, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel4.add(jPanel8);
@@ -634,25 +911,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
-            .addComponent(txtfld_bldgfloor1, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(88, Short.MAX_VALUE))
+                        .addComponent(txtfld_bldgfloor1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel50))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_bldgfloor1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel6)
+                                        .addComponent(jLabel50))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_bldgfloor1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel9);
@@ -674,27 +951,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addComponent(txtfld_MachineNo, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(txtfld_MachineNo, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel48))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_MachineNo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel7)
+                                        .addComponent(jLabel48))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_MachineNo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel10);
@@ -717,25 +994,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
-            .addComponent(txtfld_DateWanted, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(90, Short.MAX_VALUE))
+                        .addComponent(txtfld_DateWanted, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel51))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_DateWanted, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel8)
+                                        .addComponent(jLabel51))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_DateWanted, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel11);
@@ -756,23 +1033,23 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap(206, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(179, 179, 179))
+                jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addContainerGap(206, Short.MAX_VALUE)
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(179, 179, 179))
         );
         jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel9)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel12);
@@ -797,27 +1074,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chckbox_Main1)
-                    .addComponent(chckbox_Rep1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption1, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
-                .addGap(6, 6, 6))
+                jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(chckbox_Main1)
+                                        .addComponent(chckbox_Rep1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtfld_Descrption1, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
+                                .addGap(6, 6, 6))
         );
         jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtfld_Descrption1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
-                        .addComponent(chckbox_Main1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chckbox_Rep1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtfld_Descrption1)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
+                                                .addComponent(chckbox_Main1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(chckbox_Rep1)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel13);
@@ -842,27 +1119,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chckbox_Main2)
-                    .addComponent(chckbox_Rep2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption2)
-                .addContainerGap())
+                jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(chckbox_Main2)
+                                        .addComponent(chckbox_Rep2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtfld_Descrption2)
+                                .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtfld_Descrption2)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel14Layout.createSequentialGroup()
-                        .addComponent(chckbox_Main2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chckbox_Rep2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtfld_Descrption2)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel14Layout.createSequentialGroup()
+                                                .addComponent(chckbox_Main2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(chckbox_Rep2)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel14);
@@ -887,27 +1164,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chckbox_Main3)
-                    .addComponent(chckbox_Rep3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption3)
-                .addContainerGap())
+                jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(chckbox_Main3)
+                                        .addComponent(chckbox_Rep3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtfld_Descrption3)
+                                .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtfld_Descrption3)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
-                        .addComponent(chckbox_Main3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chckbox_Rep3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtfld_Descrption3)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
+                                                .addComponent(chckbox_Main3)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(chckbox_Rep3)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel15);
@@ -932,27 +1209,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chckbox_Main4)
-                    .addComponent(chckbox_Rep4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption4)
-                .addContainerGap())
+                jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(chckbox_Main4)
+                                        .addComponent(chckbox_Rep4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtfld_Descrption4)
+                                .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtfld_Descrption4)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
-                        .addComponent(chckbox_Main4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chckbox_Rep4)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtfld_Descrption4)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
+                                                .addComponent(chckbox_Main4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(chckbox_Rep4)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel16);
@@ -977,27 +1254,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chckbox_Main5)
-                    .addComponent(chckbox_Rep5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption5)
-                .addContainerGap())
+                jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(chckbox_Main5)
+                                        .addComponent(chckbox_Rep5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtfld_Descrption5)
+                                .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtfld_Descrption5)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel17Layout.createSequentialGroup()
-                        .addComponent(chckbox_Main5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chckbox_Rep5)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtfld_Descrption5)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel17Layout.createSequentialGroup()
+                                                .addComponent(chckbox_Main5)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(chckbox_Rep5)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel17);
@@ -1022,27 +1299,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
         jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chckbox_Main6)
-                    .addComponent(chckbox_Rep6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption6)
-                .addContainerGap())
+                jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel18Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(chckbox_Main6)
+                                        .addComponent(chckbox_Rep6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtfld_Descrption6)
+                                .addContainerGap())
         );
         jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtfld_Descrption6)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel18Layout.createSequentialGroup()
-                        .addComponent(chckbox_Main6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chckbox_Rep6)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel18Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtfld_Descrption6)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel18Layout.createSequentialGroup()
+                                                .addComponent(chckbox_Main6)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(chckbox_Rep6)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel18);
@@ -1067,27 +1344,27 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chckbox_Main7)
-                    .addComponent(chckbox_Rep7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtfld_Descrption7)
-                .addContainerGap())
+                jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel19Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(chckbox_Main7)
+                                        .addComponent(chckbox_Rep7))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtfld_Descrption7)
+                                .addContainerGap())
         );
         jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtfld_Descrption7)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel19Layout.createSequentialGroup()
-                        .addComponent(chckbox_Main7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(chckbox_Rep7)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel19Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtfld_Descrption7)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel19Layout.createSequentialGroup()
+                                                .addComponent(chckbox_Main7)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(chckbox_Rep7)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel19);
@@ -1110,28 +1387,28 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtfld_ScheduledDate)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(293, Short.MAX_VALUE))
+                jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtfld_ScheduledDate)
+                        .addGroup(jPanel20Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(293, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel10))
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(jLabel53)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_ScheduledDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel20Layout.createSequentialGroup()
+                                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel20Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jLabel10))
+                                        .addGroup(jPanel20Layout.createSequentialGroup()
+                                                .addGap(5, 5, 5)
+                                                .addComponent(jLabel53)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_ScheduledDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel20);
@@ -1176,33 +1453,33 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
         jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel21Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addComponent(chckbox_SchedCreationAm)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chckbox_SchedCreationPM)
-                .addContainerGap())
-            .addComponent(txtfld_TimeSched, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel21Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel12)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addComponent(chckbox_SchedCreationAm)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chckbox_SchedCreationPM)
+                                .addContainerGap())
+                        .addComponent(txtfld_TimeSched, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
-                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel12))
-                    .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(chckbox_SchedCreationPM)
-                        .addComponent(chckbox_SchedCreationAm)
-                        .addComponent(jLabel54)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtfld_TimeSched, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
+                                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel21Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jLabel12))
+                                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(chckbox_SchedCreationPM)
+                                                .addComponent(chckbox_SchedCreationAm)
+                                                .addComponent(jLabel54)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtfld_TimeSched, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
         );
 
         jPanel4.add(jPanel21);
@@ -1218,19 +1495,19 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel22Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel11)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel22Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel11)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel22);
@@ -1246,19 +1523,19 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel23Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel13)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel23Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel13)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel23);
@@ -1274,21 +1551,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel24Layout.createSequentialGroup()
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel24Layout.createSequentialGroup()
+                                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel24Layout.setVerticalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel24Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel14)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel24Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel14)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel24);
@@ -1304,21 +1581,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel25Layout.createSequentialGroup()
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel25Layout.createSequentialGroup()
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel25Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel15)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel25Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel15)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel25);
@@ -1334,22 +1611,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
         jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_qty1)
-                    .addContainerGap()))
+                jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel26Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_qty1)
+                                        .addContainerGap()))
         );
         jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_qty1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel26Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_qty1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel26);
@@ -1364,22 +1641,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
         jPanel27Layout.setHorizontalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MaterialsParts1)
-                    .addContainerGap()))
+                jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel27Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MaterialsParts1)
+                                        .addContainerGap()))
         );
         jPanel27Layout.setVerticalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MaterialsParts1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel27Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MaterialsParts1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel27);
@@ -1395,22 +1672,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
         jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel28Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MatPrice1)
-                    .addContainerGap()))
+                jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel28Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MatPrice1)
+                                        .addContainerGap()))
         );
         jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel28Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MatPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel28Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MatPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel28);
@@ -1426,22 +1703,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel29Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_Amount1)
-                    .addContainerGap()))
+                jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel29Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_Amount1)
+                                        .addContainerGap()))
         );
         jPanel29Layout.setVerticalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel29Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_Amount1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel29Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_Amount1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel29);
@@ -1457,22 +1734,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
         jPanel30Layout.setHorizontalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_qty2)
-                    .addContainerGap()))
+                jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel30Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_qty2)
+                                        .addContainerGap()))
         );
         jPanel30Layout.setVerticalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_qty2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel30Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_qty2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel30);
@@ -1487,22 +1764,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel31Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MaterialsParts2)
-                    .addContainerGap()))
+                jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel31Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MaterialsParts2)
+                                        .addContainerGap()))
         );
         jPanel31Layout.setVerticalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel31Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MaterialsParts2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel31Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MaterialsParts2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel31);
@@ -1518,22 +1795,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
         jPanel32Layout.setHorizontalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel32Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MatPrice2)
-                    .addContainerGap()))
+                jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel32Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MatPrice2)
+                                        .addContainerGap()))
         );
         jPanel32Layout.setVerticalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel32Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MatPrice2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel32Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MatPrice2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel32);
@@ -1549,22 +1826,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel33Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_Amount2)
-                    .addContainerGap()))
+                jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel33Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_Amount2)
+                                        .addContainerGap()))
         );
         jPanel33Layout.setVerticalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel33Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_Amount2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel33Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_Amount2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel33);
@@ -1580,22 +1857,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
         jPanel34Layout.setHorizontalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_qty3)
-                    .addContainerGap()))
+                jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel34Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_qty3)
+                                        .addContainerGap()))
         );
         jPanel34Layout.setVerticalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_qty3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel34Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_qty3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel34);
@@ -1610,22 +1887,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
         jPanel35Layout.setHorizontalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel35Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MaterialsParts3)
-                    .addContainerGap()))
+                jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel35Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MaterialsParts3)
+                                        .addContainerGap()))
         );
         jPanel35Layout.setVerticalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel35Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MaterialsParts3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel35Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MaterialsParts3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         txtfld_MaterialsParts3.getAccessibleContext().setAccessibleName("txtfld_Materials/Parts3");
@@ -1643,22 +1920,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
         jPanel36Layout.setHorizontalGroup(
-            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel36Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MatPrice3)
-                    .addContainerGap()))
+                jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel36Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MatPrice3)
+                                        .addContainerGap()))
         );
         jPanel36Layout.setVerticalGroup(
-            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel36Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MatPrice3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel36Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MatPrice3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel36);
@@ -1674,22 +1951,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel37Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_Amount3)
-                    .addContainerGap()))
+                jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel37Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_Amount3)
+                                        .addContainerGap()))
         );
         jPanel37Layout.setVerticalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel37Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_Amount3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel37Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_Amount3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel37);
@@ -1705,22 +1982,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
         jPanel38Layout.setHorizontalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel38Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_qty4)
-                    .addContainerGap()))
+                jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel38Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_qty4)
+                                        .addContainerGap()))
         );
         jPanel38Layout.setVerticalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel38Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_qty4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel38Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_qty4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel38);
@@ -1735,22 +2012,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel39Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MaterialsParts4)
-                    .addContainerGap()))
+                jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel39Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MaterialsParts4)
+                                        .addContainerGap()))
         );
         jPanel39Layout.setVerticalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel39Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MaterialsParts4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel39Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MaterialsParts4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel39);
@@ -1766,22 +2043,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
-            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel40Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_MatPrice4)
-                    .addContainerGap()))
+                jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel40Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_MatPrice4)
+                                        .addContainerGap()))
         );
         jPanel40Layout.setVerticalGroup(
-            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel40Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_MatPrice4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel40Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_MatPrice4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel40);
@@ -1797,22 +2074,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
         jPanel41Layout.setHorizontalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel41Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_Amount4)
-                    .addContainerGap()))
+                jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel41Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_Amount4)
+                                        .addContainerGap()))
         );
         jPanel41Layout.setVerticalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel41Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_Amount4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel41Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_Amount4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel41);
@@ -1833,22 +2110,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
         jPanel42Layout.setHorizontalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
-                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
+                jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
+                                .addContainerGap(74, Short.MAX_VALUE)
+                                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
         );
         jPanel42Layout.setVerticalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel42Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel55)
-                .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel42Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel55)
+                                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel42);
@@ -1869,22 +2146,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
         jPanel43Layout.setHorizontalGroup(
-            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
-                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
-            .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
+                jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
+                                .addContainerGap(143, Short.MAX_VALUE)
+                                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(80, 80, 80))
+                        .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
-            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel43Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel56)
-                .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel43Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel56)
+                                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel43);
@@ -1906,22 +2183,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
         jPanel44Layout.setHorizontalGroup(
-            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
-                .addContainerGap(73, Short.MAX_VALUE)
-                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
+                jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
+                                .addContainerGap(73, Short.MAX_VALUE)
+                                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                        .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
         );
         jPanel44Layout.setVerticalGroup(
-            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel44Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel57)
-                .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel44Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel57)
+                                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel44);
@@ -1947,25 +2224,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
         jPanel47Layout.setHorizontalGroup(
-            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap())
         );
         jPanel47Layout.setVerticalGroup(
-            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel47Layout.createSequentialGroup()
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel41)
-                    .addComponent(jLabel58))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel47Layout.createSequentialGroup()
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel41)
+                                        .addComponent(jLabel58))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
         );
 
         jPanel4.add(jPanel47);
@@ -1985,24 +2262,24 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
-            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel48Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtfld_TotalMat)
-                .addContainerGap())
-            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel48Layout.createSequentialGroup()
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel48Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(txtfld_TotalMat)
+                                .addContainerGap())
+                        .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel48Layout.createSequentialGroup()
+                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel48Layout.setVerticalGroup(
-            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtfld_TotalMat)
-            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel48Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel22)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtfld_TotalMat)
+                        .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel48Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel22)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel48);
@@ -2018,22 +2295,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
         jPanel45Layout.setHorizontalGroup(
-            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel45Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_hrs1)
-                    .addContainerGap()))
+                jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel45Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_hrs1)
+                                        .addContainerGap()))
         );
         jPanel45Layout.setVerticalGroup(
-            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel45Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_hrs1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel45Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_hrs1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel45);
@@ -2048,22 +2325,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
         jPanel46Layout.setHorizontalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel46Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_Labor1)
-                    .addContainerGap()))
+                jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel46Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_Labor1)
+                                        .addContainerGap()))
         );
         jPanel46Layout.setVerticalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel46Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_Labor1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel46Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_Labor1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel46);
@@ -2079,22 +2356,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
         jPanel49Layout.setHorizontalGroup(
-            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel49Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_LbrPrice1)
-                    .addContainerGap()))
+                jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel49Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_LbrPrice1)
+                                        .addContainerGap()))
         );
         jPanel49Layout.setVerticalGroup(
-            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel49Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_LbrPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel49Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_LbrPrice1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel49);
@@ -2115,21 +2392,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
         jPanel50.setLayout(jPanel50Layout);
         jPanel50Layout.setHorizontalGroup(
-            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel50Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel60))
-                .addContainerGap())
+                jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel50Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel60))
+                                .addContainerGap())
         );
         jPanel50Layout.setVerticalGroup(
-            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel50Layout.createSequentialGroup()
-                .addComponent(jLabel60)
-                .addGap(1, 1, 1)
-                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 11, Short.MAX_VALUE)
-                .addGap(27, 27, 27))
+                jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel50Layout.createSequentialGroup()
+                                .addComponent(jLabel60)
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 11, Short.MAX_VALUE)
+                                .addGap(27, 27, 27))
         );
 
         jPanel4.add(jPanel50);
@@ -2149,31 +2426,31 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
         jPanel51.setLayout(jPanel51Layout);
         jPanel51Layout.setHorizontalGroup(
-            jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel51Layout.createSequentialGroup()
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel51Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_TotalLbr)
-                    .addContainerGap()))
+                jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel51Layout.createSequentialGroup()
+                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel51Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_TotalLbr)
+                                        .addContainerGap()))
         );
         jPanel51Layout.setVerticalGroup(
-            jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel51Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel24)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel51Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_TotalLbr, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel51Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel24)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel51Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_TotalLbr, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel51);
@@ -2189,22 +2466,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
         jPanel52.setLayout(jPanel52Layout);
         jPanel52Layout.setHorizontalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel52Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_hrs2)
-                    .addContainerGap()))
+                jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel52Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_hrs2)
+                                        .addContainerGap()))
         );
         jPanel52Layout.setVerticalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel52Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_hrs2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel52Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_hrs2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel52);
@@ -2219,22 +2496,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
         jPanel53.setLayout(jPanel53Layout);
         jPanel53Layout.setHorizontalGroup(
-            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel53Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_Labor2)
-                    .addContainerGap()))
+                jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel53Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_Labor2)
+                                        .addContainerGap()))
         );
         jPanel53Layout.setVerticalGroup(
-            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel53Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_Labor2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel53Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_Labor2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel53);
@@ -2250,22 +2527,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
         jPanel54.setLayout(jPanel54Layout);
         jPanel54Layout.setHorizontalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel54Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_LbrPrice2)
-                    .addContainerGap()))
+                jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel54Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_LbrPrice2)
+                                        .addContainerGap()))
         );
         jPanel54Layout.setVerticalGroup(
-            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel54Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_LbrPrice2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel54Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_LbrPrice2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel54);
@@ -2280,21 +2557,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
         jPanel55.setLayout(jPanel55Layout);
         jPanel55Layout.setHorizontalGroup(
-            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel55Layout.createSequentialGroup()
-                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel55Layout.createSequentialGroup()
+                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel55Layout.setVerticalGroup(
-            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel55Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel25)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel55Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel25)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel55);
@@ -2309,21 +2586,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel56Layout = new javax.swing.GroupLayout(jPanel56);
         jPanel56.setLayout(jPanel56Layout);
         jPanel56Layout.setHorizontalGroup(
-            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel56Layout.createSequentialGroup()
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel56Layout.createSequentialGroup()
+                                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel56Layout.setVerticalGroup(
-            jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel56Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel26)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel56Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel56Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel26)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel56);
@@ -2339,22 +2616,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
         jPanel57.setLayout(jPanel57Layout);
         jPanel57Layout.setHorizontalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel57Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_hrs3)
-                    .addContainerGap()))
+                jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel57Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_hrs3)
+                                        .addContainerGap()))
         );
         jPanel57Layout.setVerticalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel57Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_hrs3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel57Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_hrs3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel57);
@@ -2369,22 +2646,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
         jPanel58.setLayout(jPanel58Layout);
         jPanel58Layout.setHorizontalGroup(
-            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel58Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_Labor3)
-                    .addContainerGap()))
+                jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel58Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_Labor3)
+                                        .addContainerGap()))
         );
         jPanel58Layout.setVerticalGroup(
-            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel58Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_Labor3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel58Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_Labor3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel58);
@@ -2400,22 +2677,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
         jPanel59.setLayout(jPanel59Layout);
         jPanel59Layout.setHorizontalGroup(
-            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel59Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_LbrPrice3)
-                    .addContainerGap()))
+                jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel59Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_LbrPrice3)
+                                        .addContainerGap()))
         );
         jPanel59Layout.setVerticalGroup(
-            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel59Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_LbrPrice3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel59Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_LbrPrice3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel59);
@@ -2430,21 +2707,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel60Layout = new javax.swing.GroupLayout(jPanel60);
         jPanel60.setLayout(jPanel60Layout);
         jPanel60Layout.setHorizontalGroup(
-            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel60Layout.createSequentialGroup()
-                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel60Layout.createSequentialGroup()
+                                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel60Layout.setVerticalGroup(
-            jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel60Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel27)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel60Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel60Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel27)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel60);
@@ -2459,21 +2736,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel61Layout = new javax.swing.GroupLayout(jPanel61);
         jPanel61.setLayout(jPanel61Layout);
         jPanel61Layout.setHorizontalGroup(
-            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel61Layout.createSequentialGroup()
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel61Layout.createSequentialGroup()
+                                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel61Layout.setVerticalGroup(
-            jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel61Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel28)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel61Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel61Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel28)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel61);
@@ -2493,28 +2770,28 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel62Layout = new javax.swing.GroupLayout(jPanel62);
         jPanel62.setLayout(jPanel62Layout);
         jPanel62Layout.setHorizontalGroup(
-            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
-                .addContainerGap(207, Short.MAX_VALUE)
-                .addComponent(jLabel61)
-                .addGap(127, 127, 127))
-            .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
-                    .addContainerGap(225, Short.MAX_VALUE)
-                    .addComponent(jLabel19)
-                    .addContainerGap()))
+                jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
+                                .addContainerGap(207, Short.MAX_VALUE)
+                                .addComponent(jLabel61)
+                                .addGap(127, 127, 127))
+                        .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel62Layout.createSequentialGroup()
+                                        .addContainerGap(225, Short.MAX_VALUE)
+                                        .addComponent(jLabel19)
+                                        .addContainerGap()))
         );
         jPanel62Layout.setVerticalGroup(
-            jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel62Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel61)
-                .addContainerGap(14, Short.MAX_VALUE))
-            .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel62Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel19)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel62Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel61)
+                                .addContainerGap(14, Short.MAX_VALUE))
+                        .addGroup(jPanel62Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel62Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel19)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel62);
@@ -2531,22 +2808,22 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel63Layout = new javax.swing.GroupLayout(jPanel63);
         jPanel63.setLayout(jPanel63Layout);
         jPanel63Layout.setHorizontalGroup(
-            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel63Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_TotalLaborInit)
-                    .addContainerGap()))
+                jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel63Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_TotalLaborInit)
+                                        .addContainerGap()))
         );
         jPanel63Layout.setVerticalGroup(
-            jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel63Layout.createSequentialGroup()
-                    .addGap(1, 1, 1)
-                    .addComponent(txtfld_TotalLaborInit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel63Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtfld_TotalLaborInit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel63);
@@ -2561,21 +2838,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel64Layout = new javax.swing.GroupLayout(jPanel64);
         jPanel64.setLayout(jPanel64Layout);
         jPanel64Layout.setHorizontalGroup(
-            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel64Layout.createSequentialGroup()
-                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel64Layout.createSequentialGroup()
+                                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel64Layout.setVerticalGroup(
-            jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel64Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel29)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel64Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel64Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel29)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel64);
@@ -2590,21 +2867,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
         jPanel65.setLayout(jPanel65Layout);
         jPanel65Layout.setHorizontalGroup(
-            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel65Layout.createSequentialGroup()
-                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel65Layout.createSequentialGroup()
+                                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel65Layout.setVerticalGroup(
-            jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel65Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel30)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel65Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel65Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel30)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel65);
@@ -2626,25 +2903,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel66Layout = new javax.swing.GroupLayout(jPanel66);
         jPanel66.setLayout(jPanel66Layout);
         jPanel66Layout.setHorizontalGroup(
-            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel66Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(335, Short.MAX_VALUE))
-            .addComponent(txtfld_ChargeTo, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel66Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(335, Short.MAX_VALUE))
+                        .addComponent(txtfld_ChargeTo, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel66Layout.setVerticalGroup(
-            jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel66Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel62))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_ChargeTo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel66Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel66Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel20)
+                                        .addComponent(jLabel62))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_ChargeTo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel66);
@@ -2659,17 +2936,17 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel67Layout = new javax.swing.GroupLayout(jPanel67);
         jPanel67.setLayout(jPanel67Layout);
         jPanel67Layout.setHorizontalGroup(
-            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel67Layout.createSequentialGroup()
-                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel67Layout.createSequentialGroup()
+                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 1, Short.MAX_VALUE))
         );
         jPanel67Layout.setVerticalGroup(
-            jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel67Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(jLabel31)
-                .addContainerGap(55, Short.MAX_VALUE))
+                jPanel67Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel67Layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(jLabel31)
+                                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel67);
@@ -2684,21 +2961,21 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel68Layout = new javax.swing.GroupLayout(jPanel68);
         jPanel68.setLayout(jPanel68Layout);
         jPanel68Layout.setHorizontalGroup(
-            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel68Layout.createSequentialGroup()
-                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel68Layout.createSequentialGroup()
+                                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel68Layout.setVerticalGroup(
-            jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel68Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel32)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel68Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel68Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel32)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanel4.add(jPanel68);
@@ -2720,25 +2997,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel69Layout = new javax.swing.GroupLayout(jPanel69);
         jPanel69.setLayout(jPanel69Layout);
         jPanel69Layout.setHorizontalGroup(
-            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel69Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel34)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(170, Short.MAX_VALUE))
-            .addComponent(txtfld_WrkCompBy, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel69Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel34)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(170, Short.MAX_VALUE))
+                        .addComponent(txtfld_WrkCompBy, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel69Layout.setVerticalGroup(
-            jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel69Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel63))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_WrkCompBy, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel69Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel69Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel34)
+                                        .addComponent(jLabel63))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_WrkCompBy, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel69);
@@ -2761,25 +3038,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel70Layout = new javax.swing.GroupLayout(jPanel70);
         jPanel70.setLayout(jPanel70Layout);
         jPanel70Layout.setHorizontalGroup(
-            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel70Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel35)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
-            .addComponent(txtfld_DateComp, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel70Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel35)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(36, Short.MAX_VALUE))
+                        .addComponent(txtfld_DateComp, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel70Layout.setVerticalGroup(
-            jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel70Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel35)
-                    .addComponent(jLabel64))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_DateComp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel70Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel70Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel35)
+                                        .addComponent(jLabel64))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_DateComp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel70);
@@ -2799,25 +3076,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel71Layout = new javax.swing.GroupLayout(jPanel71);
         jPanel71.setLayout(jPanel71Layout);
         jPanel71Layout.setHorizontalGroup(
-            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel71Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
-                .addComponent(jLabel36)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel71Layout.createSequentialGroup()
+                                .addContainerGap(28, Short.MAX_VALUE)
+                                .addComponent(jLabel36)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
         );
         jPanel71Layout.setVerticalGroup(
-            jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel71Layout.createSequentialGroup()
-                .addGroup(jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel71Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel71Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel65)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel71Layout.createSequentialGroup()
+                                .addGroup(jPanel71Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel71Layout.createSequentialGroup()
+                                                .addGap(21, 21, 21)
+                                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel71Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jLabel65)))
+                                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel71);
@@ -2837,31 +3114,31 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel72Layout = new javax.swing.GroupLayout(jPanel72);
         jPanel72.setLayout(jPanel72Layout);
         jPanel72Layout.setHorizontalGroup(
-            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel72Layout.createSequentialGroup()
-                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel72Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_TOTAL)
-                    .addContainerGap()))
+                jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel72Layout.createSequentialGroup()
+                                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel72Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_TOTAL)
+                                        .addContainerGap()))
         );
         jPanel72Layout.setVerticalGroup(
-            jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel72Layout.createSequentialGroup()
-                    .addGap(8, 8, 8)
-                    .addComponent(jLabel37)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel72Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(txtfld_TOTAL)
-                    .addContainerGap()))
+                jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel72Layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addComponent(jLabel37)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel72Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel72Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(txtfld_TOTAL)
+                                        .addContainerGap()))
         );
 
         jPanel4.add(jPanel72);
@@ -2883,25 +3160,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel73Layout = new javax.swing.GroupLayout(jPanel73);
         jPanel73.setLayout(jPanel73Layout);
         jPanel73Layout.setHorizontalGroup(
-            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel73Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel38)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(235, Short.MAX_VALUE))
-            .addComponent(txtfld_InspAppBy, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel73Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel38)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(235, Short.MAX_VALUE))
+                        .addComponent(txtfld_InspAppBy, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel73Layout.setVerticalGroup(
-            jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel73Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38)
-                    .addComponent(jLabel66))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_InspAppBy, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel73Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel73Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel38)
+                                        .addComponent(jLabel66))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_InspAppBy, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel73);
@@ -2924,25 +3201,25 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel74Layout = new javax.swing.GroupLayout(jPanel74);
         jPanel74.setLayout(jPanel74Layout);
         jPanel74Layout.setHorizontalGroup(
-            jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel74Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel39)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
-            .addComponent(txtfld_DateInsp, javax.swing.GroupLayout.Alignment.TRAILING)
+                jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel74Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel39)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(155, Short.MAX_VALUE))
+                        .addComponent(txtfld_DateInsp, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         jPanel74Layout.setVerticalGroup(
-            jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel74Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel39)
-                    .addComponent(jLabel67))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtfld_DateInsp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel74Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel74Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel39)
+                                        .addComponent(jLabel67))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtfld_DateInsp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.add(jPanel74);
@@ -2963,31 +3240,31 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(285, 285, 285))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel42))
-                .addContainerGap(278, Short.MAX_VALUE))
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(285, 285, 285))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                        .addComponent(jLabel42))
+                                .addContainerGap(278, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel42)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel42)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(38, 38, 38)
+                                .addComponent(bttnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel2);
@@ -2995,12 +3272,12 @@ public class WOInputForm extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1569, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1569, Short.MAX_VALUE)
         );
 
         pack();
@@ -3008,426 +3285,420 @@ public class WOInputForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void chckbox_SchedCreationPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_SchedCreationPMActionPerformed
-        if(chckbox_SchedCreationPM.isSelected()){
+        if (chckbox_SchedCreationPM.isSelected()) {
             SchedTime = " pm";
         }
     }//GEN-LAST:event_chckbox_SchedCreationPMActionPerformed
 
     private void chckbox_SchedCreationAmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckbox_SchedCreationAmActionPerformed
-        if(chckbox_SchedCreationAm.isSelected()){
+        if (chckbox_SchedCreationAm.isSelected()) {
             SchedTime = " am";
         }
     }//GEN-LAST:event_chckbox_SchedCreationAmActionPerformed
 
     private void bttnOkErrorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnOkErrorActionPerformed
-        frameErrorMessage.dispose();
         frameErrorMessage.setVisible(false);
+        frameErrorMessage.dispose();
+
     }//GEN-LAST:event_bttnOkErrorActionPerformed
 
-
     private void bttnSaveActionPerformed(ActionEvent evt) {
-        ArrayList<Double>  tempMatAmount       = new ArrayList<>();
-        ArrayList<String>  tempServiceID       = new ArrayList<>();
-        ArrayList<String>  tempNatureofService = new ArrayList<>();
-        ArrayList<String>  tempDescription     = new ArrayList<>();
-        ArrayList<Integer> tempQTY             = new ArrayList<>();
-        ArrayList<String>  tempMatParts        = new ArrayList<>();
-        ArrayList<Double>  tempMatPrice        = new ArrayList<>();
-        ArrayList<Integer> tempHours           = new ArrayList<>();
-        ArrayList<String>  tempLabor           = new ArrayList<>();
-        ArrayList<String>  tempLbrID           = new ArrayList<>();
-        ArrayList<Double>  tempLaborAmount     = new ArrayList<>();
-        ArrayList<String>  tempMatID           = new ArrayList<>();
+        ArrayList<Double> tempMatAmount = new ArrayList<>();
+        ArrayList<String> tempServiceID = new ArrayList<>();
+        ArrayList<String> tempNatureofService = new ArrayList<>();
+        ArrayList<String> tempDescription = new ArrayList<>();
+        ArrayList<Integer> tempQTY = new ArrayList<>();
+        ArrayList<String> tempMatParts = new ArrayList<>();
+        ArrayList<Double> tempMatPrice = new ArrayList<>();
+        ArrayList<Integer> tempHours = new ArrayList<>();
+        ArrayList<String> tempLabor = new ArrayList<>();
+        ArrayList<String> tempLbrID = new ArrayList<>();
+        ArrayList<Double> tempLaborAmount = new ArrayList<>();
+        ArrayList<String> tempMatID = new ArrayList<>();
         try {
-            ArrayList <Integer> errors = new ArrayList<>();
+            ArrayList<Integer> errors = new ArrayList<>();
             do {
 
-                    errors.clear();
-                    tempMatAmount.clear();
-                    tempServiceID.clear();
-                    tempNatureofService.clear();
-                    tempDescription.clear();
-                    tempQTY.clear();
-                    tempMatParts.clear();
-                    tempMatPrice.clear();
-                    tempHours.clear();
-                    tempLabor.clear();
-                    tempLbrID.clear();
-                    tempLaborAmount.clear();
-                    tempMatID.clear();
+                errors.clear();
+                tempMatAmount.clear();
+                tempServiceID.clear();
+                tempNatureofService.clear();
+                tempDescription.clear();
+                tempQTY.clear();
+                tempMatParts.clear();
+                tempMatPrice.clear();
+                tempHours.clear();
+                tempLabor.clear();
+                tempLbrID.clear();
+                tempLaborAmount.clear();
+                tempMatID.clear();
 
-                    if (chckbox_Main1.isSelected()) {
+                if (chckbox_Main1.isSelected()) {
+                    tempServiceID.add("M0001");
+                    tempNatureofService.add("Maintenance");
+                } else if (!chckbox_Rep1.isSelected()) {
+                    errors.add(1);
+                }
+                if (chckbox_Rep1.isSelected()) {
+                    tempServiceID.add("R0001");
+                    tempNatureofService.add("Repair");
+                } else if (!chckbox_Main1.isSelected()) {
+                    errors.add(1);
+                }
+                if (chckbox_Main2.isSelected()) {
+                    tempNatureofService.add("Maintenance");
+                    if (tempServiceID.contains("M0001")) {
+                        tempServiceID.add("M0002");
+                    } else {
                         tempServiceID.add("M0001");
-                        tempNatureofService.add("Maintenance");
-                    } else if (!chckbox_Rep1.isSelected()) {
-                        errors.add(1);
                     }
-                    if (chckbox_Rep1.isSelected()) {
+                }
+                if (chckbox_Rep2.isSelected()) {
+                    tempNatureofService.add("Repair");
+                    if (tempServiceID.contains("R0001")) {
+                        tempServiceID.add("R0002");
+                    } else {
                         tempServiceID.add("R0001");
-                        tempNatureofService.add("Repair");
-                    } else if (!chckbox_Main1.isSelected()) {
-                        errors.add(1);
                     }
-                    if (chckbox_Main2.isSelected()) {
-                        tempNatureofService.add("Maintenance");
-                        if (tempServiceID.contains("M0001")) {
-                            tempServiceID.add("M0002");
-                        } else {
-                            tempServiceID.add("M0001");
-                        }
-                    }
-                    if (chckbox_Rep2.isSelected()) {
-                        tempNatureofService.add("Repair");
-                        if (tempServiceID.contains("R0001")) {
-                            tempServiceID.add("R0002");
-                        } else {
-                            tempServiceID.add("R0001");
-                        }
-                    }
-                    if (chckbox_Main3.isSelected()) {
-                        tempNatureofService.add("Maintenance");
-                        if (tempServiceID.contains("M0002")) {
-                            tempServiceID.add("M0003");
-                        } else if (tempServiceID.contains("M0001")) {
-                            tempServiceID.add("M0002");
-                        } else {
-                            tempServiceID.add("M0001");
-                        }
-                    }
-                    if (chckbox_Rep3.isSelected()) {
-                        tempNatureofService.add("Repair");
-                        if (tempServiceID.contains("R0002")) {
-                            tempServiceID.add("R0003");
-                        } else if (tempServiceID.contains("R0001")) {
-                            tempServiceID.add("R0002");
-                        } else {
-                            tempServiceID.add("R0001");
-                        }
-                    }
-                    if (chckbox_Main4.isSelected()) {
-                        tempNatureofService.add("Maintenance");
-                        if (tempServiceID.contains("M0003")) {
-                            tempServiceID.add("M0004");
-                        } else if (tempServiceID.contains("M0002")) {
-                            tempServiceID.add("M0003");
-                        } else if (tempServiceID.contains("M0001")) {
-                            tempServiceID.add("M0002");
-                        } else {
-                            tempServiceID.add("M0001");
-                        }
-                    }
-                    if (chckbox_Rep4.isSelected()) {
-                        tempNatureofService.add("Repair");
-                        if (tempServiceID.contains("R0003")) {
-                            tempServiceID.add("R0004");
-                        } else if (tempServiceID.contains("R0002")) {
-                            tempServiceID.add("R0003");
-                        } else if (tempServiceID.contains("R0001")) {
-                            tempServiceID.add("R0002");
-                        } else {
-                            tempServiceID.add("R0001");
-                        }
-                    }
-                    if (chckbox_Main5.isSelected()) {
-                        tempNatureofService.add("Maintenance");
-                        if (tempServiceID.contains("M0004")) {
-                            tempServiceID.add("M0005");
-                        } else if (tempServiceID.contains("M0003")) {
-                            tempServiceID.add("M0004");
-                        } else if (tempServiceID.contains("M0002")) {
-                            tempServiceID.add("M0003");
-                        } else if (tempServiceID.contains("M0001")) {
-                            tempServiceID.add("M0002");
-                        } else {
-                            tempServiceID.add("M0001");
-                        }
-                    }
-                    if (chckbox_Rep5.isSelected()) {
-                        tempNatureofService.add("Repair");
-                        if (tempServiceID.contains("R0004")) {
-                            tempServiceID.add("R0005");
-                        } else if (tempServiceID.contains("R0003")) {
-                            tempServiceID.add("R0004");
-                        } else if (tempServiceID.contains("R0002")) {
-                            tempServiceID.add("R0003");
-                        } else if (tempServiceID.contains("R0001")) {
-                            tempServiceID.add("R0002");
-                        } else {
-                            tempServiceID.add("R0001");
-                        }
-                    }
-                    if (chckbox_Main6.isSelected()) {
-                        tempNatureofService.add("Maintenance");
-                        if (tempServiceID.contains("M0005")) {
-                            tempServiceID.add("M0006");
-                        } else if (tempServiceID.contains("M0004")) {
-                            tempServiceID.add("M0005");
-                        } else if (tempServiceID.contains("M0003")) {
-                            tempServiceID.add("M0004");
-                        } else if (tempServiceID.contains("M0002")) {
-                            tempServiceID.add("M0003");
-                        } else if (tempServiceID.contains("M0001")) {
-                            tempServiceID.add("M0002");
-                        } else {
-                            tempServiceID.add("M0001");
-                        }
-                    }
-                    if (chckbox_Rep6.isSelected()) {
-                        tempNatureofService.add("Repair");
-                        if (tempServiceID.contains("R0005")) {
-                            tempServiceID.add("R0006");
-                        } else if (tempServiceID.contains("R0004")) {
-                            tempServiceID.add("R0005");
-                        } else if (tempServiceID.contains("R0003")) {
-                            tempServiceID.add("R0004");
-                        } else if (tempServiceID.contains("R0002")) {
-                            tempServiceID.add("R0003");
-                        } else if (tempServiceID.contains("R0001")) {
-                            tempServiceID.add("R0002");
-                        } else {
-                            tempServiceID.add("R0001");
-                        }
-                    }
-                    if (chckbox_Main7.isSelected()) {
-                        tempNatureofService.add("Maintenance");
-                        if (tempServiceID.contains("M0006")) {
-                            tempServiceID.add("M0007");
-                        } else if (tempServiceID.contains("M0005")) {
-                            tempServiceID.add("M0006");
-                        } else if (tempServiceID.contains("M0004")) {
-                            tempServiceID.add("M0005");
-                        } else if (tempServiceID.contains("M0003")) {
-                            tempServiceID.add("M0004");
-                        } else if (tempServiceID.contains("M0002")) {
-                            tempServiceID.add("M0003");
-                        } else if (tempServiceID.contains("M0001")) {
-                            tempServiceID.add("M0002");
-                        } else {
-                            tempServiceID.add("M0001");
-                        }
-                    }
-                    if (chckbox_Rep7.isSelected()) {
-                        tempNatureofService.add("Repair");
-                        if (tempServiceID.contains("R0006")) {
-                            tempServiceID.add("R0007");
-                        } else if (tempServiceID.contains("R0005")) {
-                            tempServiceID.add("R0006");
-                        } else if (tempServiceID.contains("R0004")) {
-                            tempServiceID.add("R0005");
-                        } else if (tempServiceID.contains("R0003")) {
-                            tempServiceID.add("R0004");
-                        } else if (tempServiceID.contains("R0002")) {
-                            tempServiceID.add("R0003");
-                        } else if (tempServiceID.contains("R0001")) {
-                            tempServiceID.add("R0002");
-                        } else {
-                            tempServiceID.add("R0001");
-                        }
-                    }
-
-
-                    String txtDescription1 = txtfld_Descrption1.getText();
-                    if (txtDescription1.equals(""))
-                        errors.add(1);
-                    String txtDescription2 = txtfld_Descrption2.getText();
-                    String txtDescription3 = txtfld_Descrption3.getText();
-                    String txtDescription4 = txtfld_Descrption4.getText();
-                    String txtDescription5 = txtfld_Descrption5.getText();
-                    String txtDescription6 = txtfld_Descrption6.getText();
-                    String txtDescription7 = txtfld_Descrption7.getText();
-
-                    tempDescription.add(txtDescription1);
-                    if (!txtfld_Descrption1.getText().isEmpty() && !txtfld_Descrption2.getText().isEmpty())
-                        tempDescription.add(txtDescription2);
-                    if (!txtfld_Descrption2.getText().isEmpty() && !txtfld_Descrption3.getText().isEmpty())
-                        tempDescription.add(txtDescription3);
-                    if (!txtfld_Descrption3.getText().isEmpty() && !txtfld_Descrption4.getText().isEmpty())
-                        tempDescription.add(txtDescription4);
-                    if (!txtfld_Descrption4.getText().isEmpty() && !txtfld_Descrption5.getText().isEmpty())
-                        tempDescription.add(txtDescription5);
-                    if (!txtfld_Descrption5.getText().isEmpty() && !txtfld_Descrption6.getText().isEmpty())
-                        tempDescription.add(txtDescription6);
-                    if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty())
-                        tempDescription.add(txtDescription7);
-
-
-                    if (!txtfld_qty1.getText().isEmpty()) {
-                        qty1 = Integer.parseInt(txtfld_qty1.getText());
-                        tempQTY.add(qty1);
+                }
+                if (chckbox_Main3.isSelected()) {
+                    tempNatureofService.add("Maintenance");
+                    if (tempServiceID.contains("M0002")) {
+                        tempServiceID.add("M0003");
+                    } else if (tempServiceID.contains("M0001")) {
+                        tempServiceID.add("M0002");
                     } else {
-                        tempQTY.add(0, 0);
+                        tempServiceID.add("M0001");
                     }
-                    if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
-                        qty2 = Integer.parseInt(txtfld_qty2.getText());
-                        tempQTY.add(qty2);
-                    }
-                    if (!txtfld_qty2.getText().isEmpty() && !txtfld_qty3.getText().isEmpty()) {
-                        qty3 = Integer.parseInt(txtfld_qty3.getText());
-                        tempQTY.add(qty3);
-                    }
-                    if (!txtfld_qty3.getText().isEmpty() && !txtfld_qty4.getText().isEmpty()) {
-                        qty4 = Integer.parseInt(txtfld_qty4.getText());
-                        tempQTY.add(qty4);
-                    }
-
-                    String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
-                    String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
-                    String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
-                    String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
-                    if (txtfld_MaterialsParts1.getText().isEmpty()) {
-                        tempMatParts.add("No Materials/Parts");
-                    }
-                    tempMatParts.add(txtMaterialsParts1);
-                    tempMatParts.add(txtMaterialsParts2);
-                    tempMatParts.add(txtMaterialsParts3);
-                    tempMatParts.add(txtMaterialsParts4);
-
-
-                    if (!txtfld_MatPrice1.getText().isEmpty()) {
-                        dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
-                        tempMatPrice.add(dblMatPrice1);
+                }
+                if (chckbox_Rep3.isSelected()) {
+                    tempNatureofService.add("Repair");
+                    if (tempServiceID.contains("R0002")) {
+                        tempServiceID.add("R0003");
+                    } else if (tempServiceID.contains("R0001")) {
+                        tempServiceID.add("R0002");
                     } else {
-                        tempMatPrice.add(0, 0.00);
+                        tempServiceID.add("R0001");
                     }
-                    if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
-                        dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
-                        tempMatPrice.add(dblMatPrice2);
-                    }
-                    if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
-                        dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
-                        tempMatPrice.add(dblMatPrice3);
-                    }
-                    if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
-                        dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
-                        tempMatPrice.add(dblMatPrice4);
-                    }
-
-
-                    if (!txtfld_Amount1.getText().isEmpty()) {
-                        dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
-                        tempMatAmount.add(dblAmount1);
+                }
+                if (chckbox_Main4.isSelected()) {
+                    tempNatureofService.add("Maintenance");
+                    if (tempServiceID.contains("M0003")) {
+                        tempServiceID.add("M0004");
+                    } else if (tempServiceID.contains("M0002")) {
+                        tempServiceID.add("M0003");
+                    } else if (tempServiceID.contains("M0001")) {
+                        tempServiceID.add("M0002");
                     } else {
-                        tempMatAmount.add(0, 0.00);
+                        tempServiceID.add("M0001");
                     }
-                    if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
-                        dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
-                        tempMatAmount.add(dblAmount2);
+                }
+                if (chckbox_Rep4.isSelected()) {
+                    tempNatureofService.add("Repair");
+                    if (tempServiceID.contains("R0003")) {
+                        tempServiceID.add("R0004");
+                    } else if (tempServiceID.contains("R0002")) {
+                        tempServiceID.add("R0003");
+                    } else if (tempServiceID.contains("R0001")) {
+                        tempServiceID.add("R0002");
+                    } else {
+                        tempServiceID.add("R0001");
                     }
-                    if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
-                        dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
-                        tempMatAmount.add(dblAmount3);
+                }
+                if (chckbox_Main5.isSelected()) {
+                    tempNatureofService.add("Maintenance");
+                    if (tempServiceID.contains("M0004")) {
+                        tempServiceID.add("M0005");
+                    } else if (tempServiceID.contains("M0003")) {
+                        tempServiceID.add("M0004");
+                    } else if (tempServiceID.contains("M0002")) {
+                        tempServiceID.add("M0003");
+                    } else if (tempServiceID.contains("M0001")) {
+                        tempServiceID.add("M0002");
+                    } else {
+                        tempServiceID.add("M0001");
                     }
-                    if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
-                        dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
-                        tempMatAmount.add(dblAmount4);
+                }
+                if (chckbox_Rep5.isSelected()) {
+                    tempNatureofService.add("Repair");
+                    if (tempServiceID.contains("R0004")) {
+                        tempServiceID.add("R0005");
+                    } else if (tempServiceID.contains("R0003")) {
+                        tempServiceID.add("R0004");
+                    } else if (tempServiceID.contains("R0002")) {
+                        tempServiceID.add("R0003");
+                    } else if (tempServiceID.contains("R0001")) {
+                        tempServiceID.add("R0002");
+                    } else {
+                        tempServiceID.add("R0001");
                     }
-
-                    if (!txtfld_hrs1.getText().isEmpty()) {
-                        hrs1 = Integer.parseInt(txtfld_hrs1.getText());
-                        tempHours.add(hrs1);
-                    } else
-                        errors.add(1);
-                    if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
-                        hrs2 = Integer.parseInt(txtfld_qty2.getText());
-                        tempHours.add(hrs2);
+                }
+                if (chckbox_Main6.isSelected()) {
+                    tempNatureofService.add("Maintenance");
+                    if (tempServiceID.contains("M0005")) {
+                        tempServiceID.add("M0006");
+                    } else if (tempServiceID.contains("M0004")) {
+                        tempServiceID.add("M0005");
+                    } else if (tempServiceID.contains("M0003")) {
+                        tempServiceID.add("M0004");
+                    } else if (tempServiceID.contains("M0002")) {
+                        tempServiceID.add("M0003");
+                    } else if (tempServiceID.contains("M0001")) {
+                        tempServiceID.add("M0002");
+                    } else {
+                        tempServiceID.add("M0001");
                     }
-                    if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
-                        hrs3 = Integer.parseInt(txtfld_qty3.getText());
-                        tempHours.add(hrs3);
+                }
+                if (chckbox_Rep6.isSelected()) {
+                    tempNatureofService.add("Repair");
+                    if (tempServiceID.contains("R0005")) {
+                        tempServiceID.add("R0006");
+                    } else if (tempServiceID.contains("R0004")) {
+                        tempServiceID.add("R0005");
+                    } else if (tempServiceID.contains("R0003")) {
+                        tempServiceID.add("R0004");
+                    } else if (tempServiceID.contains("R0002")) {
+                        tempServiceID.add("R0003");
+                    } else if (tempServiceID.contains("R0001")) {
+                        tempServiceID.add("R0002");
+                    } else {
+                        tempServiceID.add("R0001");
                     }
-
-
-                    String txtLabor1 = txtfld_Labor1.getText();
-                    if (txtLabor1.equals(""))
-                        errors.add(1);
-                    String txtLabor2 = txtfld_Labor2.getText();
-                    String txtLabor3 = txtfld_Labor3.getText();
-                    tempLabor.add(txtLabor1);
-                    tempLabor.add(txtLabor2);
-                    tempLabor.add(txtLabor3);
-
-                    if (!txtfld_LbrPrice1.getText().isEmpty()) {
-                        dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
-                        tempLaborAmount.add(dblLaborPrice1);
+                }
+                if (chckbox_Main7.isSelected()) {
+                    tempNatureofService.add("Maintenance");
+                    if (tempServiceID.contains("M0006")) {
+                        tempServiceID.add("M0007");
+                    } else if (tempServiceID.contains("M0005")) {
+                        tempServiceID.add("M0006");
+                    } else if (tempServiceID.contains("M0004")) {
+                        tempServiceID.add("M0005");
+                    } else if (tempServiceID.contains("M0003")) {
+                        tempServiceID.add("M0004");
+                    } else if (tempServiceID.contains("M0002")) {
+                        tempServiceID.add("M0003");
+                    } else if (tempServiceID.contains("M0001")) {
+                        tempServiceID.add("M0002");
+                    } else {
+                        tempServiceID.add("M0001");
                     }
-                    if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
-                        dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
-                        tempLaborAmount.add(dblLaborPrice2);
+                }
+                if (chckbox_Rep7.isSelected()) {
+                    tempNatureofService.add("Repair");
+                    if (tempServiceID.contains("R0006")) {
+                        tempServiceID.add("R0007");
+                    } else if (tempServiceID.contains("R0005")) {
+                        tempServiceID.add("R0006");
+                    } else if (tempServiceID.contains("R0004")) {
+                        tempServiceID.add("R0005");
+                    } else if (tempServiceID.contains("R0003")) {
+                        tempServiceID.add("R0004");
+                    } else if (tempServiceID.contains("R0002")) {
+                        tempServiceID.add("R0003");
+                    } else if (tempServiceID.contains("R0001")) {
+                        tempServiceID.add("R0002");
+                    } else {
+                        tempServiceID.add("R0001");
                     }
-                    if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
-                        dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
-                        tempLaborAmount.add(dblLaborPrice3);
-                    }
-
-                    txtTakenBy = txtfld_Takenby.getText();
-                    if (txtTakenBy.equals(""))
-                        errors.add(1);
-                    txtRequestedBy = txtfld_Requestedby.getText();
-                    if (txtRequestedBy.equals(""))
-                        errors.add(1);
-                    txtDept = txtfld_Dept.getText();
-                    if (txtDept.equals(""))
-                        errors.add(1);
-                    txtBldgfloor = txtfld_bldgfloor1.getText();
-                    if (txtBldgfloor.equals(""))
-                        errors.add(1);
-                    MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
-                    txtTimeSched = txtfld_TimeSched.getText();
-                    if (txtTimeSched.equals(""))
-                        errors.add(1);
-                    else {
-                        txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
-                    }
-                    txtChargeTo = txtfld_ChargeTo.getText();
-                    if (txtChargeTo.equals(""))
-                        errors.add(1);
-                    txtWrkCompBy = txtfld_WrkCompBy.getText();
-                    if (txtWrkCompBy.equals(""))
-                        errors.add(1);
-                    txtInsAppBy = txtfld_InspAppBy.getText();
-                    if (txtInsAppBy.equals(""))
-                        errors.add(1);
-                    txtdateofcreation = txtfld_dateofcreation.getText();
-                    if (txtdateofcreation.equals(""))
-                        errors.add(1);
-                    txtDateWanted = txtfld_DateWanted.getText();
-                    if (txtDateWanted.equals(""))
-                        errors.add(1);
-                    txtScheduleDate = txtfld_ScheduledDate.getText();
-                    if (txtScheduleDate.equals(""))
-                        errors.add(1);
-                    txtDateComp = txtfld_DateComp.getText();
-                    if (txtDateComp.equals(""))
-                        errors.add(1);
-                    txtDateInsp = txtfld_DateInsp.getText();
-                    if (txtDateInsp.equals(""))
-                        errors.add(1);
-                    dblTotalLaborInit = Double.parseDouble(txtfld_TotalLaborInit.getText());
-                    dblTotalMaterials = Double.parseDouble(txtfld_TotalMat.getText());
-                    dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
-
-                    tempMatID.add("MAT0001");
-                    if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
-                    if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
-                    if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
+                }
 
 
-                    if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
-                    else errors.add(1);
-                    if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
-                    if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
+                String txtDescription1 = txtfld_Descrption1.getText();
+                if (txtDescription1.equals(""))
+                    errors.add(1);
+                String txtDescription2 = txtfld_Descrption2.getText();
+                String txtDescription3 = txtfld_Descrption3.getText();
+                String txtDescription4 = txtfld_Descrption4.getText();
+                String txtDescription5 = txtfld_Descrption5.getText();
+                String txtDescription6 = txtfld_Descrption6.getText();
+                String txtDescription7 = txtfld_Descrption7.getText();
 
-                    if(!errors.isEmpty()){
-                        frameErrorMessage.setVisible(true);
-                        frameErrorMessage.setLocationRelativeTo(null);
-                        frameErrorMessage.setSize(325, 150);
-                        break;
-                    }
+                tempDescription.add(txtDescription1);
+                if (!txtfld_Descrption1.getText().isEmpty() && !txtfld_Descrption2.getText().isEmpty())
+                    tempDescription.add(txtDescription2);
+                if (!txtfld_Descrption2.getText().isEmpty() && !txtfld_Descrption3.getText().isEmpty())
+                    tempDescription.add(txtDescription3);
+                if (!txtfld_Descrption3.getText().isEmpty() && !txtfld_Descrption4.getText().isEmpty())
+                    tempDescription.add(txtDescription4);
+                if (!txtfld_Descrption4.getText().isEmpty() && !txtfld_Descrption5.getText().isEmpty())
+                    tempDescription.add(txtDescription5);
+                if (!txtfld_Descrption5.getText().isEmpty() && !txtfld_Descrption6.getText().isEmpty())
+                    tempDescription.add(txtDescription6);
+                if (!txtfld_Descrption6.getText().isEmpty() && !txtfld_Descrption7.getText().isEmpty())
+                    tempDescription.add(txtDescription7);
 
 
-                } while (!errors.isEmpty());
+                if (!txtfld_qty1.getText().isEmpty()) {
+                    qty1 = Integer.parseInt(txtfld_qty1.getText());
+                    tempQTY.add(qty1);
+                } else {
+                    tempQTY.add(0, 0);
+                }
+                if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
+                    qty2 = Integer.parseInt(txtfld_qty2.getText());
+                    tempQTY.add(qty2);
+                }
+                if (!txtfld_qty2.getText().isEmpty() && !txtfld_qty3.getText().isEmpty()) {
+                    qty3 = Integer.parseInt(txtfld_qty3.getText());
+                    tempQTY.add(qty3);
+                }
+                if (!txtfld_qty3.getText().isEmpty() && !txtfld_qty4.getText().isEmpty()) {
+                    qty4 = Integer.parseInt(txtfld_qty4.getText());
+                    tempQTY.add(qty4);
+                }
+
+                String txtMaterialsParts1 = txtfld_MaterialsParts1.getText();
+                String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
+                String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
+                String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
+                if (txtfld_MaterialsParts1.getText().isEmpty()) {
+                    tempMatParts.add("No Materials/Parts");
+                }
+                tempMatParts.add(txtMaterialsParts1);
+                tempMatParts.add(txtMaterialsParts2);
+                tempMatParts.add(txtMaterialsParts3);
+                tempMatParts.add(txtMaterialsParts4);
 
 
+                if (!txtfld_MatPrice1.getText().isEmpty()) {
+                    dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    tempMatPrice.add(dblMatPrice1);
+                } else {
+                    tempMatPrice.add(0, 0.00);
+                }
+                if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
+                    dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    tempMatPrice.add(dblMatPrice2);
+                }
+                if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
+                    dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    tempMatPrice.add(dblMatPrice3);
+                }
+                if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
+                    dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    tempMatPrice.add(dblMatPrice4);
+                }
+
+
+                if (!txtfld_Amount1.getText().isEmpty()) {
+                    dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
+                    tempMatAmount.add(dblAmount1);
+                } else {
+                    tempMatAmount.add(0, 0.00);
+                }
+                if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
+                    dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    tempMatAmount.add(dblAmount2);
+                }
+                if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
+                    dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    tempMatAmount.add(dblAmount3);
+                }
+                if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
+                    dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    tempMatAmount.add(dblAmount4);
+                }
+
+                if (!txtfld_hrs1.getText().isEmpty()) {
+                    hrs1 = Integer.parseInt(txtfld_hrs1.getText());
+                    tempHours.add(hrs1);
+                } else
+                    errors.add(1);
+                if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
+                    hrs2 = Integer.parseInt(txtfld_qty2.getText());
+                    tempHours.add(hrs2);
+                }
+                if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
+                    hrs3 = Integer.parseInt(txtfld_qty3.getText());
+                    tempHours.add(hrs3);
+                }
+
+
+                String txtLabor1 = txtfld_Labor1.getText();
+                if (txtLabor1.equals(""))
+                    errors.add(1);
+                String txtLabor2 = txtfld_Labor2.getText();
+                String txtLabor3 = txtfld_Labor3.getText();
+                tempLabor.add(txtLabor1);
+                tempLabor.add(txtLabor2);
+                tempLabor.add(txtLabor3);
+
+                if (!txtfld_LbrPrice1.getText().isEmpty()) {
+                    dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                    tempLaborAmount.add(dblLaborPrice1);
+                }
+                if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
+                    dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                    tempLaborAmount.add(dblLaborPrice2);
+                }
+                if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
+                    dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                    tempLaborAmount.add(dblLaborPrice3);
+                }
+
+                txtTakenBy = txtfld_Takenby.getText();
+                if (txtTakenBy.equals(""))
+                    errors.add(1);
+                txtRequestedBy = txtfld_Requestedby.getText();
+                if (txtRequestedBy.equals(""))
+                    errors.add(1);
+                txtDept = txtfld_Dept.getText();
+                if (txtDept.equals(""))
+                    errors.add(1);
+                txtBldgfloor = txtfld_bldgfloor1.getText();
+                if (txtBldgfloor.equals(""))
+                    errors.add(1);
+                MachineNo = Integer.parseInt(txtfld_MachineNo.getText());
+                txtTimeSched = txtfld_TimeSched.getText();
+                if (txtTimeSched.equals(""))
+                    errors.add(1);
+                else {
+                    txtTimeSched = txtfld_TimeSched.getText() + SchedTime;
+                }
+                txtChargeTo = txtfld_ChargeTo.getText();
+                if (txtChargeTo.equals(""))
+                    errors.add(1);
+                txtWrkCompBy = txtfld_WrkCompBy.getText();
+                if (txtWrkCompBy.equals(""))
+                    errors.add(1);
+                txtInsAppBy = txtfld_InspAppBy.getText();
+                if (txtInsAppBy.equals(""))
+                    errors.add(1);
+                txtdateofcreation = txtfld_dateofcreation.getText();
+                if (txtdateofcreation.equals(""))
+                    errors.add(1);
+                txtDateWanted = txtfld_DateWanted.getText();
+                if (txtDateWanted.equals(""))
+                    errors.add(1);
+                txtScheduleDate = txtfld_ScheduledDate.getText();
+                if (txtScheduleDate.equals(""))
+                    errors.add(1);
+                txtDateComp = txtfld_DateComp.getText();
+                if (txtDateComp.equals(""))
+                    errors.add(1);
+                txtDateInsp = txtfld_DateInsp.getText();
+                if (txtDateInsp.equals(""))
+                    errors.add(1);
+                dblTotalLaborInit = Double.parseDouble(txtfld_TotalLaborInit.getText());
+                dblTotalMaterials = Double.parseDouble(txtfld_TotalMat.getText());
+                dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
+
+                tempMatID.add("MAT0001");
+                if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
+                if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
+                if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
+
+
+                if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
+                else errors.add(1);
+                if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
+                if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
+
+                if (!errors.isEmpty()) {
+                    throw new java.lang.RuntimeException("Please fill out all fields");
+                }
+
+            } while (!errors.isEmpty());
 
             try {
 
@@ -3437,7 +3708,7 @@ public class WOInputForm extends javax.swing.JFrame {
                     String sqlWorkOrder = "INSERT INTO WORK_ORDER (DateofCreation, TakenBy, RequestedBy, Dept, BLDGFloor, MachineNo, DateWanted, ChargeTo, WorkCompletedBy, DateCompleted, InspectedBy, " +
                             "DateInspected, ScheduledDate, ScheduledTime, TotalMaterials, TotalLabor, Total)" + " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
                     PreparedStatement psWorkOrder = objConn.prepareStatement(sqlWorkOrder);
-                    if(errors.isEmpty()) {
+                    if (errors.isEmpty()) {
                         psWorkOrder.setString(1, txtdateofcreation);
                         psWorkOrder.setString(2, txtTakenBy);
                         psWorkOrder.setString(3, txtRequestedBy);
@@ -3545,289 +3816,9 @@ public class WOInputForm extends javax.swing.JFrame {
                 }
                 System.out.println("SQL completed");
             }
-        }catch(Exception objEx){
+        } catch (Exception objEx) {
             System.out.println(objEx);
         }
     }
-
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String... args) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(WOInputForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new WOInputForm().setVisible(true);
-            }
-        });
-
-        try {
-            objConn = DriverManager.getConnection("jdbc:ucanaccess://D:\\Files\\Documents\\PUPDocs\\InfoMngmt\\Project\\IT Work Order Input Form\\Work-Order-Application-JAVA\\WorkOrderInputForm\\src\\main\\java\\sourcecode\\workorderinputform\\WODatabase Sample.accdb");
-            System.out.println("Database Connected");
-        }catch (Exception objEx) {
-
-            System.out.println("Database failed!");
-            System.out.println(objEx);
-
-        }finally{
-            if (objConn != null) {
-                try {
-                    objConn.close();
-                } catch (Exception objEx) {
-                    System.out.println("Problem closing the database!");
-                    System.out.println(objEx);
-                }
-            }
-
-        }
-    }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bttnOkError;
-    private javax.swing.JButton bttnSave;
-    private javax.swing.ButtonGroup bttngrpDesc1;
-    private javax.swing.ButtonGroup bttngrpDesc2;
-    private javax.swing.ButtonGroup bttngrpDesc3;
-    private javax.swing.ButtonGroup bttngrpDesc4;
-    private javax.swing.ButtonGroup bttngrpDesc5;
-    private javax.swing.ButtonGroup bttngrpDesc6;
-    private javax.swing.ButtonGroup bttngrpDesc7;
-    private javax.swing.ButtonGroup bttngrpScheduledTime;
-    private javax.swing.ButtonGroup bttngrpTimeCreation;
-    private javax.swing.JCheckBox chckbox_Main1;
-    private javax.swing.JCheckBox chckbox_Main2;
-    private javax.swing.JCheckBox chckbox_Main3;
-    private javax.swing.JCheckBox chckbox_Main4;
-    private javax.swing.JCheckBox chckbox_Main5;
-    private javax.swing.JCheckBox chckbox_Main6;
-    private javax.swing.JCheckBox chckbox_Main7;
-    private javax.swing.JCheckBox chckbox_Rep1;
-    private javax.swing.JCheckBox chckbox_Rep2;
-    private javax.swing.JCheckBox chckbox_Rep3;
-    private javax.swing.JCheckBox chckbox_Rep4;
-    private javax.swing.JCheckBox chckbox_Rep5;
-    private javax.swing.JCheckBox chckbox_Rep6;
-    private javax.swing.JCheckBox chckbox_Rep7;
-    private javax.swing.JCheckBox chckbox_SchedCreationAm;
-    private javax.swing.JCheckBox chckbox_SchedCreationPM;
-    private javax.swing.JCheckBox chckbox_TimeCreationAm;
-    private javax.swing.JDialog frameErrorMessage;
-    private javax.swing.JCheckBox hckbox_TimeCreationPm;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
-    private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
-    private javax.swing.JPanel jPanel35;
-    private javax.swing.JPanel jPanel36;
-    private javax.swing.JPanel jPanel37;
-    private javax.swing.JPanel jPanel38;
-    private javax.swing.JPanel jPanel39;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel40;
-    private javax.swing.JPanel jPanel41;
-    private javax.swing.JPanel jPanel42;
-    private javax.swing.JPanel jPanel43;
-    private javax.swing.JPanel jPanel44;
-    private javax.swing.JPanel jPanel45;
-    private javax.swing.JPanel jPanel46;
-    private javax.swing.JPanel jPanel47;
-    private javax.swing.JPanel jPanel48;
-    private javax.swing.JPanel jPanel49;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel50;
-    private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
-    private javax.swing.JPanel jPanel53;
-    private javax.swing.JPanel jPanel54;
-    private javax.swing.JPanel jPanel55;
-    private javax.swing.JPanel jPanel56;
-    private javax.swing.JPanel jPanel57;
-    private javax.swing.JPanel jPanel58;
-    private javax.swing.JPanel jPanel59;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel60;
-    private javax.swing.JPanel jPanel61;
-    private javax.swing.JPanel jPanel62;
-    private javax.swing.JPanel jPanel63;
-    private javax.swing.JPanel jPanel64;
-    private javax.swing.JPanel jPanel65;
-    private javax.swing.JPanel jPanel66;
-    private javax.swing.JPanel jPanel67;
-    private javax.swing.JPanel jPanel68;
-    private javax.swing.JPanel jPanel69;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel70;
-    private javax.swing.JPanel jPanel71;
-    private javax.swing.JPanel jPanel72;
-    private javax.swing.JPanel jPanel73;
-    private javax.swing.JPanel jPanel74;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JFormattedTextField txtfld_Amount1;
-    private javax.swing.JFormattedTextField txtfld_Amount2;
-    private javax.swing.JFormattedTextField txtfld_Amount3;
-    private javax.swing.JFormattedTextField txtfld_Amount4;
-    private javax.swing.JFormattedTextField txtfld_ChargeTo;
-    private javax.swing.JFormattedTextField txtfld_DateComp;
-    private javax.swing.JFormattedTextField txtfld_DateInsp;
-    private javax.swing.JFormattedTextField txtfld_DateWanted;
-    private javax.swing.JFormattedTextField txtfld_Dept;
-    private javax.swing.JFormattedTextField txtfld_Descrption1;
-    private javax.swing.JFormattedTextField txtfld_Descrption2;
-    private javax.swing.JFormattedTextField txtfld_Descrption3;
-    private javax.swing.JFormattedTextField txtfld_Descrption4;
-    private javax.swing.JFormattedTextField txtfld_Descrption5;
-    private javax.swing.JFormattedTextField txtfld_Descrption6;
-    private javax.swing.JFormattedTextField txtfld_Descrption7;
-    private javax.swing.JFormattedTextField txtfld_InspAppBy;
-    private javax.swing.JFormattedTextField txtfld_Labor1;
-    private javax.swing.JFormattedTextField txtfld_Labor2;
-    private javax.swing.JFormattedTextField txtfld_Labor3;
-    private javax.swing.JFormattedTextField txtfld_LbrPrice1;
-    private javax.swing.JFormattedTextField txtfld_LbrPrice2;
-    private javax.swing.JFormattedTextField txtfld_LbrPrice3;
-    private javax.swing.JFormattedTextField txtfld_MachineNo;
-    private javax.swing.JFormattedTextField txtfld_MatPrice1;
-    private javax.swing.JFormattedTextField txtfld_MatPrice2;
-    private javax.swing.JFormattedTextField txtfld_MatPrice3;
-    private javax.swing.JFormattedTextField txtfld_MatPrice4;
-    private javax.swing.JFormattedTextField txtfld_MaterialsParts1;
-    private javax.swing.JFormattedTextField txtfld_MaterialsParts2;
-    private javax.swing.JFormattedTextField txtfld_MaterialsParts3;
-    private javax.swing.JFormattedTextField txtfld_MaterialsParts4;
-    private javax.swing.JFormattedTextField txtfld_Requestedby;
-    private javax.swing.JFormattedTextField txtfld_ScheduledDate;
-    private javax.swing.JFormattedTextField txtfld_TOTAL;
-    private javax.swing.JFormattedTextField txtfld_Takenby;
-    private javax.swing.JFormattedTextField txtfld_Time;
-    private javax.swing.JFormattedTextField txtfld_TimeSched;
-    private javax.swing.JFormattedTextField txtfld_TotalLaborInit;
-    private javax.swing.JFormattedTextField txtfld_TotalLbr;
-    private javax.swing.JFormattedTextField txtfld_TotalMat;
-    private javax.swing.JFormattedTextField txtfld_WrkCompBy;
-    private javax.swing.JFormattedTextField txtfld_bldgfloor1;
-    private javax.swing.JFormattedTextField txtfld_dateofcreation;
-    private javax.swing.JFormattedTextField txtfld_hrs1;
-    private javax.swing.JFormattedTextField txtfld_hrs2;
-    private javax.swing.JFormattedTextField txtfld_hrs3;
-    private javax.swing.JFormattedTextField txtfld_qty1;
-    private javax.swing.JFormattedTextField txtfld_qty2;
-    private javax.swing.JFormattedTextField txtfld_qty3;
-    private javax.swing.JFormattedTextField txtfld_qty4;
     // End of variables declaration//GEN-END:variables
 }

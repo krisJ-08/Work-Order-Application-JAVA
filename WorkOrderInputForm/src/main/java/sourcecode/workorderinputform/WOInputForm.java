@@ -3321,16 +3321,16 @@ public class WOInputForm extends javax.swing.JFrame {
 
                 errors.clear();
                 tempMatAmount.clear();
-                tempServiceID.clear();
-                tempNatureofService.clear();
-                tempDescription.clear();
+//                tempServiceID.clear();
+//                tempNatureofService.clear();
+//                tempDescription.clear();
                 tempQTY.clear();
                 tempMatParts.clear();
                 tempMatPrice.clear();
-                tempHours.clear();
-                tempLabor.clear();
-                tempLbrID.clear();
-                tempLaborAmount.clear();
+//                tempHours.clear();
+//                tempLabor.clear();
+//                tempLbrID.clear();
+//                tempLaborAmount.clear();
                 tempMatID.clear();
 
                 if (chckbox_Main1.isSelected()) {
@@ -3528,12 +3528,18 @@ public class WOInputForm extends javax.swing.JFrame {
                     tempDescription.add(txtDescription7);
 
 
+                tempMatID.add("MAT0001");
+                if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
+                if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
+                if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
+
+
+                tempQTY.add(0,0);
                 if (!txtfld_qty1.getText().isEmpty()) {
                     qty1 = Integer.parseInt(txtfld_qty1.getText());
-                    tempQTY.add(qty1);
-                } else {
-                    tempQTY.add(0, 0);
+                    tempQTY.set(0,qty1);
                 }
+
                 if (!txtfld_qty1.getText().isEmpty() && !txtfld_qty2.getText().isEmpty()) {
                     qty2 = Integer.parseInt(txtfld_qty2.getText());
                     tempQTY.add(qty2);
@@ -3551,51 +3557,54 @@ public class WOInputForm extends javax.swing.JFrame {
                 String txtMaterialsParts2 = txtfld_MaterialsParts2.getText();
                 String txtMaterialsParts3 = txtfld_MaterialsParts3.getText();
                 String txtMaterialsParts4 = txtfld_MaterialsParts4.getText();
-                if (txtfld_MaterialsParts1.getText().isEmpty()) {
-                    tempMatParts.add("No Materials/Parts");
+
+                tempMatParts.add("No Materials/Parts");
+                if (!txtfld_MaterialsParts1.getText().isEmpty()) {
+                    tempMatParts.set(0, txtMaterialsParts1);
                 }
-                tempMatParts.add(txtMaterialsParts1);
-                tempMatParts.add(txtMaterialsParts2);
-                tempMatParts.add(txtMaterialsParts3);
-                tempMatParts.add(txtMaterialsParts4);
+                if (!txtfld_MaterialsParts1.getText().isEmpty() && !txtfld_MaterialsParts2.getText().isEmpty()) {
+                    tempMatParts.add(txtMaterialsParts2);
+                }
+                if (!txtfld_MaterialsParts2.getText().isEmpty() && !txtfld_MaterialsParts3.getText().isEmpty()) {
+                    tempMatParts.add(txtMaterialsParts3);
+                }
+                if (!txtfld_MaterialsParts3.getText().isEmpty() && !txtfld_MaterialsParts4.getText().isEmpty()) {
+                    tempMatParts.add(txtMaterialsParts4);
+                }
 
-
+                tempMatPrice.add(0, 0.00);
                 if (!txtfld_MatPrice1.getText().isEmpty()) {
                     dblMatPrice1 = Double.parseDouble(txtfld_MatPrice1.getText());
-                    tempMatPrice.add(dblMatPrice1);
-                } else {
-                    tempMatPrice.add(0, 0.00);
+                    tempMatPrice.set(0, dblMatPrice1);
                 }
                 if (!txtfld_MatPrice1.getText().isEmpty() && !txtfld_MatPrice2.getText().isEmpty()) {
-                    dblMatPrice2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    dblMatPrice2 = Double.parseDouble(txtfld_MatPrice2.getText());
                     tempMatPrice.add(dblMatPrice2);
                 }
                 if (!txtfld_MatPrice2.getText().isEmpty() && !txtfld_MatPrice3.getText().isEmpty()) {
-                    dblMatPrice3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    dblMatPrice3 = Double.parseDouble(txtfld_MatPrice3.getText());
                     tempMatPrice.add(dblMatPrice3);
                 }
                 if (!txtfld_MatPrice3.getText().isEmpty() && !txtfld_MatPrice4.getText().isEmpty()) {
-                    dblMatPrice4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    dblMatPrice4 = Double.parseDouble(txtfld_MatPrice4.getText());
                     tempMatPrice.add(dblMatPrice4);
                 }
 
-
+                tempMatAmount.add(0, 0.00);
                 if (!txtfld_Amount1.getText().isEmpty()) {
                     dblAmount1 = Double.parseDouble(txtfld_Amount1.getText());
-                    tempMatAmount.add(dblAmount1);
-                } else {
-                    tempMatAmount.add(0, 0.00);
+                    tempMatAmount.set(0, dblAmount1);
                 }
                 if (!txtfld_Amount1.getText().isEmpty() && !txtfld_Amount2.getText().isEmpty()) {
-                    dblAmount2 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    dblAmount2 = Double.parseDouble(txtfld_Amount2.getText());
                     tempMatAmount.add(dblAmount2);
                 }
                 if (!txtfld_Amount2.getText().isEmpty() && !txtfld_Amount3.getText().isEmpty()) {
-                    dblAmount3 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    dblAmount3 = Double.parseDouble(txtfld_Amount3.getText());
                     tempMatAmount.add(dblAmount3);
                 }
                 if (!txtfld_Amount3.getText().isEmpty() && !txtfld_Amount4.getText().isEmpty()) {
-                    dblAmount4 = Double.parseDouble(txtfld_MatPrice1.getText());
+                    dblAmount4 = Double.parseDouble(txtfld_Amount4.getText());
                     tempMatAmount.add(dblAmount4);
                 }
 
@@ -3605,34 +3614,43 @@ public class WOInputForm extends javax.swing.JFrame {
                 } else
                     errors.add(1);
                 if (!txtfld_hrs1.getText().isEmpty() && !txtfld_hrs2.getText().isEmpty()) {
-                    hrs2 = Integer.parseInt(txtfld_qty2.getText());
+                    hrs2 = Integer.parseInt(txtfld_hrs2.getText());
                     tempHours.add(hrs2);
                 }
                 if (!txtfld_hrs2.getText().isEmpty() && !txtfld_hrs3.getText().isEmpty()) {
-                    hrs3 = Integer.parseInt(txtfld_qty3.getText());
+                    hrs3 = Integer.parseInt(txtfld_hrs3.getText());
                     tempHours.add(hrs3);
                 }
 
 
                 String txtLabor1 = txtfld_Labor1.getText();
-                if (txtLabor1.equals(""))
-                    errors.add(1);
                 String txtLabor2 = txtfld_Labor2.getText();
                 String txtLabor3 = txtfld_Labor3.getText();
-                tempLabor.add(txtLabor1);
-                tempLabor.add(txtLabor2);
-                tempLabor.add(txtLabor3);
+
+                if (!txtfld_Labor1.getText().isEmpty()) {
+                    tempLabor.add(txtLabor1);
+                } else if(txtfld_Labor1.getText().isEmpty()){
+                    errors.add(1);
+                }
+                if (!txtfld_Labor1.getText().isEmpty() && !txtfld_Labor2.getText().isEmpty()) {
+                    tempLabor.add(txtLabor2);
+                }
+                if (!txtfld_Labor2.getText().isEmpty() && !txtfld_Labor3.getText().isEmpty()) {
+                    tempLabor.add(txtLabor3);
+                }
 
                 if (!txtfld_LbrPrice1.getText().isEmpty()) {
                     dblLaborPrice1 = Double.parseDouble(txtfld_LbrPrice1.getText());
                     tempLaborAmount.add(dblLaborPrice1);
+                }else if(txtfld_LbrPrice1.getText().isEmpty()) {
+                    errors.add(1);
                 }
                 if (!txtfld_LbrPrice1.getText().isEmpty() && !txtfld_LbrPrice2.getText().isEmpty()) {
-                    dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                    dblLaborPrice2 = Double.parseDouble(txtfld_LbrPrice2.getText());
                     tempLaborAmount.add(dblLaborPrice2);
                 }
                 if (!txtfld_LbrPrice3.getText().isEmpty() && !txtfld_LbrPrice3.getText().isEmpty()) {
-                    dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice1.getText());
+                    dblLaborPrice3 = Double.parseDouble(txtfld_LbrPrice3.getText());
                     tempLaborAmount.add(dblLaborPrice3);
                 }
 
@@ -3683,14 +3701,14 @@ public class WOInputForm extends javax.swing.JFrame {
                 dblTotalMaterials = Double.parseDouble(txtfld_TotalMat.getText());
                 dblTotal = Double.parseDouble(txtfld_TOTAL.getText());
 
-                tempMatID.add("MAT0001");
-                if (!txtfld_qty2.getText().isEmpty()) tempMatID.add("MAT0002");
-                if (!txtfld_qty3.getText().isEmpty()) tempMatID.add("MAT0003");
-                if (!txtfld_qty4.getText().isEmpty()) tempMatID.add("MAT0004");
 
 
-                if (!txtfld_Labor1.getText().isEmpty()) tempLbrID.add("LBR0001");
-                else errors.add(1);
+
+                if (!txtfld_Labor1.getText().isEmpty())
+                    tempLbrID.add("LBR0001");
+                else if(txtfld_Labor1.getText().isEmpty()){
+                    errors.add(1);
+                }
                 if (!txtfld_Labor2.getText().isEmpty()) tempLbrID.add("LBR0002");
                 if (!txtfld_Labor3.getText().isEmpty()) tempLbrID.add("LBR0003");
 
